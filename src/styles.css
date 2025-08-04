@@ -1,14 +1,18 @@
 :root{
-    --main-background-color: #272635;
-    --element-border-color: #272635;
-    --element-background-color: #CECECE;
-    --container-border-color: #CECECE;
-    --container-background-color: #E8E9F3;
-    --spceial-button-color: #B1E5F2;
+    --main-background-color: #272635b4;
+    --element-border-color: #272635b4;
+    --element-background-color: #3c408bb4;
+    --container-border-color: #3c408bb4;
+    --container-background-color: #295f58d5;
+
+    --spceial-button-color-one: #ffe51ccb;
+    --spceial-button-color-two: #ffff84cb;
 }
 
 html, body{
-    background-color: var(--main-background-color);
+    background-image: url('/backgrounds/main.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -30,12 +34,12 @@ app-root {
 }
 
 .container-border{
-    border: var(--container-border-color) 0.3vw solid;
+    border: var(--container-border-color) 0.25vw solid;
     border-radius: 0.7vw 0.1vw 0.7vw 0.1vw;
 }
 
 .content-border{
-    border: var(--element-border-color) 0.3vw solid;
+    border: var(--element-border-color) 0.15vw solid;
     border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
 }
 

@@ -11,7 +11,7 @@
 
 .selector-container > * {
     background-color: var(--element-background-color);
-    border: var(--element-border-color) 0.3vw solid;
+    border: var(--element-border-color) 0.15vw solid;
     border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
 
     width: 80%;
@@ -29,7 +29,7 @@
 }
 
 .selector-container > button{
-    background-color: var(--spceial-button-color);
+    background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
 }
 
 .weapon-image {
@@ -58,8 +58,8 @@
 }
 
 #special-container > button {
-    background-color: var(--spceial-button-color);
-    border: var(--element-border-color) 0.3vw solid;
+    background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    border: var(--element-border-color) 0.15vw solid;
     border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
 
     margin: 0 1vw 0 1vw;
@@ -70,7 +70,7 @@
 
 #special-container > div{
     background-color: var(--element-background-color);
-    border: var(--element-border-color) 0.3vw solid;
+    border: var(--element-border-color) 0.15vw solid;
 
     height: 100%;
     width: 50%;
