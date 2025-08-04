@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "O3tHqvE7dfM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\temac\\OneDrive\\Документы\\My Games\\Terraria\\tModLoader\\ModSources\\GatherWeaponData\\GatherWeaponData.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\temac\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

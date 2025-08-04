@@ -1,0 +1,3 @@
+displayName = Banana Stealer
+author = Daiki
+version = 0.1

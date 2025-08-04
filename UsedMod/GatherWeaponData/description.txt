@@ -1,0 +1,1 @@
+Gathers all bananas from your current active run. ( Gathers all weapons into string so i could use it later for my shit. Maybe smth else)
