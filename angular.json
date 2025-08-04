@@ -13,14 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/terraria-modded-random-weapon",
+            "outputPath": "docs",
             "index": "src/index.html",
-            "baseHref": "./",
-            "browser": "src/main.ts",
+            "baseHref":  "/terraria-modded-random-weapon-selector/",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "browser": "src/main.ts",
             "assets": [
               {
                 "glob": "**/*",
