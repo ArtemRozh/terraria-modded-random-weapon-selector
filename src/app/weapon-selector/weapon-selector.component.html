@@ -1,0 +1,59 @@
+<div class="main-container">
+    <div class="selector-container  container-border">
+        <div [style.height]="'15%'"> 
+            Current stage:<br>
+            {{ currentIndex + 1 }}/{{ progression.length }} {{progression[currentIndex].step}}
+        </div>
+        <div> Available Weapons: {{ availableToRollWeapons.length }} </div>
+        <div> 
+            Weapon:
+            <div *ngIf="selectedWeapon.name !== 'None'" class="weapon-image">
+                <img [src]="selectedWeapon['image']" alt="weapons">
+            </div>
+            {{ selectedWeapon.name }} 
+        </div>
+        
+        <div id="special-container">
+            <button (click)="changeStep(-1)" [disabled]="currentIndex === 0">P</button>
+            <div> Select stage </div>
+            <button (click)="changeStep(1)" [disabled]="currentIndex === progression.length - 1">N</button>
+        </div>
+        
+
+        <button (click)="selectRandomWeapon()"> Get random weapon </button>
+
+
+        <div class="config-selector">
+            <div>
+                <input type="checkbox" [(ngModel)]="switch" (change)="changeVanillaWeaponsAvailabillity()"> Remove vanilla weapons from the list
+            </div>
+            <div>
+                <input type="checkbox" [(ngModel)]="clearSwitch" (change)="clearWeaponsOnDifficultyChange()"> Dont clear weapons on difficulty change
+            </div>
+            <div>
+                <input type="checkbox" [(ngModel)]="banSwitch" (change)="banWeaponsOnRoll()"> Ban rolled weapon on obtainment
+            </div>
+        </div>
+
+        <button (click)="clearBannedWeapons()"> Clear all banned weapons </button>
+
+        <!-- Legacy. Let it stay here if i ever need to change it back
+
+        <button (click)="changeVanillaWeaponsAvailabillity()"> 
+            <span *ngIf="!switch"> Remove vanilla weapons from the list </span> 
+            <span *ngIf="switch"> Add vanilla weapons to the list </span> 
+        </button>
+        <button (click)="clearWeaponsOnDifficultyChange()"> 
+            <span *ngIf="!clearSwitch"> Dont clear weapon list on difficulty change  </span> 
+            <span *ngIf="clearSwitch"> Clear weapon list on difficulty change  </span> 
+        </button>
+
+        -->
+
+        <div class="config-selector">
+            <div *ngFor="let content of availableContentFiltered">
+                <input type="checkbox" [(ngModel)]="content.active" (change)="modifyProgression(content.label, content.active)"> Enable {{ content.label }}
+             </div>
+        </div>
+    </div>
+</div>

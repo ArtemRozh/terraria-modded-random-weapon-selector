@@ -1,0 +1,11 @@
+<div class="main-container">
+    <div class="content-container">
+        <button 
+            class="weapon-content" *ngFor="let weapon of availableWeapons"
+            [style.background-color] = "getBackgroundColor(weapon.banned)"
+            (click)="swapWeaponState(weapon)">
+            <span class="text-container"> {{ weapon.name }} </span>
+            <div class="weapon-container"><img [src]="weapon.image" class="weapon-image" alt="weapon"></div> 
+        </button>
+    </div>
+</div>
