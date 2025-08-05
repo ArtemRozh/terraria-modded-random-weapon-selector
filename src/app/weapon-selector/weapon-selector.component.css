@@ -105,7 +105,7 @@
     height: 1.2vw;  
 
     margin-right: 0.5vw;
-    filter: invert(60%) hue-rotate(15deg) brightness(2);
+    accent-color: var(--spceial-button-color-one);
 }
 
 .config-selector::-webkit-scrollbar {

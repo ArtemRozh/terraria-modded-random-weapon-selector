@@ -1,16 +1,16 @@
 :root{
-    --main-background-color: #272635b4;
-    --element-border-color: #272635b4;
-    --element-background-color: #3c408bb4;
-    --container-border-color: #3c408bb4;
-    --container-background-color: #295f58d5;
+    --main-background-color: #272635;
+    --element-border-color: #272635;
+    --element-background-color: #495eabe0;
+    --container-border-color: #495eabe0;
+    --container-background-color: #202747e0;
 
-    --spceial-button-color-one: #ffe51ccb;
-    --spceial-button-color-two: #ffff84cb;
+    --spceial-button-color-one: #fff238f1;
+    --spceial-button-color-two: #ffff84f1;
 }
 
 html, body{
-    background-image: url('backgrounds/main.png');
+    background-image: url('/backgrounds/main.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
