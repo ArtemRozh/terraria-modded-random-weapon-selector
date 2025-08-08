@@ -568,7 +568,7 @@ export const calamityWeaponData = [
         {name: 'Vivid Clarity', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.ExoMechs},//
         {name: 'Void Vortex', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Yharon},//
         {name: 'Voltaic Climax', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DOG},//
-        {name: 'Waywasher', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Waywasher', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Wingman', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Golem},//
         {name: 'Winters Fury', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
         {name: 'Wrath of the Ancients', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
@@ -580,7 +580,7 @@ export const calamityWeaponData = [
         {name: 'Aegis Blade', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Golem},//
         {name: 'Aftershock', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
         {name: 'Air Spinner', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
-        {name: 'Amidias Trident', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Amidias Trident', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Anarchy Blade', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
         {name: 'Aorta', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
         {name: 'Ark of the Cosmos', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Yharon},//
@@ -736,7 +736,7 @@ export const calamityWeaponData = [
         {name: 'Tumbleweed', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
         {name: 'Typhons Greed', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Leviathan},//
         {name: 'Ultimus Cleaver', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Ravager},//
-        {name: 'Urchin Flail', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Urchin Flail', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Urchin Mace', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Vein Burster', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
         {name: 'Violence', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
@@ -785,7 +785,7 @@ export const calamityWeaponData = [
         {name: 'Conference Call', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Cultist},//
         {name: 'Contagion', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
         {name: 'Continental Greatbow', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Golem},//
-        {name: 'Coral Cannon', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Coral Cannon', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Corinth Prime', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Servant1},// Servant material weapon
         {name: 'Corroded Caustibow', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.AquaticScourge},//
         {name: 'Crackshot Colt', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
@@ -868,7 +868,7 @@ export const calamityWeaponData = [
         {name: 'Seas Searing', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.AquaticScourge},//
         {name: 'Septic Skewer', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.OldPuke},//
         {name: 'Shadethrower', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
-        {name: 'Shellshooter', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Shellshooter', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Shredder', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.MoonLord},//
         {name: 'Shroomer', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Cultist},//
         {name: 'Slag Magnum', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
@@ -1008,7 +1008,7 @@ export const calamityWeaponData = [
         {name: 'Rot Ball', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
         {name: 'Sacrifice', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
         {name: 'Samsara Slicer', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
-        {name: 'Sand Dollar', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Sand Dollar', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Sandslasher', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
         {name: 'Scarlet Devil', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
         {name: 'Scourge of the Desert', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
@@ -1025,7 +1025,7 @@ export const calamityWeaponData = [
         {name: 'Sky Stabber', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CalamityEvil},//
         {name: 'Slick Cane', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Skeletron},//
         {name: 'Sludge Splotch', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.EvilBoss},//
-        {name: 'Snap Clam', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Snap Clam', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Spear of Destiny', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.MechBossRest},//
         {name: 'Spear of Paleolith', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
         {name: 'Spent Fuel Container', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.AquaticScourge},//
@@ -1088,7 +1088,7 @@ export const calamityWeaponData = [
         {name: 'Dragonblood Disgorger', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Providence},//
         {name: 'Dreadmine Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Leviathan},//
         {name: 'Elemental Axe', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.MoonLord},//
-        {name: 'Enchanted Conch', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Enchanted Conch', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Endogenesis', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
         {name: 'Endo Hydra Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DOG},//
         {name: 'Entropys Vigil', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.CababitasClone},//
@@ -1119,7 +1119,7 @@ export const calamityWeaponData = [
         {name: 'Orthocera Shell', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.AquaticScourge},//
         {name: 'Perdition', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.SupremeCababitas},//
         {name: 'Plantation Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Plantera},//
-        {name: 'Polyp Launcher', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
+        {name: 'Polyp Launcher', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Puff Shroom', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Crabulon},//
         {name: 'Resurrection Butterfly', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Golem},//
         {name: 'Rusty Beacon Prototype', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.EyeOfCthulhu},//
