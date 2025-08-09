@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { allWeaponData } from './data/weapon.data';
 import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
+import seedrandom from 'seedrandom';
 
 @Injectable({
   providedIn: 'root'
@@ -127,7 +128,16 @@ export class WeaponDataService {
 
     if (availableList.length === 0) return {name: 'Copper Shortsword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss};
 
-    const randomIndex = Math.floor(Math.random() * availableList.length);
+    const date1 = new Date("6969-69-69T00:00:00Z");
+    const date2 = new Date()
+
+    const dateDiff = date1.getTime() - date2.getTime();
+    const randomToken = "final_update_" + Math.floor(Math.random() * 20);
+
+    const finalSeed = `${dateDiff}-${randomToken}`;
+
+    const rng = seedrandom(finalSeed);
+    const randomIndex = Math.floor(rng() * availableList.length);
 
     if(banSwitch){
       availableList[randomIndex].banned = true;
