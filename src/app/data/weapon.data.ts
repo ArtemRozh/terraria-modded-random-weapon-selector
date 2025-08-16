@@ -856,7 +856,7 @@ export const calamityWeaponData = [
         {name: 'Polaris Parrotfish', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
         {name: 'Prideful Hunters Planar Ripper', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.MoonLord},//
         {name: 'Pristine Fury', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Providence},//
-        {name: 'Pumpler', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.EyeOfCthulhu},//
+        {name: 'Pumpler', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
         {name: 'Realm Ravager', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Ravager},//
         {name: 'Reed Blowgun', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
         {name: 'Rubico Prime', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DOG},//
@@ -1104,7 +1104,7 @@ export const calamityWeaponData = [
         {name: 'Gastric Belcher Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Leviathan},//
         {name: 'Glacial Embrace', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Cryogen},//
         {name: 'Guidelight of Oblivion', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Providence},//
-        {name: 'Harvest Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.EyeOfCthulhu},//
+        {name: 'Harvest Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.PreBoss},//
         {name: 'Haunted Scroll', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
         {name: 'Herring Staff', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Skeletron},//
         {name: 'Hive Pod', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.AstrumAureus},//
