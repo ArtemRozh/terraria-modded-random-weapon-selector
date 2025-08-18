@@ -128,7 +128,7 @@ export class WeaponDataService {
 
     if (availableList.length === 0) return {name: 'Copper Shortsword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss};
 
-    const date1 = new Date("6969-69-69T00:00:00Z");
+    const date1 = new Date("6969-06-09T00:00:00Z");
     const date2 = new Date()
 
     const dateDiff = date1.getTime() - date2.getTime();
