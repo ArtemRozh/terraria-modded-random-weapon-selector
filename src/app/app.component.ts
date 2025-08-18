@@ -10,9 +10,14 @@ import { RouterOutlet, Router, RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'terraria-modded-random-weapon'; 
+  toRevealDetails: boolean = false;
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.navigate(['/main']);
+  }
+
+  revealDetails(){
+    this.toRevealDetails = !this.toRevealDetails;
   }
 }

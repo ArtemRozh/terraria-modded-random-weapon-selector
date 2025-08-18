@@ -7,6 +7,38 @@
 
     <div class="content-wrapper">
         <router-outlet></router-outlet> 
+        <div *ngIf = "toRevealDetails" id="absolute-details" class="container-border">
+            <span> TLDR </span>
+
+            <span>
+                Inspired by <a href="https://dariodaf.github.io/TerrariaRandomWeapon/" target="_blank">this</a> website.<br>
+                If all you need is vanilla content, use this one, its better for that matter.
+            </span>
+
+            <span>
+                If you find any inconsistencies, like weapons being in the wrong tier, or any other problem go to 
+                <a href="https://github.com/ArtemRozh/terraria-modded-random-weapon-selector" target="_blank">github page of this project</a>
+            </span>
+
+            <span>
+                Now to usage: If you roll on King Slime tier, the weapon you get is the one you would use untill you slay King Slime. 
+                Thats basic premise. Everything is up to the player anyway.
+            </span>
+
+            <span>
+                Weapons are located as early as they could be obtained. It matters mostly with Calamity, 
+                where you can get hellstone gear before any bosses, and hardmode ores moved to earliest hardmode due to fishing, stuff like that.
+            </span>
+
+            <span>
+                This site could support any amount of mods, only thing I need is mod data, which Im too lazy to gather due to requiring a lot of manual sorting.
+                But its possible.
+            </span>
+
+            <span>
+                If you dont like the progression, there should be a menu to modify it to fit your needs. Note that there could be some inconsistencies after some swaps.
+            </span>
+        </div>
     </div>
 
     <footer>
@@ -16,9 +48,13 @@
             <span> Terraria v.1.4.4.9  </span>
         </div>
 
-        <span class="signature-text">
-            Made by Artem Rozh
-        </span>
+        <div class="details-container">
+            <span class="signature-text">
+                Made by Artem Rozh
+            </span>
+
+            <img id="hint-image" (click)="revealDetails()" src="details/hint.png" alt="details">
+        </div>
     </footer>
 </div>
 
