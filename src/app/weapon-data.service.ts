@@ -136,6 +136,8 @@ export class WeaponDataService {
 
     const finalSeed = `${dateDiff}-${randomToken}`;
 
+    console.log(finalSeed);
+    
     const rng = seedrandom(finalSeed);
     const randomIndex = Math.floor(rng() * availableList.length);
 

@@ -5,8 +5,8 @@
     --container-border-color: #495eabe0;
     --container-background-color: #202747e0;
 
-    --spceial-button-color-one: #fff238f1;
-    --spceial-button-color-two: #ffff84f1;
+    --spceial-button-color-one: #f4f474;
+    --spceial-button-color-two: #f4f474;
 }
 
 html, body{
@@ -35,12 +35,12 @@ app-root {
 
 .container-border{
     border: var(--container-border-color) 0.25vw solid;
-    border-radius: 0.7vw 0.1vw 0.7vw 0.1vw;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
 }
 
 .content-border{
     border: var(--element-border-color) 0.15vw solid;
-    border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
 }
 
 * {

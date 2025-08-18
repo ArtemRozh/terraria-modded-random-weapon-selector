@@ -12,7 +12,7 @@
 .selector-container > * {
     background-color: var(--element-background-color);
     border: var(--element-border-color) 0.15vw solid;
-    border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
 
     width: 80%;
     height: 7%;
@@ -60,7 +60,7 @@
 #special-container > button {
     background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
     border: var(--element-border-color) 0.15vw solid;
-    border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
 
     margin: 0 1vw 0 1vw;
 
@@ -80,7 +80,7 @@
     align-items: center;    
     justify-content: center; 
 
-    border-radius: 0.1vw 0.7vw 0.1vw 0.7vw;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
 }
 
 .config-selector{
