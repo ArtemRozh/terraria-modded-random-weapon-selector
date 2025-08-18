@@ -46,12 +46,15 @@ app-root {
 * {
     font-size: 1.2vw;
     font-family: "Bookman Old Style", Georgia, serif;
+    color: white;
 }
 
 button {
     font-size: inherit;
     font-family: inherit;
     font-weight: inherit;
+
+    color: black;
 }
 
 button, input {

@@ -1,0 +1,54 @@
+.progression-container{
+    width: 30%;
+    height: 80%;
+    background-color: var(--container-background-color);
+
+    padding: 0.5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.progression-element{
+    width: 90%;
+    height: 5%;
+    padding: 0 1vw;
+
+    background-color: var(--element-background-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.progression-changer{
+    width: 10%;
+    height: 50%;
+    color: black;
+    font-size: 1vw;
+}
+
+#reset-button{
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    margin-top: 1vw;
+}
+
+.progression-container::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.progression-container::-webkit-scrollbar-thumb {
+    background-color: var(--container-background-color);
+    border-radius: 15px;
+}
+
+.progression-container::-webkit-scrollbar-track {
+    background: var(--main-background-color);
+}

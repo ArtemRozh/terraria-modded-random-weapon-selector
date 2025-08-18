@@ -1,0 +1,20 @@
+<div class="main-container">
+
+    <div class="progression-container container-border">
+        <div class="progression-element content-border" *ngFor="let prog of currentProgression">
+            <span>
+                {{prog.step}}
+            </span>
+            <input 
+                #indexInput
+                class="progression-changer" 
+                type="number" 
+                [value]="getProgressionIndex(prog) + 1" 
+                (change)="changeIndex(indexInput.value, prog)"> 
+        </div>
+    </div>
+
+    <button id="reset-button" class="content-border" (click)="restoreToDefaultProgression()">
+        Reset progression
+    </button>
+</div>

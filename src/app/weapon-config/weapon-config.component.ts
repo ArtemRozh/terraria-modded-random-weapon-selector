@@ -55,5 +55,5 @@ export class WeaponConfigComponent {
     this.selectorState.availableWeapons = [...this.availableWeapons]; 
       
     this.availableWeapons = this.availableWeapons.sort((a, b) => a.name.localeCompare(b.name));
-}
+  }
 }

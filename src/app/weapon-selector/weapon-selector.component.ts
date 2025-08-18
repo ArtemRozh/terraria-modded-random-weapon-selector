@@ -42,8 +42,8 @@ export class WeaponSelectorComponent {
     this.currentIndex = this.selectorState.currentIndex;
     this.availableContent = [...this.selectorState.availableContent];
     this.clearSwitch = this.selectorState.clearSwich;
-    this.progression = this.mergeProgressions(vanillaProgression, allModdedProgression);
 
+    this.properProgressionMerge();
     this.updateAvailableWeapons();
 
     this.selectedWeapon = this.selectorState.selectedWeapon;
@@ -151,11 +151,12 @@ export class WeaponSelectorComponent {
       this.availableContent[index].active = value;
     }
 
-    this.progression = this.mergeProgressions(vanillaProgression, allModdedProgression);
+    this.progression = this.fullModifyProgression();
     this.currentIndex = 0;
 
     this.updateAvailableWeapons();
 
+    this.selectorState.progression = this.progression;
     this.selectorState.availableContent = [...this.availableContent];
     this.selectorState.currentIndex = this.currentIndex;
     this.selectorState.availableWeapons = this.availableWeapons;
@@ -170,6 +171,40 @@ export class WeaponSelectorComponent {
   clearBannedWeapons(){
     this.selectorState.bannedWeaponsMap = {};
     this.updateAvailableWeapons();
+  }
+
+  fullModifyProgression(){
+    return this.mergeProgressions(vanillaProgression, allModdedProgression);
+  }
+
+  properProgressionMerge() {
+    const freshProgression = this.fullModifyProgression();
+    const savedProgression = this.selectorState.progression;
+
+    const hasSavedProgression = savedProgression.length !== 0;
+    const progressionsDiffer = !this.selectorState.arrayEquals(freshProgression, savedProgression);
+
+    this.progression = (hasSavedProgression && progressionsDiffer)
+      ? savedProgression
+      : freshProgression;
+  }
+
+  reconcileProgression(saved: { step: string }[], fresh: { step: string }[]): { step: string }[] {
+    const freshOrderMap = new Map(fresh.map((p, idx) => [p.step, idx]));
+
+    let filteredSaved = saved.filter(p => freshOrderMap.has(p.step));
+
+    for (const stepObj of fresh) {
+      if (!filteredSaved.find(p => p.step === stepObj.step)) {
+        filteredSaved.push(stepObj);
+      }
+    }
+    
+    filteredSaved.sort((a, b) => {
+      return (freshOrderMap.get(a.step) ?? 0) - (freshOrderMap.get(b.step) ?? 0);
+    });
+
+    return filteredSaved;
   }
 
   private updateAvailableWeapons(): void {

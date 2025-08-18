@@ -8,14 +8,25 @@ export const enum Boss {
     Skeletron = "Skeletron",
     WallOfFlesh = "Wall of Flesh",
     QueenSlime = "Queen Slime",
+    
     MechBoss1 = "1st Mech Boss",
     MechBossRest = "Rest Mech Bosses",
+
     Plantera = "Plantera",
     Golem = "Golem",
     Duke = "Duke Fishron",
     Empress = "Empress of Light",
     Cultist = "Lunatic Cultist",
-    MoonLord = "Moon lord"
+    MoonLord = "Moon lord",
+
+    FirstMech = "FirstMech",
+
+    Destroyer = "The Destroyer",
+    Twinks = "The Twins",
+    Prime = "Skeletron Prime",
+
+    MechRest = "PostMech",
+
 }
 
 export const enum Calamityboss{
@@ -35,8 +46,8 @@ export const enum Calamityboss{
     ProfanedGuardians = "Profaned Guardians",
     Dragonfly = "Dragonfolly",
     Providence = "Providence, the Profaned Goddess",
-    Servant1 = "1st Servant of the Scourge",  
-    ServantRest = "Rest Servants of the Scourge",
+
+
     Polterghast = "Polterghast",    
     OldPuke = "The Old Duke",
     DOG = "The Devourer of Gods",
@@ -44,6 +55,16 @@ export const enum Calamityboss{
     ExoMechs = "Exo Mechs",
     SupremeCababitas = "Supreme Witch, Calamitas",
     BossRush = "End Game (Boss Rush, etc.)",
+
+    Servant1 = "1st Servant of The Scourge",
+    ServantRest = "Rest Servants of The Scourge",
+
+    
+    FirstServant = "PreServants",
+    Weaver = "Storm Weaver",  
+    Void = "Ceaseless Void", 
+    Signus = "Signus, Envoy of the Devourer", 
+    PostServants = "PostServants",
 }
 
 export const enum StarsAboveBoss{
@@ -73,8 +94,10 @@ export const vanillaProgression = [
     {step: Boss.Skeletron},
     {step: Boss.WallOfFlesh},
     {step: Boss.QueenSlime},
+
     {step: Boss.MechBoss1},
     {step: Boss.MechBossRest},
+
     {step: Boss.Plantera},
     {step: Boss.Golem},
     {step: Boss.Duke},
@@ -90,7 +113,7 @@ export const calamityProgression = [
     {step: Calamityboss.SlimeGod, after: Boss.Skeletron},
     {step: Calamityboss.Cryogen, after: Boss.QueenSlime},
     {step: Calamityboss.AquaticScourge, after: Boss.MechBoss1},
-    {step: Calamityboss.Brimstone, after: Boss.MechBoss1},
+    {step: Calamityboss.Brimstone, after: Calamityboss.AquaticScourge},
     {step: Calamityboss.CababitasClone, after: Boss.MechBossRest},
     {step: Calamityboss.Leviathan, after: Boss.Plantera},
     {step: Calamityboss.AstrumAureus, after: Calamityboss.Leviathan},
@@ -100,8 +123,10 @@ export const calamityProgression = [
     {step: Calamityboss.ProfanedGuardians, after: Boss.MoonLord},
     {step: Calamityboss.Dragonfly, after: Calamityboss.ProfanedGuardians},
     {step: Calamityboss.Providence, after: Calamityboss.Dragonfly},
+
     {step: Calamityboss.Servant1, after: Calamityboss.Providence},
     {step: Calamityboss.ServantRest, after: Calamityboss.Servant1},
+
     {step: Calamityboss.Polterghast, after: Calamityboss.ServantRest},
     {step: Calamityboss.OldPuke, after: Calamityboss.Polterghast},
     {step: Calamityboss.DOG, after: Calamityboss.OldPuke},
@@ -111,7 +136,7 @@ export const calamityProgression = [
     {step: Calamityboss.BossRush, after: Calamityboss.SupremeCababitas},
 ];
 
-export const starsAboveProgression = [
+export const starsAboveProgression: { step: string; after: string }[]  = [
     {step: StarsAboveBoss.Vagrant, after: Boss.EyeOfCthulhu},
     {step: StarsAboveBoss.Thespian, after: Boss.EvilBoss},
     {step: StarsAboveBoss.Dioskouroi, after: Boss.Skeletron},

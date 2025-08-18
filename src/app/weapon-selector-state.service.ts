@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { allContent, ContentLabels } from './data/progression.data';
+import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
 
 @Injectable({
   providedIn: 'root'
@@ -123,5 +123,15 @@ export class WeaponSelectorStateService {
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }
+  }
+
+  arrayEquals(a:any[], b:any[]){
+    if (a.length !== b.length) return false;
+
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return false;
+    }
+
+    return true;
   }
 }
