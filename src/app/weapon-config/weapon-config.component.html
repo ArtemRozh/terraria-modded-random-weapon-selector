@@ -1,7 +1,38 @@
 <div class="main-container">
     <div class="content-container">
+        <div id='helper-container'>
+            <div id='sorting-container'>
+                <input #searchInput class="colored-input" type="text" placeholder="Search for... " (change)="searchFor(searchInput.value)">
+                <div class="option-container">
+                    Filter
+                    <div>
+                        <input #inputIndex1 type="radio" name="filter" value="all" (change)="changeDisplay(inputIndex1.value)" [checked]="filterState === 'all'"> All
+                    </div>
+                    <div>
+                        <input #inputIndex2 type="radio" name="filter" value="available" (change)="changeDisplay(inputIndex2.value)" [checked]="filterState === 'available'"> Available
+                    </div>
+                    <div>
+                        <input #inputIndex3 type="radio" name="filter" value="banned" (change)="changeDisplay(inputIndex3.value)" [checked]="filterState === 'banned'"> Banned
+                    </div>
+                </div>
+
+                <div class="option-container">
+                    Sort
+                    <div>
+                        <input #inputSortIndex1 type="radio" name="sort" value="alpha" (change)="changeSort(inputSortIndex1.value)" [checked]="sortingState === 'alpha'"> A-Z
+                    </div>
+                    <div>
+                        <input #inputSortIndex2 type="radio" name="sort" value="prog" (change)="changeSort(inputSortIndex2.value)" [checked]="sortingState === 'prog'"> Progression
+                    </div>
+                    <div>
+                        <input type="checkbox" [(ngModel)]="isReverse" (change)="changeReverse()"> Reverse
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <button 
-            class="weapon-content" *ngFor="let weapon of availableWeapons"
+            class="weapon-content" *ngFor="let weapon of displayWeapons"
             [style.background-color] = "getBackgroundColor(weapon.banned)"
             (click)="swapWeaponState(weapon)">
             <span class="text-container"> {{ weapon.name }} </span>

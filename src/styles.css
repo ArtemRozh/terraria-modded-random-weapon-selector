@@ -10,7 +10,7 @@
 }
 
 html, body{
-    background-image: url('backgrounds/main.png');
+    background-image: url('/backgrounds/main.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;

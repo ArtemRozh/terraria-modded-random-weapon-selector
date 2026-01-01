@@ -10,12 +10,12 @@
             <div *ngIf="selectedWeapon.name !== 'None'" class="weapon-image">
                 <img [src]="selectedWeapon['image']" alt="weapons">
             </div>
-            {{ selectedWeapon.name }} 
+            <span class='selected-weapon'>{{ selectedWeapon.name }}</span>
         </div>
         
         <div id="special-container">
             <button (click)="changeStep(-1)" [disabled]="currentIndex === 0">P</button>
-            <div> Select stage </div>
+            <div> Select Stage <input #indexInput class="special-input" type="number" [value]="currentIndex+1" (change)="changeProgressionByInput(indexInput.value)"></div>
             <button (click)="changeStep(1)" [disabled]="currentIndex === progression.length - 1">N</button>
         </div>
         

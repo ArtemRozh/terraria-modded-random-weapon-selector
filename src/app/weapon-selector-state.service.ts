@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
+import { Filter, Sort } from './data/filter.data';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class WeaponSelectorStateService {
   private _clearSwich = false;
   private _banSwitch = false;
   private _bannedWeaponsMap: Record<string, boolean> = {};
+
+  private _filterState: string = "";
+  private _sortingState: string = "";
+  private _isReverse: boolean = false;
 
   private storageKey = 'weaponSelectorState';
 
@@ -66,19 +71,37 @@ export class WeaponSelectorStateService {
     this.saveState();
   }
 
+  get isReverse() {
+    return this._isReverse;
+  }
+  set isReverse(value: boolean) {
+    this._isReverse = value;
+    this.saveState();
+  }
+
+  get filterState() {
+    return this._filterState;
+  }
+  
+  set filterState(value: string) {
+    this._filterState = value;
+    this.saveState();
+  }
+
+  get sortingState() {
+    return this._sortingState;
+  }
+  
+  set sortingState(value: string) {
+    this._sortingState = value;
+    this.saveState();
+  }
+
   get banSwitch() {
     return this._banSwitch;
   }
   set banSwitch(value: boolean) {
     this._banSwitch = value;
-    this.saveState();
-  }
-
-  get clearSwich() {
-    return this._clearSwich;
-  }
-  set clearSwich(value: boolean) {
-    this._clearSwich = value;
     this.saveState();
   }
 
@@ -91,6 +114,15 @@ export class WeaponSelectorStateService {
     this.saveState();
   }
 
+  get clearSwich() {
+    return this._clearSwich;
+  }
+
+  set clearSwich(value: boolean) {
+    this._clearSwich = value;
+    this.saveState();
+  }
+
   saveState() {
     const state = {
       currentIndex: this._currentIndex,
@@ -100,7 +132,10 @@ export class WeaponSelectorStateService {
       switch: this._switch,
       clearSwich: this._clearSwich,
       banSwitch: this._banSwitch,
-      bannedWeaponsMap: this._bannedWeaponsMap
+      bannedWeaponsMap: this._bannedWeaponsMap,
+      filterState: this._filterState,
+      sortingState: this._sortingState,
+      isReverse: this._isReverse
     };
     
     localStorage.setItem(this.storageKey, JSON.stringify(state));
@@ -120,6 +155,9 @@ export class WeaponSelectorStateService {
       this._clearSwich = state.clearSwich || false;
       this._banSwitch = state.banSwitch || false;
       this._bannedWeaponsMap = state.bannedWeaponsMap || {};
+      this._filterState = state.filterState || Filter.All;
+      this.sortingState = state.sortingState || Sort.Alphabet;
+      this.isReverse = state.isReverse || false;
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }

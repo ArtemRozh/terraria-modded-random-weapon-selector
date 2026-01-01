@@ -132,7 +132,7 @@ export class WeaponDataService {
     const date2 = new Date()
 
     const dateDiff = date1.getTime() - date2.getTime();
-    const randomToken = "final_update_" + Math.floor(Math.random() * 20);
+    const randomToken = "final_update_" + Math.floor(Math.random() * 200);
 
     const finalSeed = `${dateDiff}-${randomToken}`;
 

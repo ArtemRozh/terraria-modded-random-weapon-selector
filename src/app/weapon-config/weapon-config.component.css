@@ -63,21 +63,62 @@
 }
 
 .weapon-container {
-  width: 45%;
-  aspect-ratio: 1 / 1;
-  
-  background-color: var(--element-background-color);
-  border: var(--element-border-color) 0.3vw solid;
-  border-radius: 0.7vw;
+    width: 45%;
+    aspect-ratio: 1 / 1;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;       
+    background-color: var(--element-background-color);
+    border: var(--element-border-color) 0.3vw solid;
+    border-radius: 0.7vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;       
 }
 
 .weapon-image {
   width: 90%;
   height: 90%;
   object-fit: contain;
+}
+
+#helper-container{
+    width: 100%;
+    height: 16%;
+
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sorting-container{
+    width: 50%;
+    height: 100%;
+    
+    padding: 15px;
+
+    background-color: var(--element-background-color);
+    border: var(--element-border-color) 0.3vw solid;
+    
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option-container {
+    background-color: var(--element-background-color);
+    padding: 5px;
+    border: var(--element-border-color) 0.3vw solid;
+
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+}
+
+.colored-input {
+    background: var(--container-background-color);
+    border: 3px solid var(--main-background-color);
+    color: white;
 }

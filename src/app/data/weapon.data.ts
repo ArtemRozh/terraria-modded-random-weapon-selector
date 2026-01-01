@@ -944,7 +944,7 @@ export const calamityWeaponData = [
         {name: 'Dynamic Pursuer', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.Yharon},//
         {name: 'Eclipses Fall', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DOG},//
         {name: 'Elemental Disk', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.MoonLord},//
-        {name: 'Enchanted Axe', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DesertScourge},//
+        {name: 'Enchanted Axe', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Skeletron},//
         {name: 'Epidemic Shredder', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.Golem},//
         {name: 'Equanimity', image: 'weapon-images/CalamityMod/Default.png',  tier: Boss.WallOfFlesh},//
         {name: 'Eradicator', image: 'weapon-images/CalamityMod/Default.png',  tier: Calamityboss.DOG},//

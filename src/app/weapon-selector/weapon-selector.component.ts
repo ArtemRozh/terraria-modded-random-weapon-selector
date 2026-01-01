@@ -84,6 +84,19 @@ export class WeaponSelectorComponent {
 
   }
 
+  changeProgressionByInput(newIndex: string) {
+    const index = Number(newIndex) - 1
+
+    if (index >= 0 && index < this.progression.length) {
+      this.currentIndex = index;
+
+      this.updateAvailableWeapons();
+
+      this.selectorState.currentIndex = this.currentIndex;
+      this.selectorState.availableWeapons = this.availableWeapons;
+    }
+  }
+
   clearWeaponsOnDifficultyChange(){
     //this.clearSwitch = !this.clearSwitch;
     this.selectorState.clearSwich = this.clearSwitch;
