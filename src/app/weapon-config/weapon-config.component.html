@@ -2,7 +2,7 @@
     <div class="content-container">
         <div id='helper-container'>
             <div id='sorting-container'>
-                <input #searchInput class="colored-input" type="text" placeholder="Search for... " (change)="searchFor(searchInput.value)">
+                <input #searchInput class="colored-input" type="text" placeholder="Search for... " (input)="searchFor(searchInput.value)">
                 <div class="option-container">
                     Filter
                     <div>

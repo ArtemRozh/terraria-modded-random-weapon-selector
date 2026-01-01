@@ -6,11 +6,11 @@
     --container-background-color: #202747e0;
 
     --spceial-button-color-one: #f4f474;
-    --spceial-button-color-two: #f4f474;
+    --spceial-button-color-two: #ffffc1;
 }
 
 html, body{
-    background-image: url('backgrounds/main.png');
+    background-image: url('/backgrounds/main.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
