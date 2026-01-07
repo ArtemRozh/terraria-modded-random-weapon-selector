@@ -25,7 +25,6 @@ export class WeaponSelectorComponent {
 
   constructor(private weaponDataService: WeaponDataService,
   private selectorState: WeaponSelectorStateService) {
-      this.updateAvailableWeapons();
   }
 
   get availableContentFiltered() {
@@ -44,6 +43,7 @@ export class WeaponSelectorComponent {
     this.clearSwitch = this.selectorState.clearSwich;
 
     this.properProgressionMerge();
+    this.selectorState.progression = this.progression;
     this.updateAvailableWeapons();
 
     this.selectedWeapon = this.selectorState.selectedWeapon;
@@ -176,9 +176,22 @@ export class WeaponSelectorComponent {
   }
 
   selectRandomWeapon(){
-    this.selectedWeapon = this.weaponDataService.getRandomWeapon(this.selectorState.bannedWeaponsMap, this.banSwitch, this.availableContent);
+    this.selectedWeapon = this.weaponDataService.getRandomWeapon(
+        this.selectorState.progression,
+        this.selectorState.progression[this.selectorState.currentIndex]?.step,
+        this.selectorState.clearSwich,
+        this.selectorState.bannedWeaponsMap,
+        this.selectorState.banSwitch,
+        this.selectorState.availableContent
+      );
     this.selectorState.selectedWeapon = this.selectedWeapon;
-    this.availableWeapons = this.weaponDataService.getWeapons(this.selectorState.bannedWeaponsMap, this.availableContent);
+    this.availableWeapons = this.weaponDataService.getWeaponsByProgression(
+        this.selectorState.progression,
+        this.selectorState.progression[this.selectorState.currentIndex]?.step,
+        this.selectorState.clearSwich,
+        this.selectorState.bannedWeaponsMap,
+        this.selectorState.availableContent
+      );
   }
 
   clearBannedWeapons(){
@@ -228,5 +241,25 @@ export class WeaponSelectorComponent {
       this.selectorState.bannedWeaponsMap,
       this.availableContent
     );
+  }
+
+  saveStateToFile(){
+    this.selectorState.saveStateToFile()
+  }
+
+  loadStateFromFile(event: Event){
+    const file = (event.target as HTMLInputElement).files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const error = this.selectorState.loadStateFromFile(reader.result as string);
+      if (error) alert(error);
+      else {
+        alert('State loaded!');
+        location.reload();
+      }
+    };
+    reader.readAsText(file);
   }
 }

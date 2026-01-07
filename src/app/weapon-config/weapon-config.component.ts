@@ -4,7 +4,7 @@ import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
 import { Filter, Sort } from '../data/filter.data';
 import { FormsModule } from '@angular/forms';
-import { Boss } from '../data/progression.data';
+import { Boss, Calamityboss } from '../data/progression.data';
 
 @Component({
   selector: 'app-weapon-config',
@@ -22,6 +22,12 @@ export class WeaponConfigComponent {
   filterState: string = Filter.All;
   sortingState: string = Sort.Alphabet;
   isReverse: boolean = false;
+
+  private mechBosses: string[] = [ Boss.Destroyer, Boss.Twinks, Boss.Prime ]
+  private mechBossesTags: string[] = [Boss.MechBoss1, Boss.MechBoss2, Boss.MechBossRest]
+
+  private calamityServants: string[] = [ Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void ]
+  private calamityServantsTags: string[] = [Calamityboss.PostServants]
 
   constructor(private weaponDataService: WeaponDataService,
       private selectorState: WeaponSelectorStateService
@@ -100,8 +106,55 @@ export class WeaponConfigComponent {
     weapon: any,
     progression: { step: string }[]
   ): number {
+    
+
     if (weapon.tier === Boss.PreBoss) {
       return -1;
+    }
+
+
+
+    return this.getRelatedBossIndex(weapon, progression);
+  }
+
+  getRelatedBossIndex(
+    weapon: any,
+    progression: { step: string }[]
+  ): number {
+    if (this.mechBossesTags.includes(weapon.tier)) {
+      let helperArray: string|any = []
+
+      for(const tag of progression){
+        if(this.mechBosses.includes(tag.step)){
+          helperArray.push(tag.step)
+        }
+      }
+
+      switch(weapon.tier){
+        case this.mechBossesTags[0]:
+          return progression.findIndex(p => p.step === helperArray[0]) + 0.5;
+        case this.mechBossesTags[1]:
+          return progression.findIndex(p => p.step === helperArray[1]) + 0.5;
+        case this.mechBossesTags[2]:
+          return progression.findIndex(p => p.step === helperArray[2]) + 0.5;
+      }
+    }
+
+    if(this.calamityServantsTags.includes(weapon.tier)) {
+      let helperArray: string|any = []
+
+      for(const tag of progression){
+        if(this.calamityServants.includes(tag.step)){
+          helperArray.push(tag.step)
+        }
+      }
+
+      console.log(helperArray)
+
+      switch(weapon.tier){
+        case this.calamityServantsTags[0]:
+          return progression.findIndex(p => p.step === helperArray[2]) + 0.5;
+      }
     }
 
     return progression.findIndex(p => p.step === weapon.tier);
@@ -141,7 +194,13 @@ export class WeaponConfigComponent {
     this.isReverse = this.selectorState.isReverse
     
     if (!this.availableWeapons || this.availableWeapons.length === 0) {
-      this.availableWeapons = this.weaponDataService.getWeapons(this.selectorState.bannedWeaponsMap, this.selectorState.availableContent);
+      this.availableWeapons = this.weaponDataService.getWeaponsByProgression(
+        this.selectorState.progression,
+        this.selectorState.progression[this.selectorState.currentIndex]?.step,
+        this.selectorState.clearSwich,
+        this.selectorState.bannedWeaponsMap,
+        this.selectorState.availableContent
+      );
     }
 
     const bannedMap = this.selectorState.bannedWeaponsMap;

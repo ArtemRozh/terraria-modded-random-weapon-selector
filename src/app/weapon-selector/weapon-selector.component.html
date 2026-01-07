@@ -55,5 +55,12 @@
                 <input type="checkbox" [(ngModel)]="content.active" (change)="modifyProgression(content.label, content.active)"> Enable {{ content.label }}
              </div>
         </div>
+
+        <div class="save-selector">
+            <button (click)="saveStateToFile()"> Save State </button>  
+            
+            <label for="fileInput" class="file-button">Load State</label>
+            <input id="fileInput" type="file" (change)="loadStateFromFile($event)" accept="application/json" hidden />
+        </div>
     </div>
 </div>

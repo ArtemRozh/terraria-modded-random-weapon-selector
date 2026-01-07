@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
 import { Filter, Sort } from './data/filter.data';
+import { saveAs } from 'file-saver';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,13 @@ export class WeaponSelectorStateService {
   private _isReverse: boolean = false;
 
   private storageKey = 'weaponSelectorState';
+
+  // modernization block
+
+  private legacyTags: string[] = [Boss.MechBoss1, Boss.MechBossRest, Calamityboss.Servant1, Calamityboss.ServantRest] 
+  private replacementTags: string[] = [Boss.Destroyer, Boss.Twinks, Boss.Prime, Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void]
+
+  //
 
   get currentIndex() {
     return this._currentIndex;
@@ -124,19 +132,7 @@ export class WeaponSelectorStateService {
   }
 
   saveState() {
-    const state = {
-      currentIndex: this._currentIndex,
-      availableContent: this._availableContent,
-      progression: this._progression,
-      selectedWeapon: this._selectedWeapon,
-      switch: this._switch,
-      clearSwich: this._clearSwich,
-      banSwitch: this._banSwitch,
-      bannedWeaponsMap: this._bannedWeaponsMap,
-      filterState: this._filterState,
-      sortingState: this._sortingState,
-      isReverse: this._isReverse
-    };
+    const state = this.getState();
     
     localStorage.setItem(this.storageKey, JSON.stringify(state));
   } 
@@ -149,7 +145,7 @@ export class WeaponSelectorStateService {
       const state = JSON.parse(raw);
       this._currentIndex = state.currentIndex || 0;
       this._availableContent = state.availableContent || [...allContent];
-      this._progression = state.progression || [];
+      this._progression = this._progression = this.modernizeProgression(state.progression || []);
       this._selectedWeapon = state.selectedWeapon || { name: "None" };
       this._switch = state.switch || false;
       this._clearSwich = state.clearSwich || false;
@@ -163,6 +159,76 @@ export class WeaponSelectorStateService {
     }
   }
 
+  getState(){
+    return {
+        currentIndex: this._currentIndex,
+        availableContent: this._availableContent,
+        progression: this._progression,
+        selectedWeapon: this._selectedWeapon,
+        switch: this._switch,
+        clearSwich: this._clearSwich,
+        banSwitch: this._banSwitch,
+        bannedWeaponsMap: this._bannedWeaponsMap,
+        filterState: this._filterState,
+        sortingState: this._sortingState,
+        isReverse: this._isReverse
+      };
+  }
+
+  saveStateToFile(){
+    try {
+      const state = this.getState();
+
+      const json = JSON.stringify(state, null, 2);
+      const blob = new Blob([json], { type: "application/json;charset=utf-8" });
+      saveAs(blob, "weaponSelectorState.json");
+    } catch (e) {
+      alert("Failed to save state: " + e);
+    }
+  }
+
+  loadStateFromFile(json: string): string | null {
+    try {
+      const parsed = JSON.parse(json);
+
+      if (!parsed || typeof parsed !== 'object') {
+        return 'Invalid file format: not an object';
+      }
+
+      const requiredKeys = [
+        'currentIndex', 'availableContent', 'progression', 'selectedWeapon',
+        'switch', 'clearSwich', 'banSwitch', 'bannedWeaponsMap',
+        'filterState', 'sortingState', 'isReverse'
+      ];
+
+      for (const key of requiredKeys) {
+        if (!(key in parsed)) {
+          return `Invalid file format: missing key "${key}"`;
+        }
+      }
+
+
+      this._currentIndex = parsed.currentIndex;
+      this._availableContent = parsed.availableContent;
+      this._progression = parsed.progression;
+      this._selectedWeapon = parsed.selectedWeapon;
+      this._switch = parsed.switch;
+      this._clearSwich = parsed.clearSwich;
+      this._banSwitch = parsed.banSwitch;
+      this._bannedWeaponsMap = parsed.bannedWeaponsMap;
+      this._filterState = parsed.filterState;
+      this._sortingState = parsed.sortingState;
+      this._isReverse = parsed.isReverse;
+
+      this.saveState(); 
+      
+      return null;
+
+    } catch (e: any) {
+      return 'Failed to parse JSON: ' + (e.message || e.toString());
+    }
+  }
+
   arrayEquals(a:any[], b:any[]){
     if (a.length !== b.length) return false;
 
@@ -171,5 +237,44 @@ export class WeaponSelectorStateService {
     }
 
     return true;
+  }
+
+  modernizeProgression(progression: { step: string }[]): { step: string }[] {
+    const result: { step: string }[] = [];
+
+    let replacedMechBoss = false;
+    let replacedServant = false;
+
+    for (const item of progression) {
+      const step = item.step;
+
+      if (
+        step === Boss.MechBoss1 ||
+        step === Boss.MechBossRest ||
+        step === Calamityboss.Servant1 ||
+        step === Calamityboss.ServantRest
+      ) {
+        if (step === Boss.MechBoss1 && !replacedMechBoss) {
+          result.push(
+            { step: this.replacementTags[0] },
+            { step: this.replacementTags[1] },
+            { step: this.replacementTags[2] }
+          );
+          replacedMechBoss = true;
+        } else if (step === Calamityboss.Servant1 && !replacedServant) {
+          result.push(
+            { step: this.replacementTags[3] },
+            { step: this.replacementTags[4] },
+            { step: this.replacementTags[5] }
+          );
+          replacedServant = true;
+        }
+        continue;
+      }
+
+      result.push(item);
+    }
+
+    return result;
   }
 }

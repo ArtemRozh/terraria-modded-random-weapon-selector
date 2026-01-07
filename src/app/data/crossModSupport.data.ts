@@ -14,6 +14,21 @@ export const calamityToVanillaWeaponChanges = [
 	{name: 'Volcano', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss},
 	{name: 'Phoenix Blaster', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss},
 	{name: 'Imp Staff', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss},
+
+	{name: 'Orichalcum Sword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Orichalcum Halberd', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Orichalcum Repeater', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Titanium Sword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	{name: 'Titanium Trident', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	{name: 'Titanium Repeater', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	{name: 'Mythril Halberd', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Mythril Repeater', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Mythril Sword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss1},// Modified by calamity (?)
+	{name: 'Adamantite Repeater', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	{name: 'Adamantite Sword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	{name: 'Adamantite Glaive', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},// Modified by calamity (?)
+	
+    {name: 'Spirit Flame', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.MechBoss2},//
 ];
 
 export const calamityToStarsAboveWeaponChanges = [

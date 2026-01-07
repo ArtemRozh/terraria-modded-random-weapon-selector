@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { allWeaponData } from './data/weapon.data';
-import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints } from './data/progression.data';
+import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints, Calamityboss } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
 
@@ -8,11 +8,16 @@ import seedrandom from 'seedrandom';
   providedIn: 'root'
 })
 export class WeaponDataService {
-  private progression: { step: string }[] = [];
-  private currentStep: string = '';
-  private clearSwitch: boolean = false;
+  // related bosses
+  private mechBosses: string[] = [ Boss.Destroyer, Boss.Twinks, Boss.Prime ]
+  private mechBossesTags: string[] = [Boss.MechBoss1, Boss.MechBoss2, Boss.MechBossRest]
 
-  constructor() {}
+  private calamityServants: string[] = [ Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void ]
+  private calamityServantsTags: string[] = [Calamityboss.PostServants]
+
+
+  constructor() {
+  }
 
   private gatherAvailableWeapons(availableContent: { label: string; active: boolean }[]): any[] {
     const weaponsList: any[] = [];
@@ -41,10 +46,6 @@ export class WeaponDataService {
     availableContent: { label: string; active: boolean }[]
   ): any[] {
     const weapons = this.gatherAvailableWeapons(availableContent);
-
-    this.progression = progression;
-    this.currentStep = currentStep;
-    this.clearSwitch = clearSwitch;
 
     let filteredWeapons = this.filterWeaponsByProgression(weapons, progression, currentStep, clearSwitch);
 
@@ -75,10 +76,14 @@ export class WeaponDataService {
         return false;
       }
       
-      const tierIndex = (w.tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === w.tier);
+      let tierIndex = (w.tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === w.tier);
+
+      if(this.mechBossesTags.includes(w.tier) || this.calamityServantsTags.includes(w.tier)) {
+        tierIndex = this.getRelatedBossesTier(progression, w.tier)
+      }
 
       // test only
-      //const certainBool = true;
+      // const certainBool = true;
 
       //if (certainBool) {
       //  if (tierIndex === -1) {
@@ -111,20 +116,61 @@ export class WeaponDataService {
     });
   }
 
-  getWeapons(
-    bannedMap: Record<string, boolean> = {},
-    availableContent: { label: string; active: boolean }[]
-  ): any[] {
-    const filtered = this.getWeaponsByProgression(this.progression, this.currentStep, this.clearSwitch, bannedMap, availableContent);
-    return filtered.sort((a, b) => a.name.localeCompare(b.name));
+  getRelatedBossesTier(progression: { step: string }[], tier: string): number {
+    // vanilla helper and modded helper
+    const helperArray: string|any = []
+
+    // filling the array with steps, if any new needed add condition here
+    for (const prog of progression) {
+      if(this.mechBosses.includes(prog.step) || this.calamityServants.includes(prog.step)){
+        helperArray.push(prog.step)
+      }
+    }
+
+    // finding the last step, if any new needed add another if here
+    for (let i = helperArray.length - 1; i >= 0; i--){
+      if(tier === this.mechBossesTags[2] && this.mechBosses.includes(helperArray[i])) {
+        return progression.findIndex(p => p.step === helperArray[i]);
+      } 
+
+      if(tier === this.calamityServantsTags[0] && this.calamityServants.includes(helperArray[i])) {
+        return progression.findIndex(p => p.step === helperArray[i]);
+      }
+    }
+
+    // finding first or second step, if any new needed add another ifs here
+    let helperCount = 0
+    for(const prog of helperArray){
+      if(tier === this.mechBossesTags[0] && this.mechBosses.includes(prog)) {
+        return progression.findIndex(p => p.step === prog);
+      } 
+
+      if(tier === this.mechBossesTags[1] && this.mechBosses.includes(prog)) {
+        if(helperCount === 1) {
+          return progression.findIndex(p => p.step === prog);
+        }
+        helperCount++
+      } 
+    }
+
+    return -1
   }
 
   getRandomWeapon(
-    bannedMap: Record<string, boolean> = {},
+    progression: { step: string }[],
+    currentStep: string,
+    clearSwitch: boolean,
+    bannedMap: Record<string, boolean>,
     banSwitch: boolean,
     availableContent: { label: string; active: boolean }[]
   ): any {
-    const availableList = this.getWeapons(bannedMap, availableContent).filter(element => !element.banned);
+    const availableList = this.getWeaponsByProgression(
+      progression,
+      currentStep,
+      clearSwitch,
+      bannedMap,
+      availableContent
+    ).filter(w => !w.banned);
 
     if (availableList.length === 0) return {name: 'Copper Shortsword', image: 'weapon-images/Vanilla/Default.png',  tier: Boss.PreBoss};
 

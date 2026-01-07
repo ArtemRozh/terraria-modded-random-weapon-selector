@@ -36,6 +36,7 @@
             [style.background-color] = "getBackgroundColor(weapon.banned)"
             (click)="swapWeaponState(weapon)">
             <span class="text-container"> {{ weapon.name }} </span>
+            <span class="sub-text-container"> Tier: {{ weapon.tier }} </span>
             <div class="weapon-container"><img [src]="weapon.image" class="weapon-image" alt="weapon"></div> 
         </button>
     </div>
