@@ -27,7 +27,70 @@
                 <input type="checkbox" [(ngModel)]="content.active" (change)="modifyProgression(content.label, content.active)"> Enable {{ content.label }}
              </div>
         </div>
+
+        <div class="config-section-title"> World evil </div>
+
+        <div class="config-selector">
+            <div class="button-holder">
+                <button 
+                    class="evil-button" 
+                    [ngClass]="{'button-active': checkWorldEvil(1) === true, 'button-inactive': checkWorldEvil(1) === false}"
+                    (click)="changeWorldEvil(1)">
+                    Crimson
+                </button>
+                <button 
+                    class="evil-button" 
+                    [ngClass]="{'button-active': checkWorldEvil(2) === true, 'button-inactive': checkWorldEvil(2) === false}"
+                    (click)="changeWorldEvil(2)">
+                    Corruption
+                </button>
+                <button 
+                    class="evil-button" 
+                    [ngClass]="{'button-active': checkWorldEvil(3) === true, 'button-inactive': checkWorldEvil(3) === false}"
+                    (click)="changeWorldEvil(3)">
+                    Both
+                </button>
+            </div>
+        </div>
         
+        <div class="config-section-title" [ngClass]="{'hidden': !checkIfContentEnabled(1)}"> Vanilla </div>
+
+        <div class="config-selector"  [ngClass]="{'hidden': !checkIfContentEnabled(1)}">
+            <div>
+                <input type="checkbox" [(ngModel)]="finalUpdateSwitch" (change)="changeFinalUpdate()"> Enable 1.4.4.5 Vanilla weapons
+            </div>
+        </div>
+
+        <div class="config-section-title" [ngClass]="{'hidden': !checkIfContentEnabled(2)}"> Calamity </div>
+
+        <div class="config-selector" [ngClass]="{'hidden': !checkIfContentEnabled(2)}">
+            <div>
+                <input type="checkbox"  [(ngModel)]="preBossHellstoneSwitch" (change)="changePreBossHelstone()"> Enable pre-boss hellstone weapons
+            </div>
+        </div>
+
+        <div class="config-section-title"  [ngClass]="{'hidden': !checkIfContentEnabled(3)}"> Stars Above </div>
+
+        <div class="config-selector"  [ngClass]="{'hidden': !checkIfContentEnabled(3)}">
+            <div>
+                Starfarer of choice:
+            </div>
+            <div class="button-holder">
+                <button 
+                    class="starfarer-button"
+                    [ngClass]="{'button-active': checkStarfarer(1) === true, 'button-inactive': checkStarfarer(1) === false}"
+                    (click)="changeStarfarer(1)">
+                    Asphodene
+                </button>
+                <button 
+                    class="starfarer-button"
+                    [ngClass]="{'button-active': checkStarfarer(2) === true, 'button-inactive': checkStarfarer(2) === false}"
+                    (click)="changeStarfarer(2)">
+                    Eridani
+                </button>
+            </div>
+        </div>
+
         <div class="save-selector">
             <button (click)="saveStateToFile()"> Save State </button>  
             

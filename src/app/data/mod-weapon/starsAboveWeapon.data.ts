@@ -1,4 +1,5 @@
 import { Boss, StarsAboveBoss } from "../progression.data";
+import { StarsAboveTag } from "../tag.data";
 
 export const starsAboveWeaponData=[
         //{name: 'Every Moment Matters', image: 'weapon-images/StarsAbove/Default.png',  tier: [StarsAboveBoss.Vagrant]},// removed
@@ -12,7 +13,7 @@ export const starsAboveWeaponData=[
         {name: 'The Only Thing I Know For Real', image: 'weapon-images/StarsAbove/Default.png',  tier: [StarsAboveBoss.Arbitration]},//
         {name: 'Ultima Thule', image: 'weapon-images/StarsAbove/Default.png',  tier: [StarsAboveBoss.Tsukiyomi]},// Changed by calamity
         {name: 'Virtues Edge', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.MoonLord]},// Changed by calamity
-        {name: 'Aegis Driver', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.KingSlime]},//
+        {name: 'Aegis Driver', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.KingSlime], tags: [StarsAboveTag.Asphodene]},//
         {name: 'Carian Dark Moon', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.EyeOfCthulhu]},//
         {name: 'Cloak of An Arbiter', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.Cultist]},//
         {name: 'Dragged Below', image: 'weapon-images/StarsAbove/Default.png',  tier: [Boss.WallOfFlesh]},//

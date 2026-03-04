@@ -1,4 +1,5 @@
 import { ContentLabels, Boss, Calamityboss, StarsAboveBoss } from "./progression.data";
+import { CalamityTag } from "./tag.data";
 
 export const calamityToVanillaWeaponChanges = [
     {name: 'Nights Edge', image: 'weapon-images/Vanilla/Default.png',  tier: [Calamityboss.SlimeGod]},
@@ -11,7 +12,7 @@ export const calamityToVanillaWeaponChanges = [
     {name: 'Hallowed Jousting Lance', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.MechBossRest]},
     {name: 'Zenith', image: 'weapon-images/Vanilla/Default.png',  tier: [Calamityboss.Yharon]},
 	{name: 'Trimarang', image: 'weapon-images/Vanilla/Default.png',  tier: [Calamityboss.DesertScourge]},
-	{name: 'Volcano', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},
+	{name: 'Volcano', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [CalamityTag.PreBossHellstone]},
 	{name: 'Phoenix Blaster', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},
 	{name: 'Imp Staff', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},
 

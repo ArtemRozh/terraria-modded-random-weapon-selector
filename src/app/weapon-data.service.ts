@@ -3,6 +3,9 @@ import { allWeaponData } from './data/allWeapon.data';
 import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints, Calamityboss } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
+import { WeaponSelectorStateService } from './weapon-selector-state.service';
+import { CalamityTag, StarsAboveTag, VanillaTag } from './data/tag.data';
+import { WorldEvil } from './data/helper/worldEvil.data';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +19,7 @@ export class WeaponDataService {
   private calamityServantsTags: string[] = [Calamityboss.PostServants]
 
 
-  constructor() {
-  }
+  constructor(private selectorState: WeaponSelectorStateService) {}
 
   private gatherAvailableWeapons(availableContent: { label: string; active: boolean }[]): any[] {
     const weaponsList: any[] = [];
@@ -57,6 +59,8 @@ export class WeaponDataService {
     return filteredWeapons;
   }
 
+
+  // main filtering happen here
   private filterWeaponsByProgression(
     weapons: any[],
     progression: { step: string }[],
@@ -75,6 +79,9 @@ export class WeaponDataService {
       if (isVanillaDisabled && w.source === ContentLabels.Vanilla) {
         return false;
       }
+
+      // tag filtering
+      if(!this.filterByTags(w)) return false;
       
       let tier = this.getLatestWeaponTier(w.tier, progression)
       let tierIndex = (tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === tier);
@@ -117,6 +124,49 @@ export class WeaponDataService {
     });
   }
 
+  filterByTags(weapon: any): boolean{
+    if(weapon.tags === undefined || weapon.tags.length === 0) return true;
+
+    return (this.filterWorldEvil(weapon) 
+      || this.filterVanillaTags(weapon)
+      || this.filterCalamityTags(weapon)
+      || this.filterStarsAboveTags(weapon))
+  }
+
+  filterWorldEvil(weapon: any): boolean{
+    if(this.selectorState.worldEvil === WorldEvil.Both) return true;
+
+    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === VanillaTag.Corruption) || (t === VanillaTag.Crimson))
+
+    if(this.selectorState.worldEvil === weapon.tags[neededTagIndex]) return true;
+
+    return false;
+  }
+
+  filterVanillaTags(weapon: any): boolean{
+    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === VanillaTag.FinalUpdate))
+
+    if(this.selectorState.finalUpdateSwitch && neededTagIndex !== -1) return true
+    
+    return false
+  }
+
+  filterCalamityTags(weapon: any): boolean{
+    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === CalamityTag.PreBossHellstone))
+
+    if(this.selectorState.preBossHellstoneSwitch && neededTagIndex !== -1) return true
+    
+    return false
+  }
+
+  filterStarsAboveTags(weapon: any): boolean{
+    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === StarsAboveTag.Asphodene) || (t === StarsAboveTag.Eridani))
+
+    if(this.selectorState.starfarer === weapon.tags[neededTagIndex]) return true;
+
+    return false;
+  }
+
   getLatestWeaponTier(weaponTier: string[], progression: { step: string }[]): string{
     if(weaponTier.length === 1) return weaponTier[0]
 
@@ -133,7 +183,6 @@ export class WeaponDataService {
         }
     }
     
-    console.log(weaponTier[highestTier])
     return weaponTier[highestTier]  
   }
 

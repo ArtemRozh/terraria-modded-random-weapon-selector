@@ -1,4 +1,5 @@
 import { Boss } from "./progression.data";
+import { VanillaTag } from "./tag.data";
 
 export const vanillaWeaponData = [
     {name: 'Iron Broadsword', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},// (?) is when its modified, but Idk if i need to change
@@ -6,7 +7,7 @@ export const vanillaWeaponData = [
     {name: 'Wooden Sword', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
     {name: 'Wooden Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},// 
     {name: 'Shuriken', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
-    {name: 'Demon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
+    {name: 'Demon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [VanillaTag.Corruption]},//
     {name: 'Lights Bane', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]}, //
     {name: 'Enchanted Boomerang', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
     {name: 'Vilethorn', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
@@ -107,7 +108,7 @@ export const vanillaWeaponData = [
     {name: 'Proximity Mine Launcher', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.Plantera]},//
     {name: 'Nettle Burst', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.Plantera]},//
     {name: 'Blood Butcherer', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
-    {name: 'Tendon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
+    {name: 'Tendon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [VanillaTag.Crimson]},//
     {name: 'The Undertaker', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
     {name: 'The Meatball', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.EvilBoss]},//
     {name: 'The Rotted Fork', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
@@ -402,4 +403,5 @@ export const vanillaWeaponData = [
     {name: 'Hive-Five', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.QueenBee]},//
     {name: 'Trimarang', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},// Modified by calamity
     {name: 'Waffles Iron', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.MechBossRest]},// GetFixedBoi shit
+    {name: 'Cobwhip', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [VanillaTag.FinalUpdate]},// Testing tags
 ];
