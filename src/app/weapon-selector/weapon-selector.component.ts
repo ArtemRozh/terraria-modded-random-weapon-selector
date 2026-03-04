@@ -35,6 +35,7 @@ export class WeaponSelectorComponent  {
 
     if (!this.selectorState.progression || this.selectorState.progression.length === 0) {
         const initialProgression = vanillaProgression;
+        console.log(vanillaProgression)
         this.selectorState.progression = initialProgression;
     }
 

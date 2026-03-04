@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { allWeaponData } from './data/weapon.data';
+import { allWeaponData } from './data/allWeapon.data';
 import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints, Calamityboss } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
@@ -76,10 +76,11 @@ export class WeaponDataService {
         return false;
       }
       
-      let tierIndex = (w.tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === w.tier);
+      let tier = this.getLatestWeaponTier(w.tier, progression)
+      let tierIndex = (tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === tier);
 
-      if(this.mechBossesTags.includes(w.tier) || this.calamityServantsTags.includes(w.tier)) {
-        tierIndex = this.getRelatedBossesTier(progression, w.tier)
+      if(this.mechBossesTags.includes(tier) || this.calamityServantsTags.includes(tier)) {
+        tierIndex = this.getRelatedBossesTier(progression, tier)
       }
 
       // test only
@@ -114,6 +115,26 @@ export class WeaponDataService {
 
       return tierIndex < currentIndex && currentIndex <= disappearIndex;
     });
+  }
+
+  getLatestWeaponTier(weaponTier: string[], progression: { step: string }[]): string{
+    if(weaponTier.length === 1) return weaponTier[0]
+
+    let highestIndex = 0
+    let highestTier = 0
+
+    for(let i = 0; i < weaponTier.length; ++i){
+        let tmp = progression.findIndex(p => p.step === weaponTier[i])
+        console.log(weaponTier[i])
+        console.log(tmp)
+        if (tmp > highestIndex){
+          highestTier = i
+          highestIndex = tmp
+        }
+    }
+    
+    console.log(weaponTier[highestTier])
+    return weaponTier[highestTier]  
   }
 
   getRelatedBossesTier(progression: { step: string }[], tier: string): number {
