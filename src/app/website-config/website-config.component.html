@@ -1,1 +1,38 @@
-<p>website-config works!</p>
+<div class="main-container">
+    <div class="selector-container  container-border">
+        <div class="config-selector">
+            <div>
+                <input type="checkbox" [(ngModel)]="switch" (change)="changeVanillaWeaponsAvailabillity()"> Remove vanilla weapons from the list
+            </div>
+            <div>
+                <input type="checkbox" [(ngModel)]="clearSwitch" (change)="clearWeaponsOnDifficultyChange()"> Dont clear weapons on difficulty change
+            </div>
+            <div>
+                <input type="checkbox" [(ngModel)]="banSwitch" (change)="banWeaponsOnRoll()"> Ban rolled weapon on obtainment
+            </div>
+        </div>
+
+        <!-- Potential configs: -->
+        <!-- Crimson/Corruption switch for vanilla -->
+        <!-- Starfarrer switch for stars above -->
+        <!-- To enable hellstone pre boss weapons for calamity -->
+        <!-- To disable hint tooltips (if I make them) -->
+        <!-- To disable details tooltips (if I make them) -->
+        <!-- To disable Weapon rarity colors (if I make them) -->
+
+        <button (click)="clearBannedWeapons()"> Clear all banned weapons </button>
+
+        <div class="config-selector">
+            <div *ngFor="let content of availableContentFiltered">
+                <input type="checkbox" [(ngModel)]="content.active" (change)="modifyProgression(content.label, content.active)"> Enable {{ content.label }}
+             </div>
+        </div>
+        
+        <div class="save-selector">
+            <button (click)="saveStateToFile()"> Save State </button>  
+            
+            <label for="fileInput" class="file-button">Load State</label>
+            <input id="fileInput" type="file" (change)="loadStateFromFile($event)" accept="application/json" hidden />
+        </div>
+    </div>
+</div>  

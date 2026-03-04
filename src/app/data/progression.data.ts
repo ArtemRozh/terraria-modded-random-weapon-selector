@@ -176,6 +176,6 @@ export const allModdedProgression = [
 
 export const allContent = [
     {label: ContentLabels.Vanilla, active: true}, 
-    {label: ContentLabels.Calamity, active: true}, 
-    {label: ContentLabels.StarsAbove, active: true}
+    {label: ContentLabels.Calamity, active: false}, 
+    {label: ContentLabels.StarsAbove, active: false}
 ]

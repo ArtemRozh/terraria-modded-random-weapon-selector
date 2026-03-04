@@ -4,15 +4,15 @@
 }
 
 .button-holder{
-    width: 30%;
+    width: 10%;
     height: 6%;
 
     margin-top: 5vh;
-
+    padding: 1px 5px;
     background-color: var(--container-background-color);
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -58,9 +58,19 @@ footer > *{
 }
 
 .link-button{
-    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
-    height: 70%;
-    width: 30%;
+    background: linear-gradient(120deg, var(--element-background-color), var(--element-background-color));
+    height: 90%;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.link-button > img {
+    width: 100%;
+    height: 100%;
 }
 
 #hint-image{
