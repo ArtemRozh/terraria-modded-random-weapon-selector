@@ -78,7 +78,7 @@ export const enum StarsAboveBoss{
     Tsukiyomi = "Tsukiyomi, the First Starfarer"
 }
 
-export const enum ContentLabels{  // ensure that labels are the same in weapons.json
+export const enum ContentLabels{  // ensure that labels are the same in weapons.data and mod-weapon folder stuff
     Vanilla = "Vanilla",
     Calamity = "Calamity",
     StarsAbove = "Stars Above"

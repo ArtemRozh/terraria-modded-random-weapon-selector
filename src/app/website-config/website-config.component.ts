@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
 import { allContent, allModdedProgression, ContentLabels, vanillaProgression } from '../data/progression.data';
+import { WorldEvil } from '../data/helper/worldEvil.data';
+import { Starfarer } from '../data/helper/smallModHelper.data';
 
 @Component({
   selector: 'app-website-config',
@@ -18,6 +20,16 @@ export class WebsiteConfigComponent {
   banSwitch: boolean = false;
   progression: any[] = [];
 
+  // Vanilla
+  worldEvil: string = WorldEvil.Both;
+  finalUpdateSwitch: boolean = false;
+
+  // Stars Above
+  starfarer: string = Starfarer.Asphodene;
+
+  // Calamity
+  preBossHellstoneSwitch: boolean = true;
+
   constructor(
     private weaponDataService: WeaponDataService,
     public selectorState: WeaponSelectorStateService
@@ -30,6 +42,11 @@ export class WebsiteConfigComponent {
     this.clearSwitch = this.selectorState.clearSwich;
     this.switch = this.selectorState.switch;
     this.banSwitch = this.selectorState.banSwitch;
+
+    this.worldEvil = this.selectorState.worldEvil;
+    this.finalUpdateSwitch = this.selectorState.finalUpdateSwitch;
+    this.starfarer = this.selectorState.starfarer;
+    this.preBossHellstoneSwitch = this.selectorState.preBossHellstoneSwitch;
 
     if (!this.selectorState.progression || this.selectorState.progression.length === 0) {
       this.progression = this.fullModifyProgression();
@@ -135,5 +152,96 @@ export class WebsiteConfigComponent {
       if (!this.selectorState.loadStateFromFile(reader.result as string)) location.reload();
     };
     reader.readAsText(file);
+  }
+
+  changeWorldEvil(option: number){
+      switch (option) {
+      case 1:
+        this.worldEvil = WorldEvil.Crimson
+        break;
+      case 2:
+        this.worldEvil = WorldEvil.Corruption
+        break;
+      case 3:
+        this.worldEvil = WorldEvil.Both
+        break;
+      default:
+        this.worldEvil = WorldEvil.Both
+        break;
+    }
+
+    this.selectorState.worldEvil = this.worldEvil;
+    this.updateAvailableWeapons();
+  }
+
+  checkWorldEvil(option: number): boolean{
+      switch (option) {
+      case 1:
+        return this.worldEvil === WorldEvil.Crimson
+      case 2:
+        return this.worldEvil === WorldEvil.Corruption
+      case 3:
+        return this.worldEvil === WorldEvil.Both
+      default:
+        return this.worldEvil === WorldEvil.Both
+    }
+  }
+
+  changeStarfarer(option: number){
+    switch (option) {
+      case 1:
+        this.starfarer = Starfarer.Asphodene
+        break;
+      case 2:
+        this.starfarer = Starfarer.Eridani
+        break;
+      default:
+        this.starfarer = Starfarer.Asphodene
+        break;
+    }
+
+    this.selectorState.starfarer = this.starfarer;
+    this.updateAvailableWeapons();
+  }
+
+  checkStarfarer(option: number): boolean{
+    switch (option) {
+      case 1:
+        return this.starfarer === Starfarer.Asphodene
+      case 2:
+        return this.starfarer === Starfarer.Eridani
+      default:
+        return this.starfarer === Starfarer.Asphodene
+    }
+  }
+
+  checkIfContentEnabled(option: number): boolean {
+    let index = 0;
+
+    switch (option) {
+      case 1:
+        index = this.availableContent.findIndex(c => c.label === ContentLabels.Vanilla)
+        break;
+      case 2:
+        index = this.availableContent.findIndex(c => c.label === ContentLabels.Calamity)
+        break;
+      case 3:
+        index = this.availableContent.findIndex(c => c.label === ContentLabels.StarsAbove)
+        break;
+      default:
+        return false
+    }
+
+    return this.availableContent[index].active;
+  }
+
+  changePreBossHelstone() {
+    this.selectorState.preBossHellstoneSwitch = this.preBossHellstoneSwitch;
+    this.updateAvailableWeapons();
+  }
+
+  changeFinalUpdate() {
+    this.selectorState.finalUpdateSwitch = this.finalUpdateSwitch;
+    this.updateAvailableWeapons();
   }
 }

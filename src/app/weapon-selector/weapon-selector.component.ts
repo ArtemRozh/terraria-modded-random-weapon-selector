@@ -30,11 +30,19 @@ export class WeaponSelectorComponent  {
     return this.availableWeapons.filter(el => el.banned !== true);
   }
 
+  get rarityColorVar(): string {
+    if (!this.selectedWeapon?.rarity) return 'var(--white-rarity)';
+    
+    const slug = this.selectedWeapon.rarity.toLowerCase().replace(/\s+/g, '-');
+    return `var(--${slug}-rarity)`;
+  }
+
   ngOnInit() {
     this.selectorState.loadState();
 
     if (!this.selectorState.progression || this.selectorState.progression.length === 0) {
         const initialProgression = vanillaProgression;
+        console.log(vanillaProgression)
         this.selectorState.progression = initialProgression;
     }
 

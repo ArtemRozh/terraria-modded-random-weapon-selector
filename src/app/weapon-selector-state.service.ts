@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
 import { Filter, Sort } from './data/filter.data';
 import { saveAs } from 'file-saver';
+import { WorldEvil } from './data/helper/worldEvil.data';
+import { Starfarer } from './data/helper/smallModHelper.data';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +22,16 @@ export class WeaponSelectorStateService {
   private _filterState: string = "";
   private _sortingState: string = "";
   private _isReverse: boolean = false;
+
+  // Vanilla
+  private _worldEvil: string = WorldEvil.Both;
+  private _finalUpdateSwitch: boolean = false;
+  
+  // Stars Above
+  private _starfarer: string = Starfarer.Asphodene;
+  
+  // Calamity
+  private _preBossHellstoneSwitch: boolean = true;
 
   private storageKey = 'weaponSelectorState';
 
@@ -131,6 +143,42 @@ export class WeaponSelectorStateService {
     this.saveState();
   }
 
+  get worldEvil() {
+    return this._worldEvil;
+  }
+
+  set worldEvil(value: string) {
+    this._worldEvil = value;
+    this.saveState();
+  }
+
+  get finalUpdateSwitch() {
+    return this._finalUpdateSwitch;
+  }
+
+  set finalUpdateSwitch(value: boolean) {
+    this._finalUpdateSwitch = value;
+    this.saveState();
+  }
+
+  get starfarer() {
+    return this._starfarer;
+  }
+
+  set starfarer(value: string) {
+    this._starfarer = value;
+    this.saveState();
+  }
+
+  get preBossHellstoneSwitch() {
+    return this._preBossHellstoneSwitch;
+  }
+
+  set preBossHellstoneSwitch(value: boolean) {
+    this._preBossHellstoneSwitch = value;
+    this.saveState();
+  }
+
   saveState() {
     const state = this.getState();
     
@@ -154,6 +202,10 @@ export class WeaponSelectorStateService {
       this._filterState = state.filterState || Filter.All;
       this.sortingState = state.sortingState || Sort.Alphabet;
       this.isReverse = state.isReverse || false;
+      this._worldEvil = state.worldEvil || WorldEvil.Both;
+      this._finalUpdateSwitch = state.finalUpdateSwitch || false;
+      this._starfarer = state.starfarer || Starfarer.Asphodene;
+      this._preBossHellstoneSwitch = state.preBossHellstoneSwitch !== undefined ? state.preBossHellstoneSwitch : true;
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }
@@ -171,7 +223,11 @@ export class WeaponSelectorStateService {
         bannedWeaponsMap: this._bannedWeaponsMap,
         filterState: this._filterState,
         sortingState: this._sortingState,
-        isReverse: this._isReverse
+        isReverse: this._isReverse,
+        worldEvil: this._worldEvil,
+        finalUpdateSwitch: this._finalUpdateSwitch,
+        starfarer: this._starfarer,
+        preBossHellstoneSwitch: this._preBossHellstoneSwitch
       };
   }
 
@@ -207,6 +263,7 @@ export class WeaponSelectorStateService {
         }
       }
 
+      this.ensureNewFields(parsed);
 
       this._currentIndex = parsed.currentIndex;
       this._availableContent = parsed.availableContent;
@@ -219,6 +276,10 @@ export class WeaponSelectorStateService {
       this._filterState = parsed.filterState;
       this._sortingState = parsed.sortingState;
       this._isReverse = parsed.isReverse;
+      this._worldEvil = parsed.worldEvil;
+      this._finalUpdateSwitch = parsed.finalUpdateSwitch;
+      this._starfarer = parsed.starfarer;
+      this._preBossHellstoneSwitch = parsed.preBossHellstoneSwitch;
 
       this.saveState(); 
       
@@ -239,6 +300,7 @@ export class WeaponSelectorStateService {
     return true;
   }
 
+  // currently obsolete as of time of use only two people needed it. Kept as an example how any future adaptations should be done
   modernizeProgression(progression: { step: string }[]): { step: string }[] {
     const result: { step: string }[] = [];
 
@@ -276,5 +338,30 @@ export class WeaponSelectorStateService {
     }
 
     return result;
+  }
+
+  ensureNewFields(parsed: any) {
+    const missing: string[] = [];
+
+    if (!('worldEvil' in parsed)) {
+      parsed.worldEvil = WorldEvil.Both;
+      missing.push('worldEvil');
+    }
+    if (!('finalUpdateSwitch' in parsed)) {
+      parsed.finalUpdateSwitch = false;
+      missing.push('finalUpdateSwitch');
+    }
+    if (!('starfarer' in parsed)) {
+      parsed.starfarer = Starfarer.Asphodene;
+      missing.push('starfarer');
+    }
+    if (!('preBossHellstoneSwitch' in parsed)) {
+      parsed.preBossHellstoneSwitch = true;
+      missing.push('preBossHellstoneSwitch');
+    }
+
+    if (missing.length > 0) {
+      alert(`Notice: Missing fields [${missing.join(', ')}] were initialized with default values.`);
+    }
   }
 }
