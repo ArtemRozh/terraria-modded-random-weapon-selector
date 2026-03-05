@@ -11,13 +11,36 @@
         </div>
         <div> Available Weapons: {{ availableToRollWeapons.length }} </div>
         <div> 
-            Weapon:
+            Weapon: 
+            <!--
             <div *ngIf="selectedWeapon.name !== 'None'" class="weapon-image">
                 <img [src]="selectedWeapon['image']" alt="weapons">
             </div>
-            <span class='selected-weapon'>{{ selectedWeapon.name }}</span>
+            -->
+            <span class='selected-weapon'> {{ selectedWeapon.name }}</span>
         </div>
         
+        <div id="weapon-container" *ngIf="selectedWeapon.name !== 'None'">
+            <div class="weapon-image">
+                <img [src]="selectedWeapon['image']" alt="weapons">
+            </div>
+            <div class="text-column">
+                <div>
+                    <span class='selected-weapon'>Rarity:</span>
+                    <span class="rarity-color" [style.--current-color]="rarityColorVar">
+                        {{ selectedWeapon.rarity || "Undefined" }}
+                    </span>
+                </div>
+                <div>
+                    <span class='selected-weapon'>Class:</span>
+                    <span class="rarity-color" [style.--current-color]="rarityColorVar">
+                        {{ selectedWeapon.class || "Undefined" }} 
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+
         <div id="special-container">
             <button (click)="changeStep(-1)" [disabled]="currentIndex === 0">P</button>
             <div> Select Stage <input #indexInput class="special-input" type="number" [value]="currentIndex+1" (change)="changeProgressionByInput(indexInput.value)"></div>

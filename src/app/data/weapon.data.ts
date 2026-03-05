@@ -7,7 +7,7 @@ export const vanillaWeaponData = [
     {name: 'Wooden Sword', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
     {name: 'Wooden Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},// 
     {name: 'Shuriken', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
-    {name: 'Demon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [VanillaTag.Corruption]},//
+    {name: 'Demon Bow', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: "ranged", rarity: "blue"},//
     {name: 'Lights Bane', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]}, //
     {name: 'Enchanted Boomerang', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
     {name: 'Vilethorn', image: 'weapon-images/Vanilla/Default.png',  tier: [Boss.PreBoss]},//
