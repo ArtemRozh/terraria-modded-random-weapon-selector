@@ -33,6 +33,10 @@ export class WeaponConfigComponent {
       private selectorState: WeaponSelectorStateService
   ) {}
 
+  getLatestTier(tiers: any): string{
+    return this.weaponDataService.getLatestWeaponTier(tiers, this.selectorState.progression)
+  }
+
   getBackgroundColor(isBanned: boolean): string{
     if(isBanned){
       return this.bannedColor;

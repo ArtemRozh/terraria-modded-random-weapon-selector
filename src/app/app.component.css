@@ -1,30 +1,66 @@
 .content-wrapper{
-    height: 82%;
+    height: 77%;
     width: 95%;
 }
 
 .button-holder{
-    width: 10%;
-    height: 6%;
+    width: 12%;
+    height: 12%;
 
-    margin-top: 5vh;
+    margin-top: 1vh;
     padding: 1px 5px;
     background-color: var(--container-background-color);
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.icon-holder{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    width: 95%;
+    height: 55%;
+}
+
+.link-button{
+    background: linear-gradient(120deg, var(--element-background-color), var(--element-background-color));
+    height: 95%;
+    width: 27%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.display-button{
+    width: 95%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+}
+
+.link-button.active {
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
 }
 
 footer{
     background-color: var(--element-background-color);
 
     width: 100%;
-    height: 6.1%;
+    height: 7.4%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 1.8vh;
 }
 
 .version-text-container{
@@ -57,16 +93,6 @@ footer > *{
     align-items: center;
 }
 
-.link-button{
-    background: linear-gradient(120deg, var(--element-background-color), var(--element-background-color));
-    height: 90%;
-    width: 25%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-}
 
 .link-button > img {
     width: 100%;

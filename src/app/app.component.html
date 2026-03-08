@@ -1,10 +1,13 @@
 <div class="main-container">
 
     <div class="button-holder container-border">
-        <button class="link-button content-border" routerLink="/main" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Housing_menu_%28on%29.png?9af942"></button>
-        <button class="link-button content-border" routerLink="/config" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Copper_Shortsword.png?2ed47b"></button>
-        <button class="link-button content-border" routerLink="/prog" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Map_Icon_Eye_of_Cthulhu_%28first_form%29.png?1b90a8"></button>
-        <button class="link-button content-border" routerLink="/webconfig" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Cog.png?70c88a"></button>
+        <div class="icon-holder">
+            <button class="link-button content-border" routerLink="/main" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Housing_menu_%28on%29.png?9af942"></button>
+            <button class="link-button content-border" routerLink="/config" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Waffle%27s_Iron.png?be4e57"></button>
+            <button class="link-button content-border" routerLink="/prog" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Map_Icon_Eye_of_Cthulhu_%28first_form%29.png?1b90a8"></button>
+            <button class="link-button content-border" routerLink="/webconfig" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Cog.png?70c88a"></button>
+        </div>
+        <button class="display-button content-border"> {{currentRouteName}} </button>
     </div>
 
     <div class="content-wrapper">

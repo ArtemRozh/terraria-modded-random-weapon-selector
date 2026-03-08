@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router, RouterModule } from '@angular/router';
+import { RouterOutlet, Router, RouterModule, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,15 @@ import { RouterOutlet, Router, RouterModule } from '@angular/router';
 export class AppComponent {
   title = 'terraria-modded-random-weapon'; 
   toRevealDetails: boolean = false;
-  constructor(private router: Router) {}
+  currentRouteName: string = 'Weapon Selector';
+
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      this.getUrlReadableName(event.urlAfterRedirects);
+    });
+  }
 
   ngOnInit() {
     this.router.navigate(['/main']);
@@ -19,5 +28,13 @@ export class AppComponent {
 
   revealDetails(){
     this.toRevealDetails = !this.toRevealDetails;
+  }
+
+  getUrlReadableName(url: string) {
+    if (url.includes('/main')) this.currentRouteName = 'Weapon Selector';
+    else if (url.includes('/config')) this.currentRouteName = 'Weapons';
+    else if (url.includes('/prog')) this.currentRouteName = 'Progression';
+    else if (url.includes('/webconfig')) this.currentRouteName = 'Config';
+    else this.currentRouteName = 'Screen';
   }
 }
