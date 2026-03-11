@@ -4,7 +4,8 @@ import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
 import { Filter, Sort } from '../data/filter.data';
 import { FormsModule } from '@angular/forms';
-import { Boss, Calamityboss } from '../data/progression.data';
+import { Boss } from '../data/content/vanilla/vanillaBoss.data';
+import { Calamityboss } from '../data/content/calamity/calamityBoss.data';
 
 @Component({
   selector: 'app-weapon-config',

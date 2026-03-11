@@ -60,6 +60,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-top: 1.8vh;
 }
 
@@ -69,8 +70,11 @@ footer{
     align-items: center;
     justify-content: space-around;
 
-    width: 30%;
-    height: 100%;
+    background-color:  var(--container-background-color);
+    border-color: var(--element-border-color);
+
+    width: 40;
+    height: 60%;
 }
 
 .details-container{

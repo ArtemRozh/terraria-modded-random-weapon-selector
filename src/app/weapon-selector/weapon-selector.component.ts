@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
-import { vanillaProgression, allModdedProgression, allContent, ContentLabels } from '../data/progression.data';
+import { allModdedProgression, allContent, ContentLabels } from '../data/progression.data';
+import { vanillaProgression } from '../data/content/vanilla/vanillaProgression.data';
 
 @Component({
   selector: 'app-weapon-selector',

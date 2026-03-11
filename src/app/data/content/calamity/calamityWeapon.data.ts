@@ -1,7 +1,8 @@
-import { Boss, Calamityboss } from "../progression.data";
+import { Boss } from "../vanilla/vanillaBoss.data";
+import { Calamityboss } from "./calamityBoss.data";
 
 export const calamityWeaponData = [	
-{name: 'Dragoon Drizzlefish', image: 'https://calamitymod.wiki.gg/images/Dragoon_Drizzlefish.png?e9359b',  tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
+        {name: 'Dragoon Drizzlefish', image: 'https://calamitymod.wiki.gg/images/Dragoon_Drizzlefish.png?e9359b',  tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
         {name: 'Sparkling Empress', image: 'https://calamitymod.wiki.gg/images/Sparkling_Empress.png?71fa21',  tier: [Calamityboss.DesertScourge], tags: [], class: 'Magic', rarity: 'Green'},//
         {name: 'Galvanizing Glaive', image: 'https://calamitymod.wiki.gg/images/Galvanizing_Glaive.png?e8b92d',  tier: [Calamityboss.Plaguebringer], tags: [], class: 'Melee', rarity: 'Yellow'},//
         {name: 'Mounted Scanner', image: 'https://calamitymod.wiki.gg/images/Mounted_Scanner.png?b88855',  tier: [Boss.Prime], tags: [], class: 'Summon', rarity: 'Pink'},// Mech soul weapon

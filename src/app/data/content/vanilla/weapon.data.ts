@@ -1,5 +1,5 @@
-import { Boss } from "./progression.data";
-import { VanillaTag } from "./tag.data";
+import { VanillaTag } from "../../tag.data";
+import { Boss } from "./vanillaBoss.data";
 
 export const vanillaWeaponData = [
     {name: 'Iron Broadsword', image: 'https://terraria.wiki.gg/images/Iron_Broadsword.png?b2b3bd',  tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'White'},// (?) is when its modified, but Idk if i need to change

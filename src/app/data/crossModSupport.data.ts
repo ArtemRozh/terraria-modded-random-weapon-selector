@@ -1,5 +1,7 @@
-import { ContentLabels, Boss, Calamityboss, StarsAboveBoss } from "./progression.data";
+import { ContentLabels } from "./progression.data";
 import { CalamityTag } from "./tag.data";
+import { Calamityboss } from "./content/calamity/calamityBoss.data";
+import { Boss } from "./content/vanilla/vanillaBoss.data";
 
 export const calamityToVanillaWeaponChanges = [
     {name: 'Nights Edge', image: 'weapon-images/Vanilla/Default.png',  tier: [Calamityboss.SlimeGod]},

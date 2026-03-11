@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
-import { allContent, allModdedProgression, ContentLabels, vanillaProgression } from '../data/progression.data';
+import { allContent, allModdedProgression, ContentLabels } from '../data/progression.data';
+import { vanillaProgression } from '../data/content/vanilla/vanillaProgression.data';
 import { WorldEvil } from '../data/helper/worldEvil.data';
 import { Starfarer } from '../data/helper/smallModHelper.data';
 
@@ -73,10 +74,29 @@ export class WebsiteConfigComponent {
 
   modifyProgression(label: string, value: boolean) {
     const index = this.availableContent.findIndex(el => el.label === label);
-    if (index !== -1) {
-      this.availableContent[index].active = value;
-      this.syncChanges();
+    if (index === -1) return;
+
+    this.availableContent[index].active = value;
+
+    const masterData = allContent.find(c => c.label === label);
+
+    if (value === true) {
+      if (masterData?.requires) {
+        const parentIndex = this.availableContent.findIndex(el => el.label === masterData.requires);
+        if (parentIndex !== -1) {
+          this.availableContent[parentIndex].active = true;
+        }
+      }
+    } else {
+      this.availableContent.forEach((content, i) => {
+        const dependencyData = allContent.find(c => c.label === content.label);
+        if (dependencyData?.requires === label) {
+          this.availableContent[i].active = false;
+        }
+      });
     }
+
+    this.syncChanges();
   }
 
   clearWeaponsOnDifficultyChange() {

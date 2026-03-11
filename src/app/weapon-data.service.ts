@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { allWeaponData } from './data/allWeapon.data';
-import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints, Calamityboss } from './data/progression.data';
+import { allContent, ContentLabels, allMajorProgressionResetPoints } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
 import { WeaponSelectorStateService } from './weapon-selector-state.service';
 import { CalamityTag, StarsAboveTag, VanillaTag } from './data/tag.data';
 import { WorldEvil } from './data/helper/worldEvil.data';
+import { Boss } from './data/content/vanilla/vanillaBoss.data';
+import { Calamityboss } from './data/content/calamity/calamityBoss.data';
 
 @Injectable({
   providedIn: 'root'

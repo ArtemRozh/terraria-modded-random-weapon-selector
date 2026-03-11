@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
+import { allContent, ContentLabels } from './data/progression.data';
 import { Filter, Sort } from './data/filter.data';
 import { saveAs } from 'file-saver';
 import { WorldEvil } from './data/helper/worldEvil.data';
 import { Starfarer } from './data/helper/smallModHelper.data';
+import { Boss } from './data/content/vanilla/vanillaBoss.data';
+import { Calamityboss } from './data/content/calamity/calamityBoss.data';
+import { StarsAboveBoss } from './data/content/stars-above/starsAboveBoss.data';
 
 @Injectable({
   providedIn: 'root'
@@ -191,17 +194,24 @@ export class WeaponSelectorStateService {
 
     try {
       const state = JSON.parse(raw);
+      
       this._currentIndex = state.currentIndex || 0;
-      this._availableContent = state.availableContent || [...allContent];
-      this._progression = this._progression = this.modernizeProgression(state.progression || []);
+
+      const savedContent = state.availableContent || [];
+      this._availableContent = allContent.map(masterItem => {
+        const savedItem = savedContent.find((s: { label: ContentLabels; active: boolean }) => s.label === masterItem.label);
+        return savedItem ? { ...savedItem } : { ...masterItem };
+      });
+      
+      this._progression = this.modernizeProgression(state.progression || []);
       this._selectedWeapon = state.selectedWeapon || { name: "None" };
       this._switch = state.switch || false;
       this._clearSwich = state.clearSwich || false;
       this._banSwitch = state.banSwitch || false;
       this._bannedWeaponsMap = state.bannedWeaponsMap || {};
       this._filterState = state.filterState || Filter.All;
-      this.sortingState = state.sortingState || Sort.Alphabet;
-      this.isReverse = state.isReverse || false;
+      this._sortingState = state.sortingState || Sort.Alphabet;
+      this._isReverse = state.isReverse || false;
       this._worldEvil = state.worldEvil || WorldEvil.Both;
       this._finalUpdateSwitch = state.finalUpdateSwitch || false;
       this._starfarer = state.starfarer || Starfarer.Asphodene;
@@ -300,68 +310,49 @@ export class WeaponSelectorStateService {
     return true;
   }
 
-  // currently obsolete as of time of use only two people needed it. Kept as an example how any future adaptations should be done
   modernizeProgression(progression: { step: string }[]): { step: string }[] {
-    const result: { step: string }[] = [];
+    const mapping: Record<string, string[]> = {
+      [Boss.MechBoss1]: [Boss.Destroyer, Boss.Twinks, Boss.Prime],
+      [Boss.MechBossRest]: [], 
+      [Calamityboss.Servant1]: [Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void],
+      [Calamityboss.ServantRest]: []
+    };
 
-    let replacedMechBoss = false;
-    let replacedServant = false;
+    const processedTags = new Set<string>();
 
-    for (const item of progression) {
-      const step = item.step;
+    return progression.flatMap(item => {
+      const replacements = mapping[item.step];
 
-      if (
-        step === Boss.MechBoss1 ||
-        step === Boss.MechBossRest ||
-        step === Calamityboss.Servant1 ||
-        step === Calamityboss.ServantRest
-      ) {
-        if (step === Boss.MechBoss1 && !replacedMechBoss) {
-          result.push(
-            { step: this.replacementTags[0] },
-            { step: this.replacementTags[1] },
-            { step: this.replacementTags[2] }
-          );
-          replacedMechBoss = true;
-        } else if (step === Calamityboss.Servant1 && !replacedServant) {
-          result.push(
-            { step: this.replacementTags[3] },
-            { step: this.replacementTags[4] },
-            { step: this.replacementTags[5] }
-          );
-          replacedServant = true;
+      if (replacements) {
+        if (replacements.length > 0 && !processedTags.has(item.step)) {
+          processedTags.add(item.step);
+          return replacements.map(tag => ({ step: tag }));
         }
-        continue;
+        return [];
       }
 
-      result.push(item);
-    }
-
-    return result;
+      return [item];
+    });
   }
 
   ensureNewFields(parsed: any) {
-    const missing: string[] = [];
+    const defaults: any = {
+      worldEvil: WorldEvil.Both,
+      finalUpdateSwitch: false,
+      starfarer: Starfarer.Asphodene,
+      preBossHellstoneSwitch: true
+    };
 
-    if (!('worldEvil' in parsed)) {
-      parsed.worldEvil = WorldEvil.Both;
-      missing.push('worldEvil');
-    }
-    if (!('finalUpdateSwitch' in parsed)) {
-      parsed.finalUpdateSwitch = false;
-      missing.push('finalUpdateSwitch');
-    }
-    if (!('starfarer' in parsed)) {
-      parsed.starfarer = Starfarer.Asphodene;
-      missing.push('starfarer');
-    }
-    if (!('preBossHellstoneSwitch' in parsed)) {
-      parsed.preBossHellstoneSwitch = true;
-      missing.push('preBossHellstoneSwitch');
-    }
+    Object.keys(defaults).forEach(key => {
+      if (!(key in parsed)) {
+        parsed[key] = defaults[key];
+      }
+    });
 
-    if (missing.length > 0) {
-      alert(`Notice: Missing fields [${missing.join(', ')}] were initialized with default values.`);
-    }
+    const savedContent = parsed.availableContent || [];
+    parsed.availableContent = allContent.map(masterItem => {
+      const savedItem = savedContent.find((s: any) => s.label === masterItem.label);
+      return savedItem ? { ...savedItem } : { ...masterItem };
+    });
   }
 }
