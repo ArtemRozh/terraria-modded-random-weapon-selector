@@ -30,6 +30,7 @@ export class WebsiteConfigComponent {
 
   // Calamity
   preBossHellstoneSwitch: boolean = true;
+  hardmodeOreShenanigansSwitch: boolean = true;
 
   constructor(
     private weaponDataService: WeaponDataService,
@@ -48,6 +49,7 @@ export class WebsiteConfigComponent {
     this.finalUpdateSwitch = this.selectorState.finalUpdateSwitch;
     this.starfarer = this.selectorState.starfarer;
     this.preBossHellstoneSwitch = this.selectorState.preBossHellstoneSwitch;
+    this.hardmodeOreShenanigansSwitch = this.selectorState.hardmodeOreShenanigansSwitch;
 
     if (!this.selectorState.progression || this.selectorState.progression.length === 0) {
       this.progression = this.fullModifyProgression();
@@ -257,6 +259,11 @@ export class WebsiteConfigComponent {
 
   changePreBossHelstone() {
     this.selectorState.preBossHellstoneSwitch = this.preBossHellstoneSwitch;
+    this.updateAvailableWeapons();
+  }
+
+  changeHardmodeOreShenanigansSwitch() {
+    this.selectorState.hardmodeOreShenanigansSwitch = this.hardmodeOreShenanigansSwitch;
     this.updateAvailableWeapons();
   }
 

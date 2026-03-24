@@ -4,7 +4,7 @@ import { allContent, ContentLabels, allMajorProgressionResetPoints } from './dat
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
 import { WeaponSelectorStateService } from './weapon-selector-state.service';
-import { CalamityTag, StarsAboveTag, VanillaTag } from './data/tag.data';
+import { CalamityTag, CalamityTagReplacer, StarsAboveTag, VanillaTag } from './data/tag.data';
 import { WorldEvil } from './data/helper/worldEvil.data';
 import { Boss } from './data/content/vanilla/vanillaBoss.data';
 import { Calamityboss } from './data/content/calamity/calamityBoss.data';
@@ -53,6 +53,8 @@ export class WeaponDataService {
 
     let filteredWeapons = this.filterWeaponsByProgression(weapons, progression, currentStep, clearSwitch);
 
+
+
     filteredWeapons = filteredWeapons.map(wep => ({
       ...wep,
       banned: bannedMap[wep.name] ?? false
@@ -84,8 +86,14 @@ export class WeaponDataService {
 
       // tag filtering
       if(!this.filterByTags(w)) return false;
+
+      // Adjusting tiers by tags
+      let activeTiers = [...w.tier]; 
+      activeTiers = this.applyCalamityTierChanges(w, activeTiers);
+
+      // Other logic
       
-      let tier = this.getLatestWeaponTier(w.tier, progression)
+      let tier = this.getLatestWeaponTier(activeTiers, progression)
       let tierIndex = (tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === tier);
 
       if(this.mechBossesTags.includes(tier) || this.calamityServantsTags.includes(tier)) {
@@ -130,55 +138,77 @@ export class WeaponDataService {
     if(weapon.tags === undefined || weapon.tags.length === 0) return true;
 
     return (this.filterWorldEvil(weapon) 
-      || this.filterVanillaTags(weapon)
-      || this.filterCalamityTags(weapon)
-      || this.filterStarsAboveTags(weapon))
+      && this.filterVanillaTags(weapon)
+      && this.filterStarsAboveTags(weapon))
   }
 
   filterWorldEvil(weapon: any): boolean{
-    if(this.selectorState.worldEvil === WorldEvil.Both) return true;
+    if (this.selectorState.worldEvil === WorldEvil.Both) return true;
 
-    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === VanillaTag.Corruption) || (t === VanillaTag.Crimson))
+    const evilTags = [VanillaTag.Corruption, VanillaTag.Crimson];
+    const weaponEvilTag = weapon.tags.find((t: VanillaTag) => evilTags.includes(t));
 
-    if(this.selectorState.worldEvil === weapon.tags[neededTagIndex]) return true;
+    if (!weaponEvilTag) return true;
 
-    return false;
+    return this.selectorState.worldEvil === weaponEvilTag;
   }
 
   filterVanillaTags(weapon: any): boolean{
-    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === VanillaTag.FinalUpdate))
+    const hasTag = weapon.tags.includes(VanillaTag.FinalUpdate);
 
-    if(this.selectorState.finalUpdateSwitch && neededTagIndex !== -1) return true
-    
-    return false
+    return hasTag ? this.selectorState.finalUpdateSwitch : true;
   }
 
-  filterCalamityTags(weapon: any): boolean{
-    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === CalamityTag.PreBossHellstone))
 
-    if(this.selectorState.preBossHellstoneSwitch && neededTagIndex !== -1) return true
+  // For now obsolete
+  filterCalamityTags(weapon: any): boolean{
+    const hasTag = weapon.tags.includes(CalamityTag.PreBossHellstone);
     
-    return false
+    return hasTag ? this.selectorState.preBossHellstoneSwitch : true;
   }
 
   filterStarsAboveTags(weapon: any): boolean{
-    let neededTagIndex = weapon.tags.findIndex((t: string) => (t === StarsAboveTag.Asphodene) || (t === StarsAboveTag.Eridani))
+    const starfarerTags = [StarsAboveTag.Asphodene, StarsAboveTag.Eridani];
+    const weaponStarfarerTag = weapon.tags.find((t: StarsAboveTag) => starfarerTags.includes(t));
 
-    if(this.selectorState.starfarer === weapon.tags[neededTagIndex]) return true;
+    if (!weaponStarfarerTag) return true;
 
-    return false;
+    return this.selectorState.starfarer === weaponStarfarerTag;
+  }
+
+  applyCalamityTierChanges(weapon: any, currentTiers: string[]): string[] {
+    const isCalamityActive = !this.selectorState.availableContent.find(c => c.label === ContentLabels.Calamity)?.active;
+    if (!weapon.tags || weapon.tags.length === 0 || isCalamityActive) return currentTiers;
+
+    let updatedTiers = [...currentTiers];
+
+    for (const rule of CalamityTagReplacer) {
+      if (weapon.tags.includes(rule.tag)) {    
+        // Condition for Reaver Shark / Pre-Boss Hellstone switch
+        if (
+          rule.tag === CalamityTag.PreBossHellstone
+          && this.selectorState.preBossHellstoneSwitch
+        ) {
+          updatedTiers = updatedTiers.map(t => t === rule.replacedTier ? rule.tierToReplace : t);
+        } 
+        // All other Calamity-active swaps
+        else if(this.selectorState.hardmodeOreShenanigansSwitch){
+          updatedTiers = updatedTiers.map(t => t === rule.tierToReplace ? rule.replacedTier : t);
+          console.log(updatedTiers)
+        }
+      }
+    }
+    return updatedTiers;
   }
 
   getLatestWeaponTier(weaponTier: string[], progression: { step: string }[]): string{
     if(weaponTier.length === 1) return weaponTier[0]
-
     let highestIndex = 0
     let highestTier = 0
 
     for(let i = 0; i < weaponTier.length; ++i){
         let tmp = progression.findIndex(p => p.step === weaponTier[i])
-        console.log(weaponTier[i])
-        console.log(tmp)
+
         if (tmp > highestIndex){
           highestTier = i
           highestIndex = tmp

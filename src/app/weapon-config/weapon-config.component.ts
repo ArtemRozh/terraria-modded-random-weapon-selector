@@ -34,7 +34,8 @@ export class WeaponConfigComponent {
       private selectorState: WeaponSelectorStateService
   ) {}
 
-  getLatestTier(tiers: any): string{
+  getLatestTier(tiers: any, weapon: any): string{
+    tiers = this.weaponDataService.applyCalamityTierChanges(weapon, tiers)
     return this.weaponDataService.getLatestWeaponTier(tiers, this.selectorState.progression)
   }
 

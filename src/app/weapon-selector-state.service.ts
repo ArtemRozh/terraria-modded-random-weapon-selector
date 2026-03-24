@@ -35,6 +35,7 @@ export class WeaponSelectorStateService {
   
   // Calamity
   private _preBossHellstoneSwitch: boolean = true;
+  private _hardmodeOreShenanigansSwitch: boolean = true;
 
   private storageKey = 'weaponSelectorState';
 
@@ -182,6 +183,15 @@ export class WeaponSelectorStateService {
     this.saveState();
   }
 
+  get hardmodeOreShenanigansSwitch() {
+    return this._hardmodeOreShenanigansSwitch;
+  }
+
+  set hardmodeOreShenanigansSwitch(value: boolean) {
+    this._hardmodeOreShenanigansSwitch = value;
+    this.saveState();
+  }
+
   saveState() {
     const state = this.getState();
     
@@ -216,6 +226,7 @@ export class WeaponSelectorStateService {
       this._finalUpdateSwitch = state.finalUpdateSwitch || false;
       this._starfarer = state.starfarer || Starfarer.Asphodene;
       this._preBossHellstoneSwitch = state.preBossHellstoneSwitch !== undefined ? state.preBossHellstoneSwitch : true;
+      this._hardmodeOreShenanigansSwitch = state.hardmodeOreShenanigansSwitch !== undefined ? state.hardmodeOreShenanigansSwitch : true;
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }
@@ -237,7 +248,8 @@ export class WeaponSelectorStateService {
         worldEvil: this._worldEvil,
         finalUpdateSwitch: this._finalUpdateSwitch,
         starfarer: this._starfarer,
-        preBossHellstoneSwitch: this._preBossHellstoneSwitch
+        preBossHellstoneSwitch: this._preBossHellstoneSwitch,
+        hardmodeOreShenanigansSwitch: this._hardmodeOreShenanigansSwitch
       };
   }
 
@@ -290,6 +302,7 @@ export class WeaponSelectorStateService {
       this._finalUpdateSwitch = parsed.finalUpdateSwitch;
       this._starfarer = parsed.starfarer;
       this._preBossHellstoneSwitch = parsed.preBossHellstoneSwitch;
+      this._hardmodeOreShenanigansSwitch = parsed.hardmodeOreShenanigansSwitch;
 
       this.saveState(); 
       
@@ -340,7 +353,8 @@ export class WeaponSelectorStateService {
       worldEvil: WorldEvil.Both,
       finalUpdateSwitch: false,
       starfarer: Starfarer.Asphodene,
-      preBossHellstoneSwitch: true
+      preBossHellstoneSwitch: true,
+      hardmodeOreShenanigansSwitch: true
     };
 
     Object.keys(defaults).forEach(key => {

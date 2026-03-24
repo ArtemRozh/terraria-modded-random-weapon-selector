@@ -12,14 +12,6 @@
             </div>
         </div>
 
-        <!-- Potential configs: -->
-        <!-- Crimson/Corruption switch for vanilla -->
-        <!-- Starfarrer switch for stars above -->
-        <!-- To enable hellstone pre boss weapons for calamity -->
-        <!-- To disable hint tooltips (if I make them) -->
-        <!-- To disable details tooltips (if I make them) -->
-        <!-- To disable Weapon rarity colors (if I make them) -->
-
         <button (click)="clearBannedWeapons()"> Clear all banned weapons </button>
 
         <div class="config-selector">
@@ -66,6 +58,9 @@
         <div class="config-selector" [ngClass]="{'hidden': !checkIfContentEnabled(2)}">
             <div>
                 <input type="checkbox"  [(ngModel)]="preBossHellstoneSwitch" (change)="changePreBossHelstone()"> Enable pre-boss hellstone weapons
+            </div>
+            <div>
+                <input type="checkbox"  [(ngModel)]="hardmodeOreShenanigansSwitch" (change)="changeHardmodeOreShenanigansSwitch()"> Enable Changes To HM Ore progression
             </div>
         </div>
 
