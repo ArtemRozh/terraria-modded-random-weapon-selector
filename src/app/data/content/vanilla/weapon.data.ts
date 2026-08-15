@@ -1,4 +1,4 @@
-import { CalamityTag, VanillaTag } from "../../tag.data";
+import { VanillaTag } from "../../tag.data";
 import { Boss } from "./vanillaBoss.data";
 
 export const vanillaWeaponData = [
@@ -39,9 +39,9 @@ export const vanillaWeaponData = [
  {name: 'Iron Bow', image: 'https://terraria.wiki.gg/images/Iron_Bow.png?70a75f', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'White'},//
  {name: 'Flower of Fire', image: 'https://terraria.wiki.gg/images/Flower_of_Fire.png?515566', tier: [Boss.Skeletron], tags: [], class: 'Magic', rarity: 'Orange'},//
  {name: 'Magic Missile', image: 'https://terraria.wiki.gg/images/Magic_Missile.png?249740', tier: [Boss.Skeletron], tags: [], class: 'Magic', rarity: 'Green'},//
- {name: 'Flamarang', image: 'https://terraria.wiki.gg/images/Flamarang.png?615f9d', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Melee', rarity: 'Orange'},//
- {name: 'Molten Fury', image: 'https://terraria.wiki.gg/images/Molten_Fury.png?682784', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Ranged', rarity: 'Orange'},//
- {name: 'Volcano', image: 'https://terraria.wiki.gg/images/Volcano.png?e0c908', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Melee', rarity: 'Orange'},//
+ {name: 'Flamarang', image: 'https://terraria.wiki.gg/images/Flamarang.png?615f9d', tier: [Boss.EvilBoss], tags: [], class: 'Melee', rarity: 'Orange'},//
+ {name: 'Molten Fury', image: 'https://terraria.wiki.gg/images/Molten_Fury.png?682784', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
+ {name: 'Volcano', image: 'https://terraria.wiki.gg/images/Volcano.png?e0c908', tier: [Boss.EvilBoss], tags: [], class: 'Melee', rarity: 'Orange'},//
  {name: 'Space Gun', image: 'https://terraria.wiki.gg/images/Space_Gun.png?298a4d', tier: [Boss.EvilBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
  {name: 'Bone', image: 'https://terraria.wiki.gg/images/Bone.png?6eb4f7', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'White'},//
  {name: 'Muramasa', image: 'https://terraria.wiki.gg/images/Muramasa.png?3f0467', tier: [Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Green'},//
@@ -70,18 +70,18 @@ export const vanillaWeaponData = [
  {name: 'Blowpipe', image: 'https://terraria.wiki.gg/images/Blowpipe.png?b6da50', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'White'},//
  {name: 'Wooden Boomerang', image: 'https://terraria.wiki.gg/images/Wooden_Boomerang.png?fc4a4a', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Poisoned Knife', image: 'https://terraria.wiki.gg/images/Poisoned_Knife.png?5a6429', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'White'},//
- {name: 'Excalibur', image: 'https://terraria.wiki.gg/images/Excalibur.png?710f8b', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Pink'},//
- {name: 'Dao of Pow', image: 'https://terraria.wiki.gg/images/Dao_of_Pow.png?29b047', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Pink'},//
- {name: 'Mythril Halberd', image: 'https://terraria.wiki.gg/images/Mythril_Halberd.png?93410e', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Adamantite Glaive', image: 'https://terraria.wiki.gg/images/Adamantite_Glaive.png?ddff67', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Excalibur', image: 'https://terraria.wiki.gg/images/Excalibur.png?710f8b', tier: [Boss.MechBoss1], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Dao of Pow', image: 'https://terraria.wiki.gg/images/Dao_of_Pow.png?29b047', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Mythril Halberd', image: 'https://terraria.wiki.gg/images/Mythril_Halberd.png?93410e', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Adamantite Glaive', image: 'https://terraria.wiki.gg/images/Adamantite_Glaive.png?ddff67', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Breaker Blade', image: 'https://terraria.wiki.gg/images/Breaker_Blade.png?34e7fa', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Clockwork Assault Rifle', image: 'https://terraria.wiki.gg/images/Clockwork_Assault_Rifle.png?1079d8', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Cobalt Repeater', image: 'https://terraria.wiki.gg/images/Cobalt_Repeater.png?84766c', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Mythril Repeater', image: 'https://terraria.wiki.gg/images/Mythril_Repeater.png?74326d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Adamantite Repeater', image: 'https://terraria.wiki.gg/images/Adamantite_Repeater.png?f46139', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Adamantite Sword', image: 'https://terraria.wiki.gg/images/Adamantite_Sword.png?482ae4', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Mythril Repeater', image: 'https://terraria.wiki.gg/images/Mythril_Repeater.png?74326d', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Adamantite Repeater', image: 'https://terraria.wiki.gg/images/Adamantite_Repeater.png?f46139', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Adamantite Sword', image: 'https://terraria.wiki.gg/images/Adamantite_Sword.png?482ae4', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Cobalt Sword', image: 'https://terraria.wiki.gg/images/Cobalt_Sword.png?15208c', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Mythril Sword', image: 'https://terraria.wiki.gg/images/Mythril_Sword.png?9911ef', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Mythril Sword', image: 'https://terraria.wiki.gg/images/Mythril_Sword.png?9911ef', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Ruler', image: 'https://terraria.wiki.gg/images/Ruler.png?528bdc', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Magical Harp', image: 'https://terraria.wiki.gg/images/Magical_Harp.png?95117d', tier: [Boss.Twinks], tags: [], class: 'Magic', rarity: 'Pink'},//
  {name: 'Rainbow Rod', image: 'https://terraria.wiki.gg/images/Rainbow_Rod.png?2729d9', tier: [Boss.Twinks], tags: [], class: 'Magic', rarity: 'Pink'},//
@@ -94,9 +94,9 @@ export const vanillaWeaponData = [
  {name: 'Megashark', image: 'https://terraria.wiki.gg/images/Megashark.png?536f44', tier: [Boss.Destroyer], tags: [], class: 'Ranged', rarity: 'Pink'},//
  {name: 'Shotgun', image: 'https://terraria.wiki.gg/images/Shotgun.png?889d80', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Cobalt Naginata', image: 'https://terraria.wiki.gg/images/Cobalt_Naginata.png?440bce', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Gungnir', image: 'https://terraria.wiki.gg/images/Gungnir.png?12c74f', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Pink'},//
- {name: 'Light Disc', image: 'https://terraria.wiki.gg/images/Light_Disc.png?44fc04', tier: [Boss.MechBoss1, Boss.Destroyer], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Pink'},//
- {name: 'Hallowed Repeater', image: 'https://terraria.wiki.gg/images/Hallowed_Repeater.png?3290da', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Gungnir', image: 'https://terraria.wiki.gg/images/Gungnir.png?12c74f', tier: [Boss.MechBoss1], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Light Disc', image: 'https://terraria.wiki.gg/images/Light_Disc.png?44fc04', tier: [Boss.MechBoss1, Boss.Destroyer], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Hallowed Repeater', image: 'https://terraria.wiki.gg/images/Hallowed_Repeater.png?3290da', tier: [Boss.MechBoss1], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Ebonwood Sword', image: 'https://terraria.wiki.gg/images/Ebonwood_Sword.png?d0a9df', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Melee', rarity: 'White'},//
  {name: 'Ebonwood Bow', image: 'https://terraria.wiki.gg/images/Ebonwood_Bow.png?471a27', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Ranged', rarity: 'White'},//
  {name: 'Rich Mahogany Sword', image: 'https://terraria.wiki.gg/images/Rich_Mahogany_Sword.png?75acb9', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'White'},//
@@ -153,12 +153,12 @@ export const vanillaWeaponData = [
  {name: 'Palladium Sword', image: 'https://terraria.wiki.gg/images/Palladium_Sword.png?e29cf4', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Palladium Pike', image: 'https://terraria.wiki.gg/images/Palladium_Pike.png?ca4713', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Palladium Repeater', image: 'https://terraria.wiki.gg/images/Palladium_Repeater.png?623f00', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Orichalcum Sword', image: 'https://terraria.wiki.gg/images/Orichalcum_Sword.png?335506', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Orichalcum Halberd', image: 'https://terraria.wiki.gg/images/Orichalcum_Halberd.png?5d6d64', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Orichalcum Repeater', image: 'https://terraria.wiki.gg/images/Orichalcum_Repeater.png?86f02f', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Titanium Sword', image: 'https://terraria.wiki.gg/images/Titanium_Sword.png?1a39b1', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Titanium Trident', image: 'https://terraria.wiki.gg/images/Titanium_Trident.png?6bc466', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Titanium Repeater', image: 'https://terraria.wiki.gg/images/Titanium_Repeater.png?d1cf6e', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Orichalcum Sword', image: 'https://terraria.wiki.gg/images/Orichalcum_Sword.png?335506', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Orichalcum Halberd', image: 'https://terraria.wiki.gg/images/Orichalcum_Halberd.png?5d6d64', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Orichalcum Repeater', image: 'https://terraria.wiki.gg/images/Orichalcum_Repeater.png?86f02f', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Titanium Sword', image: 'https://terraria.wiki.gg/images/Titanium_Sword.png?1a39b1', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Titanium Trident', image: 'https://terraria.wiki.gg/images/Titanium_Trident.png?6bc466', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Titanium Repeater', image: 'https://terraria.wiki.gg/images/Titanium_Repeater.png?d1cf6e', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Chlorophyte Claymore', image: 'https://terraria.wiki.gg/images/Chlorophyte_Claymore.png?de6d8e', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Lime'},//
  {name: 'Chlorophyte Saber', image: 'https://terraria.wiki.gg/images/Chlorophyte_Saber.png?437ddc', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Lime'},//
  {name: 'Chlorophyte Partisan', image: 'https://terraria.wiki.gg/images/Chlorophyte_Partisan.png?ca7c1f', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Lime'},//
@@ -224,13 +224,13 @@ export const vanillaWeaponData = [
  {name: 'Obsidian Swordfish', image: 'https://terraria.wiki.gg/images/Obsidian_Swordfish.png?265581', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Lime'},//
  {name: 'Swordfish', image: 'https://terraria.wiki.gg/images/Swordfish.png?e2cc58', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Green'},//
  {name: 'Hornet Staff', image: 'https://terraria.wiki.gg/images/Hornet_Staff.png?f4cb03', tier: [Boss.QueenBee], tags: [], class: 'Summon', rarity: 'Orange'},//
- {name: 'Imp Staff', image: 'https://terraria.wiki.gg/images/Imp_Staff.png?bbd684', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Summon', rarity: 'Orange'},//
- {name: 'Queen Spider Staff', image: 'https://terraria.wiki.gg/images/Queen_Spider_Staff.png?8c86b2', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Imp Staff', image: 'https://terraria.wiki.gg/images/Imp_Staff.png?bbd684', tier: [Boss.EvilBoss], tags: [], class: 'Summon', rarity: 'Orange'},//
+ {name: 'Queen Spider Staff', image: 'https://terraria.wiki.gg/images/Queen_Spider_Staff.png?8c86b2', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Anchor', image: 'https://terraria.wiki.gg/images/Anchor.png?6ce563', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Orange'},//
  {name: 'Palm Wood Bow', image: 'https://terraria.wiki.gg/images/Palm_Wood_Bow.png?56b500', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'White'},//
  {name: 'Palm Wood Sword', image: 'https://terraria.wiki.gg/images/Palm_Wood_Sword.png?27ffea', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'White'},//
  {name: 'Optic Staff', image: 'https://terraria.wiki.gg/images/Optic_Staff.png?ea51bd', tier: [Boss.Twinks], tags: [], class: 'Summon', rarity: 'Pink'},//
- {name: 'Spider Staff', image: 'https://terraria.wiki.gg/images/Spider_Staff.png?723f61', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Spider Staff', image: 'https://terraria.wiki.gg/images/Spider_Staff.png?723f61', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Pirate Staff', image: 'https://terraria.wiki.gg/images/Pirate_Staff.png?a73e61', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Pink'},//
  {name: 'Molotov Cocktail', image: 'https://terraria.wiki.gg/images/Molotov_Cocktail.png?40e3a7', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Blue'},//
  {name: 'Falcon Blade', image: 'https://terraria.wiki.gg/images/Falcon_Blade.png?430372', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Light Red'},//
@@ -242,7 +242,7 @@ export const vanillaWeaponData = [
  {name: 'Boreal Wood Sword', image: 'https://terraria.wiki.gg/images/Boreal_Wood_Sword.png?b09c19', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'White'},//
  {name: 'Boreal Wood Bow', image: 'https://terraria.wiki.gg/images/Boreal_Wood_Bow.png?a3435b', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'White'},//
  {name: 'Xeno Staff', image: 'https://terraria.wiki.gg/images/Xeno_Staff.png?374fd8', tier: [Boss.Golem], tags: [], class: 'Summon', rarity: 'Yellow'},//
- {name: 'Meteor Staff', image: 'https://terraria.wiki.gg/images/Meteor_Staff.png?5c7cc7', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Pink'},//
+ {name: 'Meteor Staff', image: 'https://terraria.wiki.gg/images/Meteor_Staff.png?5c7cc7', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Pink'},//
  {name: 'Laser Machinegun', image: 'https://terraria.wiki.gg/images/Laser_Machinegun.png?9b0150', tier: [Boss.Golem], tags: [], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Electrosphere Launcher', image: 'https://terraria.wiki.gg/images/Electrosphere_Launcher.png?a38455', tier: [Boss.Golem], tags: [], class: 'Ranged', rarity: 'Yellow'},//
  {name: 'Xenopopper', image: 'https://terraria.wiki.gg/images/Xenopopper.png?5f7623', tier: [Boss.Golem], tags: [], class: 'Ranged', rarity: 'Yellow'},//
@@ -340,11 +340,11 @@ export const vanillaWeaponData = [
  {name: 'Lunar Portal Staff', image: 'https://terraria.wiki.gg/images/Lunar_Portal_Staff.png?9b7ef9', tier: [Boss.MoonLord], tags: [], class: 'Summon', rarity: 'Red'},//
  {name: 'Lunar Flare', image: 'https://terraria.wiki.gg/images/Lunar_Flare.png?60a0ee', tier: [Boss.MoonLord], tags: [], class: 'Magic', rarity: 'Red'},//
  {name: 'Rainbow Crystal Staff', image: 'https://terraria.wiki.gg/images/Rainbow_Crystal_Staff.png?33cff4', tier: [Boss.MoonLord], tags: [], class: 'Summon', rarity: 'Red'},//
- {name: 'Phasesaber (Any)', image: 'https://terraria.wiki.gg/images/White_Phasesaber.png?c14929', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Phasesaber (Any)', image: 'https://terraria.wiki.gg/images/White_Phasesaber.png?c14929', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Mandible Blade', image: 'https://terraria.wiki.gg/images/Mandible_Blade.png?858391', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Spirit Flame', image: 'https://terraria.wiki.gg/images/Spirit_Flame.png?b61e43', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
- {name: 'Sky Fracture', image: 'https://terraria.wiki.gg/images/Sky_Fracture.png?f7fd97', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
- {name: 'Onyx Blaster', image: 'https://terraria.wiki.gg/images/Onyx_Blaster.png?b5f1e2', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Spirit Flame', image: 'https://terraria.wiki.gg/images/Spirit_Flame.png?b61e43', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Sky Fracture', image: 'https://terraria.wiki.gg/images/Sky_Fracture.png?f7fd97', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Onyx Blaster', image: 'https://terraria.wiki.gg/images/Onyx_Blaster.png?b5f1e2', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Flameburst Rod', image: 'https://terraria.wiki.gg/images/Flameburst_Rod.png?57c385', tier: [Boss.EvilBoss], tags: [], class: 'Summon', rarity: 'Orange'},//
  {name: 'Flameburst Cane', image: 'https://terraria.wiki.gg/images/Flameburst_Cane.png?f7ad12', tier: [Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Pink'},//
  {name: 'Flameburst Staff', image: 'https://terraria.wiki.gg/images/Flameburst_Staff.png?e60d23', tier: [Boss.Golem], tags: [], class: 'Summon', rarity: 'Yellow'},//
@@ -368,7 +368,7 @@ export const vanillaWeaponData = [
  {name: 'Aerial Bane', image: 'https://terraria.wiki.gg/images/Aerial_Bane.png?3f2116', tier: [Boss.Golem], tags: [], class: 'Ranged', rarity: 'Yellow'},//
  {name: 'Betsys Wrath', image: 'https://terraria.wiki.gg/images/Betsy%27s_Wrath.png?194448', tier: [Boss.Golem], tags: [], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Celebration Mk2', image: 'https://terraria.wiki.gg/images/Celebration_Mk2.png?6d1d06', tier: [Boss.MoonLord], tags: [], class: 'Ranged', rarity: 'Red'},//
- {name: 'Super Star Shooter', image: 'https://terraria.wiki.gg/images/Super_Star_Shooter.png?ef3fad', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Ranged', rarity: 'Orange'},//
+ {name: 'Super Star Shooter', image: 'https://terraria.wiki.gg/images/Super_Star_Shooter.png?ef3fad', tier: [Boss.MechBoss1], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Storm Spear', image: 'https://terraria.wiki.gg/images/Storm_Spear.png?c94f72', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Thunder Zapper', image: 'https://terraria.wiki.gg/images/Thunder_Zapper.png?7751e2', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
  {name: 'Terragrim', image: 'https://terraria.wiki.gg/images/Terragrim.png?c2c9cc', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Green'},//
@@ -383,7 +383,7 @@ export const vanillaWeaponData = [
  {name: 'Gladius', image: 'https://terraria.wiki.gg/images/Gladius.png?2a1c7e', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Desert Tiger Staff', image: 'https://terraria.wiki.gg/images/Desert_Tiger_Staff.png?29c975', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Summon', rarity: 'Yellow'},//
  {name: 'Leather Whip', image: 'https://terraria.wiki.gg/images/Leather_Whip.png?40663e', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Blue'},//
- {name: 'Durendal', image: 'https://terraria.wiki.gg/images/Durendal.png?5ef70f', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Summon', rarity: 'Pink'},//
+ {name: 'Durendal', image: 'https://terraria.wiki.gg/images/Durendal.png?5ef70f', tier: [Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Pink'},//
  {name: 'Morning Star', image: 'https://terraria.wiki.gg/images/Morning_Star.png?5018d5', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Summon', rarity: 'Yellow'},//
  {name: 'Dark Harvest', image: 'https://terraria.wiki.gg/images/Dark_Harvest.png?157af0', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Summon', rarity: 'Yellow'},//
  {name: 'Quad-Barrel Shotgun', image: 'https://terraria.wiki.gg/images/Quad-Barrel_Shotgun.png?1ed76e', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Orange'},//
@@ -393,9 +393,9 @@ export const vanillaWeaponData = [
  {name: 'Shroomerang', image: 'https://terraria.wiki.gg/images/Shroomerang.png?55af96', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Jousting Lance', image: 'https://terraria.wiki.gg/images/Jousting_Lance.png?62a4a2', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Shadow Jousting Lance', image: 'https://terraria.wiki.gg/images/Shadow_Jousting_Lance.png?dfb957', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Melee', rarity: 'Yellow'},//
- {name: 'Hallowed Jousting Lance', image: 'https://terraria.wiki.gg/images/Hallowed_Jousting_Lance.png?4c504f', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Hallowed Jousting Lance', image: 'https://terraria.wiki.gg/images/Hallowed_Jousting_Lance.png?4c504f', tier: [Boss.MechBoss1], tags: [], class: 'Melee', rarity: 'Pink'},//
  {name: 'Combat Wrench', image: 'https://terraria.wiki.gg/images/Combat_Wrench.png?16c760', tier: [Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Cool Whip', image: 'https://terraria.wiki.gg/images/Cool_Whip.png?f2d6b9', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Cool Whip', image: 'https://terraria.wiki.gg/images/Cool_Whip.png?f2d6b9', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Firecracker', image: 'https://terraria.wiki.gg/images/Firecracker.png?e7e3a1', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Snapthorn', image: 'https://terraria.wiki.gg/images/Snapthorn.png?701cd0', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Orange'},//
  {name: 'Kaleidoscope', image: 'https://terraria.wiki.gg/images/Kaleidoscope.png?5beedb', tier: [Boss.Empress], tags: [], class: 'Summon', rarity: 'Yellow'},//

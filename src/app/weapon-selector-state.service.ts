@@ -5,7 +5,6 @@ import { saveAs } from 'file-saver';
 import { WorldEvil } from './data/helper/worldEvil.data';
 import { Starfarer } from './data/helper/smallModHelper.data';
 import { Boss } from './data/content/vanilla/vanillaBoss.data';
-import { Calamityboss } from './data/content/calamity/calamityBoss.data';
 import { StarsAboveBoss } from './data/content/stars-above/starsAboveBoss.data';
 
 @Injectable({
@@ -32,17 +31,13 @@ export class WeaponSelectorStateService {
   
   // Stars Above
   private _starfarer: string = Starfarer.Asphodene;
-  
-  // Calamity
-  private _preBossHellstoneSwitch: boolean = true;
-  private _hardmodeOreShenanigansSwitch: boolean = true;
 
   private storageKey = 'weaponSelectorState';
 
   // modernization block
 
-  private legacyTags: string[] = [Boss.MechBoss1, Boss.MechBossRest, Calamityboss.Servant1, Calamityboss.ServantRest] 
-  private replacementTags: string[] = [Boss.Destroyer, Boss.Twinks, Boss.Prime, Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void]
+  private legacyTags: string[] = [Boss.MechBoss1, Boss.MechBossRest] 
+  private replacementTags: string[] = [Boss.Destroyer, Boss.Twinks, Boss.Prime]
 
   //
 
@@ -173,25 +168,7 @@ export class WeaponSelectorStateService {
     this._starfarer = value;
     this.saveState();
   }
-
-  get preBossHellstoneSwitch() {
-    return this._preBossHellstoneSwitch;
-  }
-
-  set preBossHellstoneSwitch(value: boolean) {
-    this._preBossHellstoneSwitch = value;
-    this.saveState();
-  }
-
-  get hardmodeOreShenanigansSwitch() {
-    return this._hardmodeOreShenanigansSwitch;
-  }
-
-  set hardmodeOreShenanigansSwitch(value: boolean) {
-    this._hardmodeOreShenanigansSwitch = value;
-    this.saveState();
-  }
-
+  
   saveState() {
     const state = this.getState();
     
@@ -225,8 +202,6 @@ export class WeaponSelectorStateService {
       this._worldEvil = state.worldEvil || WorldEvil.Both;
       this._finalUpdateSwitch = state.finalUpdateSwitch || false;
       this._starfarer = state.starfarer || Starfarer.Asphodene;
-      this._preBossHellstoneSwitch = state.preBossHellstoneSwitch !== undefined ? state.preBossHellstoneSwitch : true;
-      this._hardmodeOreShenanigansSwitch = state.hardmodeOreShenanigansSwitch !== undefined ? state.hardmodeOreShenanigansSwitch : true;
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }
@@ -247,9 +222,7 @@ export class WeaponSelectorStateService {
         isReverse: this._isReverse,
         worldEvil: this._worldEvil,
         finalUpdateSwitch: this._finalUpdateSwitch,
-        starfarer: this._starfarer,
-        preBossHellstoneSwitch: this._preBossHellstoneSwitch,
-        hardmodeOreShenanigansSwitch: this._hardmodeOreShenanigansSwitch
+        starfarer: this._starfarer
       };
   }
 
@@ -301,8 +274,6 @@ export class WeaponSelectorStateService {
       this._worldEvil = parsed.worldEvil;
       this._finalUpdateSwitch = parsed.finalUpdateSwitch;
       this._starfarer = parsed.starfarer;
-      this._preBossHellstoneSwitch = parsed.preBossHellstoneSwitch;
-      this._hardmodeOreShenanigansSwitch = parsed.hardmodeOreShenanigansSwitch;
 
       this.saveState(); 
       
@@ -326,9 +297,7 @@ export class WeaponSelectorStateService {
   modernizeProgression(progression: { step: string }[]): { step: string }[] {
     const mapping: Record<string, string[]> = {
       [Boss.MechBoss1]: [Boss.Destroyer, Boss.Twinks, Boss.Prime],
-      [Boss.MechBossRest]: [], 
-      [Calamityboss.Servant1]: [Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void],
-      [Calamityboss.ServantRest]: []
+      [Boss.MechBossRest]: [],
     };
 
     const processedTags = new Set<string>();
@@ -352,9 +321,7 @@ export class WeaponSelectorStateService {
     const defaults: any = {
       worldEvil: WorldEvil.Both,
       finalUpdateSwitch: false,
-      starfarer: Starfarer.Asphodene,
-      preBossHellstoneSwitch: true,
-      hardmodeOreShenanigansSwitch: true
+      starfarer: Starfarer.Asphodene
     };
 
     Object.keys(defaults).forEach(key => {

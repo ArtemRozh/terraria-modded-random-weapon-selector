@@ -53,17 +53,6 @@
             </div>
         </div>
 
-        <div class="config-section-title" [ngClass]="{'hidden': !checkIfContentEnabled(2)}"> Calamity </div>
-
-        <div class="config-selector" [ngClass]="{'hidden': !checkIfContentEnabled(2)}">
-            <div>
-                <input type="checkbox"  [(ngModel)]="preBossHellstoneSwitch" (change)="changePreBossHelstone()"> Enable pre-boss hellstone weapons
-            </div>
-            <div>
-                <input type="checkbox"  [(ngModel)]="hardmodeOreShenanigansSwitch" (change)="changeHardmodeOreShenanigansSwitch()"> Enable Changes To HM Ore progression
-            </div>
-        </div>
-
         <div class="config-section-title"  [ngClass]="{'hidden': !checkIfContentEnabled(3)}"> Stars Above </div>
 
         <div class="config-selector"  [ngClass]="{'hidden': !checkIfContentEnabled(3)}">

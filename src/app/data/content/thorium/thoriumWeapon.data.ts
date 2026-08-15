@@ -1,6 +1,5 @@
 import { Boss } from "../vanilla/vanillaBoss.data"
 import { ThoriumBoss } from "./thoriumBoss.data"
-import { CalamityTag } from "../../tag.data"
 import { VanillaTag } from "../../tag.data"
 export const thoriumWeaponData=[
  {name: 'Aerial', image: 'https://thoriummod.wiki.gg/images/Aerial.png?c61142', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Melee', rarity: 'Green'},//
@@ -18,57 +17,57 @@ export const thoriumWeaponData=[
  {name: 'Yew Wood Bow', image: 'https://thoriummod.wiki.gg/images/Yew_Wood_Bow.png?dee884', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'Yew Wood Flintlock', image: 'https://thoriummod.wiki.gg/images/Yew_Wood_Flintlock.png?ac1e7b', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'Acoustic Guitar', image: 'https://thoriummod.wiki.gg/images/Acoustic_Guitar.png?1f148a', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
- {name: 'Adamantite Klaxon', image: 'https://thoriummod.wiki.gg/images/Adamantite_Klaxon.png?e7a398', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Adamantite Klaxon', image: 'https://thoriummod.wiki.gg/images/Adamantite_Klaxon.png?e7a398', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Alphorn', image: 'https://thoriummod.wiki.gg/images/Alphorn.png?62b292', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Antlion Maraca', image: 'https://thoriummod.wiki.gg/images/Antlion_Maraca.png?d57e4f', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
- {name: 'Bagpipe', image: 'https://thoriummod.wiki.gg/images/Bagpipe.png?2cca2c', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Bagpipe', image: 'https://thoriummod.wiki.gg/images/Bagpipe.png?2cca2c', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Bassoon', image: 'https://thoriummod.wiki.gg/images/Bassoon.png?a09b33', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Betsys Bellow', image: 'https://thoriummod.wiki.gg/images/Betsy%27s_Bellow.png?73db19', tier: [Boss.Golem], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Blooming Bell', image: 'https://thoriummod.wiki.gg/images/Blooming_Bell.png?b42af9', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Bone Trumpet', image: 'https://thoriummod.wiki.gg/images/Bone_Trumpet.png?2940cf', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Green'},//
- {name: 'Bongos', image: 'https://thoriummod.wiki.gg/images/Bongos.png?a63abb', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Symphonic', rarity: 'Orange'},//
+ {name: 'Bongos', image: 'https://thoriummod.wiki.gg/images/Bongos.png?a63abb', tier: [Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Orange'},//
  {name: 'Buisine', image: 'https://thoriummod.wiki.gg/images/Buisine.png?88bf85', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Calaveras', image: 'https://thoriummod.wiki.gg/images/Calaveras.png?c18be3', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Chrono Ocarina', image: 'https://thoriummod.wiki.gg/images/Chrono_Ocarina.png?21b145', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Clarinet', image: 'https://thoriummod.wiki.gg/images/Clarinet.png?d16b66', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Cobalt Gong', image: 'https://thoriummod.wiki.gg/images/Cobalt_Gong.png?c78f81', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Concertina', image: 'https://thoriummod.wiki.gg/images/Concertina.png?5f1cdf', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Pink'},//
- {name: 'Dragons Wail', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Wail.png?d6446e', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Dragons Wail', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Wail.png?d6446e', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Drum Mallet', image: 'https://thoriummod.wiki.gg/images/Drum_Mallet.png?451735', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
  {name: 'Dukes Regal Carnyx', image: 'https://thoriummod.wiki.gg/images/Duke%27s_Regal_Carnyx.png?1b730b', tier: [Boss.Duke], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Dynasty Guzheng', image: 'https://thoriummod.wiki.gg/images/Dynasty_Guzheng.png?76abed', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Ebonwood Tambourine', image: 'https://thoriummod.wiki.gg/images/Ebonwood_Tambourine.png?b4d145', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Fishbone', image: 'https://thoriummod.wiki.gg/images/Fishbone.png?bd0027', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
- {name: 'Flesh Horn', image: 'https://thoriummod.wiki.gg/images/Flesh_Horn.png?88a676', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Flesh Horn', image: 'https://thoriummod.wiki.gg/images/Flesh_Horn.png?88a676', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Flute', image: 'https://thoriummod.wiki.gg/images/Flute.png?722e23', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Forest Ocarina', image: 'https://thoriummod.wiki.gg/images/Forest_Ocarina.png?f85aec', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Green'},//
- {name: 'Frostwind Cymbals', image: 'https://thoriummod.wiki.gg/images/Frostwind_Cymbals.png?4ff95d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
- {name: 'Geode Saxophone', image: 'https://thoriummod.wiki.gg/images/Geode_Saxophone.png?da3b2d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Frostwind Cymbals', image: 'https://thoriummod.wiki.gg/images/Frostwind_Cymbals.png?4ff95d', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Geode Saxophone', image: 'https://thoriummod.wiki.gg/images/Geode_Saxophone.png?da3b2d', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Ghastly French Horn', image: 'https://thoriummod.wiki.gg/images/Ghastly_French_Horn.png?a6b94b', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Gold Bugle Horn', image: 'https://thoriummod.wiki.gg/images/Gold_Bugle_Horn.png?62b1b1', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
  {name: 'Grand Piano', image: 'https://thoriummod.wiki.gg/images/Grand_Piano.png?7e9d32', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Granite Boom Box', image: 'https://thoriummod.wiki.gg/images/Granite_Boom_Box.png?f1ab65', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Orange'},//
- {name: 'Hallowed Megaphone', image: 'https://thoriummod.wiki.gg/images/Hallowed_Megaphone.png?734b34', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Symphonic', rarity: 'Pink'},//
+ {name: 'Hallowed Megaphone', image: 'https://thoriummod.wiki.gg/images/Hallowed_Megaphone.png?734b34', tier: [Boss.MechBoss1], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Harmonica', image: 'https://thoriummod.wiki.gg/images/Harmonica.png?70ca57', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
  {name: 'Haunting Bass Drum', image: 'https://thoriummod.wiki.gg/images/Haunting_Bass_Drum.png?fcdd54', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
- {name: 'Hells Bell', image: 'https://thoriummod.wiki.gg/images/Hell%27s_Bell.png?9a3ac7', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Pink'},//
+ {name: 'Hells Bell', image: 'https://thoriummod.wiki.gg/images/Hell%27s_Bell.png?9a3ac7', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Honey Recorder', image: 'https://thoriummod.wiki.gg/images/Honey_Recorder.png?1640f8', tier: [Boss.QueenBee], tags: [], class: 'Symphonic', rarity: 'Orange'},//
- {name: 'Hot Horn', image: 'https://thoriummod.wiki.gg/images/Hot_Horn.png?99953d', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Symphonic', rarity: 'Orange'},//
+ {name: 'Hot Horn', image: 'https://thoriummod.wiki.gg/images/Hot_Horn.png?99953d', tier: [Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Orange'},//
  {name: 'Icy Piccolo', image: 'https://thoriummod.wiki.gg/images/Icy_Piccolo.png?8667b3', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
  {name: 'Jar O Mayo', image: 'https://thoriummod.wiki.gg/images/Jar_O%27_Mayo.png?78d84c', tier: [Boss.KingSlime, Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Jingle Bells', image: 'https://thoriummod.wiki.gg/images/Jingle_Bells.png?89eaf9', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: 'Kazoo', image: 'https://thoriummod.wiki.gg/images/Kazoo.png?21d08c', tier: [ThoriumBoss.FallenBeholder], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Lightning Claves', image: 'https://thoriummod.wiki.gg/images/Lightning_Claves.png?a8202e', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
- {name: 'Lodestone Radio', image: 'https://thoriummod.wiki.gg/images/Lodestone_Radio.png?649da7', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Pink'},//
+ {name: 'Lodestone Radio', image: 'https://thoriummod.wiki.gg/images/Lodestone_Radio.png?649da7', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Marine Wine Glass', image: 'https://thoriummod.wiki.gg/images/Marine_Wine_Glass.png?6f682b', tier: [Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Meteorite Oboe', image: 'https://thoriummod.wiki.gg/images/Meteorite_Oboe.png?b6bf33', tier: [Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Microphone', image: 'https://thoriummod.wiki.gg/images/Microphone.png?5deccb', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Midnight Bass Booster', image: 'https://thoriummod.wiki.gg/images/Midnight_Bass_Booster.png?6c3e43', tier: [Boss.Skeletron, Boss.MechBossRest], tags: [], class: 'Symphonic', rarity: 'Light Purple'},//
- {name: 'Mythril Melodica', image: 'https://thoriummod.wiki.gg/images/Mythril_Melodica.png?25f3c1', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Mythril Melodica', image: 'https://thoriummod.wiki.gg/images/Mythril_Melodica.png?25f3c1', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Nocturne', image: 'https://thoriummod.wiki.gg/images/Nocturne.png?a79213', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Orange'},//
  {name: 'Obsidian Rackett', image: 'https://thoriummod.wiki.gg/images/Obsidian_Rackett.png?3189ac', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Organ', image: 'https://thoriummod.wiki.gg/images/Organ.png?136c0c', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
- {name: 'Orichalcum Slide Whistle', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Slide_Whistle.png?965436', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Orichalcum Slide Whistle', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Slide_Whistle.png?965436', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Palladium Cowbell', image: 'https://thoriummod.wiki.gg/images/Palladium_Cowbell.png?7d26ea', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Panflute', image: 'https://thoriummod.wiki.gg/images/Panflute.png?1f007d', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Orange'},//
  {name: 'Platinum Bugle Horn', image: 'https://thoriummod.wiki.gg/images/Platinum_Bugle_Horn.png?70b6a3', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
@@ -79,13 +78,13 @@ export const thoriumWeaponData=[
  {name: 'Scholars Harp', image: 'https://thoriummod.wiki.gg/images/Scholar%27s_Harp.png?6c80d2', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Scuba Curva', image: 'https://thoriummod.wiki.gg/images/Scuba_Curva.png?77f2df', tier: [Boss.EvilBoss], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Seashell Castanets', image: 'https://thoriummod.wiki.gg/images/Seashell_Castanets.png?c5f224', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
- {name: 'Serpents Cry', image: 'https://thoriummod.wiki.gg/images/Serpent%27s_Cry.png?8fe282', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Serpents Cry', image: 'https://thoriummod.wiki.gg/images/Serpent%27s_Cry.png?8fe282', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Shadewood Tambourine', image: 'https://thoriummod.wiki.gg/images/Shadewood_Tambourine.png?104608', tier: [Boss.PreBoss], tags: [VanillaTag.Crimson], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Shadowflame Warhorn', image: 'https://thoriummod.wiki.gg/images/Shadowflame_Warhorn.png?820e52', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Shooting Star Blast-Guitar', image: 'https://thoriummod.wiki.gg/images/Shooting_Star_Blast-Guitar.png?34426f', tier: [Boss.Cultist], tags: [], class: 'Symphonic', rarity: 'Red'},//
  {name: 'Sitar', image: 'https://thoriummod.wiki.gg/images/Sitar.png?de670f', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
  {name: 'Skyware Lute', image: 'https://thoriummod.wiki.gg/images/Skyware_Lute.png?b520d9', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Blue'},//
- {name: 'Snowstorm Banjo', image: 'https://thoriummod.wiki.gg/images/Snowstorm_Banjo.png?64f4df', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Snowstorm Banjo', image: 'https://thoriummod.wiki.gg/images/Snowstorm_Banjo.png?64f4df', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Song of Ice & Fire', image: 'https://thoriummod.wiki.gg/images/Song_of_Ice_%26_Fire.png?13baf3', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Sonic Amplifier', image: 'https://thoriummod.wiki.gg/images/Sonic_Amplifier.png?413468', tier: [Boss.MoonLord], tags: [], class: 'Symphonic', rarity: 'Red'},//
  {name: 'Sound Sages Lament', image: 'https://thoriummod.wiki.gg/images/Sound_Sage%27s_Lament.png?475d3e', tier: [Boss.Cultist], tags: [], class: 'Symphonic', rarity: 'Red'},//
@@ -98,19 +97,19 @@ export const thoriumWeaponData=[
  {name: 'The Lullaby', image: 'https://thoriummod.wiki.gg/images/Lullaby.png?f91890', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'The Maw', image: 'https://thoriummod.wiki.gg/images/The_Maw.png?ed81cd', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Lime'},//
  {name: 'The Triangle', image: 'https://thoriummod.wiki.gg/images/The_Triangle.png?c7b1f3', tier: [Boss.Golem], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
- {name: 'Titanium Cimbasso', image: 'https://thoriummod.wiki.gg/images/Titanium_Cimbasso.png?eba722', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Symphonic', rarity: 'Light Red'},//
- {name: 'Trombone', image: 'https://thoriummod.wiki.gg/images/Trombone.png?241dc4', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Titanium Cimbasso', image: 'https://thoriummod.wiki.gg/images/Titanium_Cimbasso.png?eba722', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Trombone', image: 'https://thoriummod.wiki.gg/images/Trombone.png?241dc4', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Bronze Tuning Fork', image: 'https://thoriummod.wiki.gg/images/Bronze_Tuning_Fork.png?95ce7a', tier: [Boss.Skeletron], tags: [], class: 'Symphonic', rarity: 'Orange'},//
  {name: 'Turntable', image: 'https://thoriummod.wiki.gg/images/Turntable.png?cc2e29', tier: [Boss.Golem], tags: [], class: 'Symphonic', rarity: 'Yellow'},//
  {name: '24-Carat Tuba', image: 'https://thoriummod.wiki.gg/images/24-Carat_Tuba.png?560c3f', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Pink'},//
  {name: 'Ukulele', image: 'https://thoriummod.wiki.gg/images/Ukulele.png?681a56', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
- {name: 'Valadium Theremin', image: 'https://thoriummod.wiki.gg/images/Valadium_Theremin.png?2a56e0', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Pink'},//
- {name: 'Vinyl Record', image: 'https://thoriummod.wiki.gg/images/Vinyl_Record.png?a45fc8', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
- {name: 'Violin', image: 'https://thoriummod.wiki.gg/images/Violin.png?2469ec', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Valadium Theremin', image: 'https://thoriummod.wiki.gg/images/Valadium_Theremin.png?2a56e0', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Symphonic', rarity: 'Pink'},//
+ {name: 'Vinyl Record', image: 'https://thoriummod.wiki.gg/images/Vinyl_Record.png?a45fc8', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Violin', image: 'https://thoriummod.wiki.gg/images/Violin.png?2469ec', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Vuvuzela (Any)', image: 'https://thoriummod.wiki.gg/images/Vuvuzela_Yellow.png?b86a94', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Lime'},//
- {name: 'Wind Chimes', image: 'https://thoriummod.wiki.gg/images/Wind_Chimes.png?c427da', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Wind Chimes', image: 'https://thoriummod.wiki.gg/images/Wind_Chimes.png?c427da', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Wooden Whistle', image: 'https://thoriummod.wiki.gg/images/Wooden_Whistle.png?27879d', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'White'},//
- {name: 'Xylophone', image: 'https://thoriummod.wiki.gg/images/Xylophone.png?4aacec', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Light Red'},//
+ {name: 'Xylophone', image: 'https://thoriummod.wiki.gg/images/Xylophone.png?4aacec', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Light Red'},//
  {name: 'Yew Wood Lute', image: 'https://thoriummod.wiki.gg/images/Yew_Wood_Lute.png?ba0c25', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Symphonic', rarity: 'Green'},//
  {name: 'Ice Fairy Staff', image: 'https://thoriummod.wiki.gg/images/Ice_Fairy_Staff.png?946cb4', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Borean Fang Staff', image: 'https://thoriummod.wiki.gg/images/Borean_Fang_Staff.png?6e14f2', tier: [ThoriumBoss.BoreanStrider], tags: [], class: 'Magic', rarity: 'Pink'},//
@@ -224,7 +223,7 @@ export const thoriumWeaponData=[
  {name: 'Demon Blood Sword', image: 'https://thoriummod.wiki.gg/images/Demon_Blood_Sword.png?96b760', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Melee', rarity: 'Yellow'},//
  {name: 'Aquaite Knife', image: 'https://thoriummod.wiki.gg/images/Aquaite_Knife.png?e6e5a5', tier: [Boss.EvilBoss], tags: [], class: 'Throwing', rarity: 'Green'},//
  {name: 'Aqua Pelter', image: 'https://thoriummod.wiki.gg/images/Aqua_Pelter.png?983447', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Green'},//
- {name: 'Blob-horn Coral Staff', image: 'https://thoriummod.wiki.gg/images/Blob-horn_Coral_Staff.png?2c837a', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Blob-horn Coral Staff', image: 'https://thoriummod.wiki.gg/images/Blob-horn_Coral_Staff.png?2c837a', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Bubble Conch', image: 'https://thoriummod.wiki.gg/images/Bubble_Conch.png?30c9eb', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Green'},//
  {name: 'Drenched Dirk', image: 'https://thoriummod.wiki.gg/images/Drenched_Dirk.png?bd3eb4', tier: [Boss.EvilBoss], tags: [], class: 'Melee', rarity: 'Green'},//
  {name: 'Geyser Staff', image: 'https://thoriummod.wiki.gg/images/Geyser_Staff.png?a84e55', tier: [Boss.EvilBoss], tags: [], class: 'Magic', rarity: 'Green'},//
@@ -232,22 +231,22 @@ export const thoriumWeaponData=[
  {name: 'Nagas Recurve', image: 'https://thoriummod.wiki.gg/images/Naga%27s_Recurve.png?3fad6b', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Nano Clam Cane', image: 'https://thoriummod.wiki.gg/images/Nano_Clam_Cane.png?2b869e', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Green'},//
  {name: 'Pearl Pike', image: 'https://thoriummod.wiki.gg/images/Pearl_Pike.png?700a80', tier: [Boss.EvilBoss], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Sea Foam Scepter', image: 'https://thoriummod.wiki.gg/images/Sea_Foam_Scepter.png?ddbdf1', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Sea Foam Scepter', image: 'https://thoriummod.wiki.gg/images/Sea_Foam_Scepter.png?ddbdf1', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Sea Ninja-Star', image: 'https://thoriummod.wiki.gg/images/Sea_Ninja-Star.png?df2d4a', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'Green'},//
  {name: 'Shark Storm', image: 'https://thoriummod.wiki.gg/images/Shark_Storm.png?615ca8', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'Aeon Staff', image: 'https://thoriummod.wiki.gg/images/Aeon_Staff.png?61fd78', tier: [ThoriumBoss.BuriedChampion, Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Arsenal Staff', image: 'https://thoriummod.wiki.gg/images/Arsenal_Staff.png?76c45a', tier: [Boss.Skeletron], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Arthropod', image: 'https://thoriummod.wiki.gg/images/Arthropod.png?a7e04b', tier: [ThoriumBoss.BoreanStrider], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Balance Bloom', image: 'https://thoriummod.wiki.gg/images/Balance_Bloom.png?33e0fc', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Radiant', rarity: 'Donator'},//
+ {name: 'Balance Bloom', image: 'https://thoriummod.wiki.gg/images/Balance_Bloom.png?33e0fc', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Baritone Saxophone', image: 'https://thoriummod.wiki.gg/images/Baritone_Saxophone.png?9bd9ae', tier: [Boss.MechBoss1], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Bass Booster', image: 'https://thoriummod.wiki.gg/images/Bass_Booster.png?3743f1', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Beetle Blaster', image: 'https://thoriummod.wiki.gg/images/Beetle_Blaster.png?d5b210', tier: [Boss.Skeletron, Boss.Golem], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Bellerose', image: 'https://thoriummod.wiki.gg/images/Bellerose.png?9089e7', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Black MIDI', image: 'https://thoriummod.wiki.gg/images/Black_MIDI.png?a00c93', tier: [Boss.PreBoss, ThoriumBoss.ThePrimordials], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Blitz-zard', image: 'https://thoriummod.wiki.gg/images/Blitz-zard.png?fc919b', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Blood Drinker', image: 'https://thoriummod.wiki.gg/images/Blood_Drinker.png?9cc032', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Donator'},//
+ {name: 'Blood Drinker', image: 'https://thoriummod.wiki.gg/images/Blood_Drinker.png?9cc032', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Blood & Glory', image: 'https://thoriummod.wiki.gg/images/Blood_%26_Glory.png?dd4801', tier: [Boss.MoonLord], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Bloody High Claw', image: 'https://thoriummod.wiki.gg/images/Bloody_High_Claw.png?877be1', tier: [Boss.WallOfFlesh, Boss.Prime], tags: [CalamityTag.TitaniumAdamantite], class: 'Melee', rarity: 'Donator'},//
+ {name: 'Bloody High Claw', image: 'https://thoriummod.wiki.gg/images/Bloody_High_Claw.png?877be1', tier: [Boss.WallOfFlesh, Boss.Prime], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Bloody Pagan Staff', image: 'https://thoriummod.wiki.gg/images/Bloody_Pagan_Staff.png?1cc220', tier: [Boss.Golem, ThoriumBoss.Lich], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Bloody Wand', image: 'https://thoriummod.wiki.gg/images/Bloody_Wand.png?ffb964', tier: [Boss.Skeletron], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Bow of Light', image: 'https://thoriummod.wiki.gg/images/Bow_of_Light.png?1cd173', tier: [ThoriumBoss.ThePrimordials], tags: [], class: 'Ranged', rarity: 'Donator'},//
@@ -262,12 +261,12 @@ export const thoriumWeaponData=[
  {name: 'Corrodling Staff', image: 'https://thoriummod.wiki.gg/images/Corrodling_Staff.png?e56d83', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Cosmic Dagger', image: 'https://thoriummod.wiki.gg/images/Cosmic_Dagger.png?622c0f', tier: [Boss.Golem], tags: [], class: 'Throwing', rarity: 'Donator'},//
  {name: 'Cosmic Flux Staff', image: 'https://thoriummod.wiki.gg/images/Cosmic_Flux_Staff.png?533cb9', tier: [Boss.Cultist], tags: [], class: 'Radiant', rarity: 'Donator'},//
- {name: 'Cupids String', image: 'https://thoriummod.wiki.gg/images/Cupid%27s_String.png?bdcd16', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Donator'},//
+ {name: 'Cupids String', image: 'https://thoriummod.wiki.gg/images/Cupid%27s_String.png?bdcd16', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Dark Flame', image: 'https://thoriummod.wiki.gg/images/Dark_Flame.png?fc8e97', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Dark Grip', image: 'https://thoriummod.wiki.gg/images/Dark_Grip.png?548dc5', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Decaying Sorrow', image: 'https://thoriummod.wiki.gg/images/Decaying_Sorrow.png?5c148b', tier: [ThoriumBoss.Lich], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'DMR', image: 'https://thoriummod.wiki.gg/images/DMR.png?9f1afa', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
- {name: 'Draconic Magma Staff', image: 'https://thoriummod.wiki.gg/images/Draconic_Magma_Staff.png?c56eea', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Donator'},//
+ {name: 'Draconic Magma Staff', image: 'https://thoriummod.wiki.gg/images/Draconic_Magma_Staff.png?c56eea', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Eclipse Fang', image: 'https://thoriummod.wiki.gg/images/Eclipse_Fang.png?4083b6', tier: [Boss.Cultist], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Emperors Will', image: 'https://thoriummod.wiki.gg/images/Emperor%27s_Will.png?42ce4e', tier: [Boss.Cultist], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Erupting Flare', image: 'https://thoriummod.wiki.gg/images/Erupting_Flare.png?7ee450', tier: [Boss.Golem], tags: [], class: 'Magic', rarity: 'Donator'},//
@@ -276,7 +275,7 @@ export const thoriumWeaponData=[
  {name: 'Fire Axe', image: 'https://thoriummod.wiki.gg/images/Fire_Axe.png?817807', tier: [Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Donator'},//
  {name: 'Friendly-Fire Staff', image: 'https://thoriummod.wiki.gg/images/Friendly-Fire_Staff.png?2ce162', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Gel Glove', image: 'https://thoriummod.wiki.gg/images/Gel_Glove.png?5f4e7b', tier: [Boss.KingSlime], tags: [], class: 'Throwing', rarity: 'Donator'},//
- {name: 'Geomancers Brush', image: 'https://thoriummod.wiki.gg/images/Geomancer%27s_Brush.png?85146d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Geomancers Brush', image: 'https://thoriummod.wiki.gg/images/Geomancer%27s_Brush.png?85146d', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Golden Locks', image: 'https://thoriummod.wiki.gg/images/Golden_Locks.png?be8ee6', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Golems Gaze', image: 'https://thoriummod.wiki.gg/images/Golem%27s_Gaze.png?ada2df', tier: [Boss.Golem], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Greedful Gurdy', image: 'https://thoriummod.wiki.gg/images/Greedful_Gurdy.png?b5a4c6', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Donator'},//
@@ -284,13 +283,13 @@ export const thoriumWeaponData=[
  {name: 'Guilty Pleasure', image: 'https://thoriummod.wiki.gg/images/Guilty_Pleasure.png?223afb', tier: [Boss.Twinks], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Hadron Collider', image: 'https://thoriummod.wiki.gg/images/Hadron_Collider.png?ba666f', tier: [Boss.MechBossRest], tags: [], class: 'Throwing', rarity: 'Donator'},//
  {name: 'Heartstriker', image: 'https://thoriummod.wiki.gg/images/Heartstriker.png?8e34b3', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Heavens Gate', image: 'https://thoriummod.wiki.gg/images/Heaven%27s_Gate.png?2c01d6', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Donator'},//
- {name: 'Hellfire Minigun', image: 'https://thoriummod.wiki.gg/images/Hellfire_Minigun.png?5b4e31', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Ranged', rarity: 'Donator'},//
+ {name: 'Heavens Gate', image: 'https://thoriummod.wiki.gg/images/Heaven%27s_Gate.png?2c01d6', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Hellfire Minigun', image: 'https://thoriummod.wiki.gg/images/Hellfire_Minigun.png?5b4e31', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Hippocrati-crossbow', image: 'https://thoriummod.wiki.gg/images/Hippocrati-crossbow.png?b734e6', tier: [Boss.MechBoss1], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Holy Hammer', image: 'https://thoriummod.wiki.gg/images/Holy_Hammer.png?929823', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Hydro Pump', image: 'https://thoriummod.wiki.gg/images/Hydro_Pump.png?c986e2', tier: [ThoriumBoss.QueenJelly, ThoriumBoss.ForgottenOne], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Idols Microphone', image: 'https://thoriummod.wiki.gg/images/Idol%27s_Microphone.png?198400', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Donator'},//
- {name: 'Infernal Animator', image: 'https://thoriummod.wiki.gg/images/Infernal_Animator.png?604ac7', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Summon', rarity: 'Donator'},//
+ {name: 'Infernal Animator', image: 'https://thoriummod.wiki.gg/images/Infernal_Animator.png?604ac7', tier: [Boss.EvilBoss], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Kineto-scythe', image: 'https://thoriummod.wiki.gg/images/Kineto-scythe.png?ada95a', tier: [Boss.Golem], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Ladys Light', image: 'https://thoriummod.wiki.gg/images/Lady%27s_Light.png?c3d7ef', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Launch Jumper', image: 'https://thoriummod.wiki.gg/images/Launch_Jumper.png?df820c', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
@@ -301,7 +300,7 @@ export const thoriumWeaponData=[
  {name: 'Little Red', image: 'https://thoriummod.wiki.gg/images/Little_Red.png?b055df', tier: [Boss.MechBossRest], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Man Hacker', image: 'https://thoriummod.wiki.gg/images/Man_Hacker.png?cbd0b4', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Mantis Cane', image: 'https://thoriummod.wiki.gg/images/Mantis_Cane.png?3206d5', tier: [Boss.QueenBee], tags: [], class: 'Summon', rarity: 'Donator'},//
- {name: 'Masters Libram', image: 'https://thoriummod.wiki.gg/images/Master%27s_Libram.png?669b0e', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Donator'},//
+ {name: 'Masters Libram', image: 'https://thoriummod.wiki.gg/images/Master%27s_Libram.png?669b0e', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Midas Gavel', image: 'https://thoriummod.wiki.gg/images/Midas%27_Gavel.png?8870f6', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Mineral Launcher', image: 'https://thoriummod.wiki.gg/images/Mineral_Launcher.png?786e39', tier: [Boss.MechBoss1], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Moonlight', image: 'https://thoriummod.wiki.gg/images/Moonlight.png?5cafdd', tier: [Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Donator'},//
@@ -309,42 +308,42 @@ export const thoriumWeaponData=[
  {name: 'Night Staff', image: 'https://thoriummod.wiki.gg/images/Night_Staff.png?e9af4a', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Northern Light', image: 'https://thoriummod.wiki.gg/images/Northern_Light.png?44fd9c', tier: [ThoriumBoss.ThePrimordials], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Nova Rifle', image: 'https://thoriummod.wiki.gg/images/Nova_Rifle.png?c58ebd', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
- {name: 'Obsidian Staff', image: 'https://thoriummod.wiki.gg/images/Obsidian_Staff.png?a7fa3c', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Magic', rarity: 'Donator'},//
- {name: 'Omega Blaster', image: 'https://thoriummod.wiki.gg/images/Omega_Blaster.png?4d9c7d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Magic', rarity: 'Donator'},//
- {name: 'Omniwrench', image: 'https://thoriummod.wiki.gg/images/Omniwrench.png?be78bf', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Donator'},//
+ {name: 'Obsidian Staff', image: 'https://thoriummod.wiki.gg/images/Obsidian_Staff.png?a7fa3c', tier: [Boss.EvilBoss], tags: [], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Omega Blaster', image: 'https://thoriummod.wiki.gg/images/Omega_Blaster.png?4d9c7d', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Omniwrench', image: 'https://thoriummod.wiki.gg/images/Omniwrench.png?be78bf', tier: [Boss.Skeletron, Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Donator'},//
  {name: 'One-man Quartet', image: 'https://thoriummod.wiki.gg/images/One-man_Quartet.png?829178', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Phantom Arm Cannon', image: 'https://thoriummod.wiki.gg/images/Phantom_Arm_Cannon.png?9119f6', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Phantom Camera', image: 'https://thoriummod.wiki.gg/images/Phantom_Camera.png?5f1645', tier: [Boss.Skeletron], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Pill Popper', image: 'https://thoriummod.wiki.gg/images/Pill_Popper.png?7b67f8', tier: [Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Donator'},//
- {name: 'Plasma Staff', image: 'https://thoriummod.wiki.gg/images/Plasma_Staff.png?c53b20', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Plasma Staff', image: 'https://thoriummod.wiki.gg/images/Plasma_Staff.png?c53b20', tier: [Boss.MechBoss1], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'P.L.G. 8999', image: 'https://thoriummod.wiki.gg/images/P.L.G._8999.png?51e53e', tier: [Boss.Plantera], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Pollen Pike', image: 'https://thoriummod.wiki.gg/images/Pollen_Pike.png?d27fda', tier: [Boss.QueenBee], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Portable Wintergatan', image: 'https://thoriummod.wiki.gg/images/Portable_Wintergatan.png?b11e3f', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Symphonic', rarity: 'Donator'},//
+ {name: 'Portable Wintergatan', image: 'https://thoriummod.wiki.gg/images/Portable_Wintergatan.png?b11e3f', tier: [Boss.MechBoss1], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Prehistoric Amber Staff', image: 'https://thoriummod.wiki.gg/images/Prehistoric_Amber_Staff.png?899b97', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Quake Gauntlet', image: 'https://thoriummod.wiki.gg/images/Quake_Gauntlet.png?2d65d1', tier: [Boss.MoonLord], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Quasars Flare', image: 'https://thoriummod.wiki.gg/images/Quasar%27s_Flare.png?6db866', tier: [ThoriumBoss.ThePrimordials], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Razorlash', image: 'https://thoriummod.wiki.gg/images/Razorlash.png?67947f', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Donator'},//
- {name: 'Resonators Arm', image: 'https://thoriummod.wiki.gg/images/Resonator%27s_Arm.png?375ff4', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Symphonic', rarity: 'Donator'},//
- {name: 'Rifle Spear', image: 'https://thoriummod.wiki.gg/images/Rifle_Spear.png?360a27', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Donator'},//
- {name: 'Rude Wand', image: 'https://thoriummod.wiki.gg/images/Rude_Wand.png?24fcaf', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Summon', rarity: 'Donator'},//
+ {name: 'Resonators Arm', image: 'https://thoriummod.wiki.gg/images/Resonator%27s_Arm.png?375ff4', tier: [Boss.WallOfFlesh], tags: [], class: 'Symphonic', rarity: 'Donator'},//
+ {name: 'Rifle Spear', image: 'https://thoriummod.wiki.gg/images/Rifle_Spear.png?360a27', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Donator'},//
+ {name: 'Rude Wand', image: 'https://thoriummod.wiki.gg/images/Rude_Wand.png?24fcaf', tier: [Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Saba', image: 'https://thoriummod.wiki.gg/images/Saba.png?b24415', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Scythe of Undoing', image: 'https://thoriummod.wiki.gg/images/Scythe_of_Undoing.png?7d2bea', tier: [Boss.PreBoss, ThoriumBoss.Lich], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Shadow-Flare Bow', image: 'https://thoriummod.wiki.gg/images/Shadow-Flare_Bow.png?85bcf4', tier: [Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Shadow Orb Staff', image: 'https://thoriummod.wiki.gg/images/Shadow_Orb_Staff.png?fbd620', tier: [Boss.Skeletron, Boss.Cultist], tags: [], class: 'Summon', rarity: 'Donator'},//
- {name: 'Shockbuster', image: 'https://thoriummod.wiki.gg/images/Shockbuster.png?6e9530', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Ranged', rarity: 'Donator'},//
- {name: 'Shus Wrath', image: 'https://thoriummod.wiki.gg/images/Shu%27s_Wrath.png?409e0f', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Donator'},//
+ {name: 'Shockbuster', image: 'https://thoriummod.wiki.gg/images/Shockbuster.png?6e9530', tier: [Boss.MechBoss1], tags: [], class: 'Ranged', rarity: 'Donator'},//
+ {name: 'Shus Wrath', image: 'https://thoriummod.wiki.gg/images/Shu%27s_Wrath.png?409e0f', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Sinister Honk', image: 'https://thoriummod.wiki.gg/images/Sinister_Honk.png?6d62c8', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Skadoosh', image: 'https://thoriummod.wiki.gg/images/Skadoosh.png?e83198', tier: [Boss.Cultist], tags: [], class: 'Melee', rarity: 'Donator'},//
- {name: 'Smiting Hammer', image: 'https://thoriummod.wiki.gg/images/Smiting_Hammer.png?a905e8', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Radiant', rarity: 'Donator'},//
+ {name: 'Smiting Hammer', image: 'https://thoriummod.wiki.gg/images/Smiting_Hammer.png?a905e8', tier: [Boss.MechBoss1], tags: [], class: 'Radiant', rarity: 'Donator'},//
  {name: 'Snarky Gun', image: 'https://thoriummod.wiki.gg/images/Snarky_Gun.png?b7d4e9', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Donator'},//
  {name: 'Snow White', image: 'https://thoriummod.wiki.gg/images/Snow_White.png?db6004', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Soul Reaver', image: 'https://thoriummod.wiki.gg/images/Soul_Reaver.png?bd4129', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Spearmint', image: 'https://thoriummod.wiki.gg/images/Spearmint.png?ac7007', tier: [Boss.Plantera], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Spirit Breaker', image: 'https://thoriummod.wiki.gg/images/Spirit_Breaker.png?2cb780', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
- {name: 'Static Prod', image: 'https://thoriummod.wiki.gg/images/Static_Prod.png?b88d30', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Static Prod', image: 'https://thoriummod.wiki.gg/images/Static_Prod.png?b88d30', tier: [Boss.MechBoss1], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Steamgunner Controller', image: 'https://thoriummod.wiki.gg/images/Steamgunner_Controller.png?fecf52', tier: [Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Stellar Rod', image: 'https://thoriummod.wiki.gg/images/Stellar_Rod.png?d57420', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Donator'},//
- {name: 'Stellar System', image: 'https://thoriummod.wiki.gg/images/Stellar_System.png?88969a', tier: [Boss.EvilBoss, Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Donator'},//
+ {name: 'Stellar System', image: 'https://thoriummod.wiki.gg/images/Stellar_System.png?88969a', tier: [Boss.EvilBoss, Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Strange Skull', image: 'https://thoriummod.wiki.gg/images/Strange_Skull.png?fc231f', tier: [Boss.Skeletron], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Strawberry Heart', image: 'https://thoriummod.wiki.gg/images/Strawberry_Heart.png?f26859', tier: [Boss.Plantera], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Super Plasma Cannon', image: 'https://thoriummod.wiki.gg/images/Super_Plasma_Cannon.png?52ccb4', tier: [Boss.Golem], tags: [], class: 'Magic', rarity: 'Donator'},//
@@ -359,17 +358,17 @@ export const thoriumWeaponData=[
  {name: 'Thunderstruck', image: 'https://thoriummod.wiki.gg/images/Thunderstruck.png?a0751c', tier: [ThoriumBoss.FallenBeholder], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Turtle Drums', image: 'https://thoriummod.wiki.gg/images/Turtle_Drums.png?4cdcc8', tier: [Boss.MechBossRest], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Umbra Blaster', image: 'https://thoriummod.wiki.gg/images/Umbra_Blaster.png?15630b', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Donator'},//
- {name: 'Useless Staff', image: 'https://thoriummod.wiki.gg/images/Useless_Staff.png?ad57c6', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Donator'},//
+ {name: 'Useless Staff', image: 'https://thoriummod.wiki.gg/images/Useless_Staff.png?ad57c6', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Valkyrie Blade', image: 'https://thoriummod.wiki.gg/images/Valkyrie_Blade.png?731226', tier: [Boss.MechBossRest], tags: [], class: 'Summon', rarity: 'Donator'},//
  {name: 'Vicious Mockery', image: 'https://thoriummod.wiki.gg/images/Vicious_Mockery.png?2fef73', tier: [Boss.PreBoss], tags: [], class: 'Symphonic', rarity: 'Donator'},//
  {name: 'Wondrous Wand', image: 'https://thoriummod.wiki.gg/images/Wondrous_Wand.png?111341', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Donator'},//
  {name: 'Wyvern Slayer', image: 'https://thoriummod.wiki.gg/images/Wyvern_Slayer.png?14095a', tier: [Boss.Golem, ThoriumBoss.FallenBeholder], tags: [], class: 'Melee', rarity: 'Donator'},//
  {name: 'Yarn Ball', image: 'https://thoriummod.wiki.gg/images/Yarn_Ball.png?78704f', tier: [Boss.Skeletron], tags: [], class: 'Summon', rarity: 'Donator'},//
- {name: 'Zunpet', image: 'https://thoriummod.wiki.gg/images/Zunpet.png?651717', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Symphonic', rarity: 'Donator'},//
- {name: 'Dragons Breath', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Breath.png?d9c7a3', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
- {name: 'Dragons Gaze', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Gaze.png?748c8f', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Dragons Talon', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Talon.png?7a29a7', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Dragons Tooth', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Tooth.png?d37bf9', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Zunpet', image: 'https://thoriummod.wiki.gg/images/Zunpet.png?651717', tier: [Boss.MechBoss1], tags: [], class: 'Symphonic', rarity: 'Donator'},//
+ {name: 'Dragons Breath', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Breath.png?d9c7a3', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Dragons Gaze', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Gaze.png?748c8f', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Dragons Talon', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Talon.png?7a29a7', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Dragons Tooth', image: 'https://thoriummod.wiki.gg/images/Dragon%27s_Tooth.png?d37bf9', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Dread Blaster', image: 'https://thoriummod.wiki.gg/images/Dread_Blaster.png?a9a462', tier: [Boss.Skeletron, Boss.Plantera], tags: [VanillaTag.Corruption], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Dread Fork', image: 'https://thoriummod.wiki.gg/images/Dread_Fork.png?1531d1', tier: [Boss.Skeletron, Boss.Plantera], tags: [VanillaTag.Corruption], class: 'Melee', rarity: 'Yellow'},//
  {name: 'Dread Launcher', image: 'https://thoriummod.wiki.gg/images/Dread_Launcher.png?4c2847', tier: [Boss.Skeletron, Boss.Plantera], tags: [VanillaTag.Corruption], class: 'Ranged', rarity: 'Yellow'},//
@@ -385,12 +384,12 @@ export const thoriumWeaponData=[
  {name: 'Poison', image: 'https://thoriummod.wiki.gg/images/Poison.png?793cba', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
  {name: 'Siphon', image: 'https://thoriummod.wiki.gg/images/Siphon.png?c57b5b', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
  {name: 'Stun', image: 'https://thoriummod.wiki.gg/images/Stun.png?b0c029', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
- {name: 'Blood Belcher', image: 'https://thoriummod.wiki.gg/images/Blood_Belcher.png?858acc', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Blood Clot Staff', image: 'https://thoriummod.wiki.gg/images/Blood_Clot_Staff.png?76a86e', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
- {name: 'Flesh Bow', image: 'https://thoriummod.wiki.gg/images/Flesh_Bow.png?ac4a09', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Flesh Mace', image: 'https://thoriummod.wiki.gg/images/Flesh_Mace.png?5158ab', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Flesh Skewer', image: 'https://thoriummod.wiki.gg/images/Flesh_Skewer.png?fe02c2', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Tooth of The Consumer', image: 'https://thoriummod.wiki.gg/images/Tooth_of_the_Consumer.png?6bceed', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Blood Belcher', image: 'https://thoriummod.wiki.gg/images/Blood_Belcher.png?858acc', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Blood Clot Staff', image: 'https://thoriummod.wiki.gg/images/Blood_Clot_Staff.png?76a86e', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Flesh Bow', image: 'https://thoriummod.wiki.gg/images/Flesh_Bow.png?ac4a09', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Flesh Mace', image: 'https://thoriummod.wiki.gg/images/Flesh_Mace.png?5158ab', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Flesh Skewer', image: 'https://thoriummod.wiki.gg/images/Flesh_Skewer.png?fe02c2', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Tooth of The Consumer', image: 'https://thoriummod.wiki.gg/images/Tooth_of_the_Consumer.png?6bceed', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Granite Crossbow', image: 'https://thoriummod.wiki.gg/images/Granite_Crossbow.png?1fbde3', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Granite Reflector', image: 'https://thoriummod.wiki.gg/images/Granite_Reflector.png?b384d5', tier: [Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Orange'},//
  {name: 'Granite Throwing Axe', image: 'https://thoriummod.wiki.gg/images/Granite_Throwing_Axe.png?e0dffd', tier: [Boss.Skeletron], tags: [], class: 'Throwing', rarity: 'Orange'},//
@@ -408,13 +407,13 @@ export const thoriumWeaponData=[
  {name: 'Deep Staff', image: 'https://thoriummod.wiki.gg/images/Deep_Staff.png?6fbbdb', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Falling Twilight', image: 'https://thoriummod.wiki.gg/images/Falling_Twilight.png?9cfd23', tier: [Boss.EvilBoss, Boss.Skeletron], tags: [VanillaTag.Corruption], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Feather Barrier Rod', image: 'https://thoriummod.wiki.gg/images/Feather_Barrier_Rod.png?594af3', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Radiant', rarity: 'Green'},//
- {name: 'Hallowed Blessing', image: 'https://thoriummod.wiki.gg/images/Hallowed_Blessing.png?e53932', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Radiant', rarity: 'Pink'},//
- {name: 'Hallowed Scythe', image: 'https://thoriummod.wiki.gg/images/Hallowed_Scythe.png?fcc3af', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Radiant', rarity: 'Pink'},//
+ {name: 'Hallowed Blessing', image: 'https://thoriummod.wiki.gg/images/Hallowed_Blessing.png?e53932', tier: [Boss.MechBoss1], tags: [], class: 'Radiant', rarity: 'Pink'},//
+ {name: 'Hallowed Scythe', image: 'https://thoriummod.wiki.gg/images/Hallowed_Scythe.png?fcc3af', tier: [Boss.MechBoss1], tags: [], class: 'Radiant', rarity: 'Pink'},//
  {name: 'Heavenly Cloud Scepter', image: 'https://thoriummod.wiki.gg/images/Heavenly_Cloud_Scepter.png?4a7277', tier: [ThoriumBoss.BuriedChampion, Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Heretic Breaker', image: 'https://thoriummod.wiki.gg/images/Heretic_Breaker.png?bb5cab', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Blue'},//
  {name: 'Holy Fire', image: 'https://thoriummod.wiki.gg/images/Holy_Fire.png?e97097', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Ice Shaver', image: 'https://thoriummod.wiki.gg/images/Ice_Shaver.png?27220f', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'White'},//
- {name: 'Iridescent Staff', image: 'https://thoriummod.wiki.gg/images/Iridescent_Staff.png?b67c84', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Radiant', rarity: 'Light Red'},//
+ {name: 'Iridescent Staff', image: 'https://thoriummod.wiki.gg/images/Iridescent_Staff.png?b67c84', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Leech Bolt', image: 'https://thoriummod.wiki.gg/images/Leech_Bolt.png?b4fca0', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Blue'},//
  {name: 'Lethal Injection', image: 'https://thoriummod.wiki.gg/images/Lethal_Injection.png?ddb50b', tier: [Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Yellow'},//
  {name: 'Life and Death', image: 'https://thoriummod.wiki.gg/images/Life_and_Death.png?9147e3', tier: [Boss.MoonLord], tags: [], class: 'Radiant', rarity: 'Red'},//
@@ -422,19 +421,19 @@ export const thoriumWeaponData=[
  {name: 'Light Bringers Warhammer', image: 'https://thoriummod.wiki.gg/images/Light_Bringer%27s_Warhammer.png?e42087', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Yellow'},//
  {name: 'Lights Lament', image: 'https://thoriummod.wiki.gg/images/Light%27s_Lament.png?d2df9f', tier: [Boss.Skeletron], tags: [], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Lil Devils Wand', image: 'https://thoriummod.wiki.gg/images/Li%27l_Devil%27s_Wand.png?182588', tier: [ThoriumBoss.BuriedChampion, ThoriumBoss.FallenBeholder], tags: [], class: 'Radiant', rarity: 'Pink'},//
- {name: 'Lustrous Baton', image: 'https://thoriummod.wiki.gg/images/Lustrous_Baton.png?9002dd', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Radiant', rarity: 'Light Red'},//
+ {name: 'Lustrous Baton', image: 'https://thoriummod.wiki.gg/images/Lustrous_Baton.png?9002dd', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Midnight Staff', image: 'https://thoriummod.wiki.gg/images/Midnight_Staff.png?d8d4b5', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
- {name: 'Mind Melter', image: 'https://thoriummod.wiki.gg/images/Mind_Melter.png?f3e473', tier: [Boss.MechBoss1, Boss.Prime], tags: [CalamityTag.Hollow], class: 'Radiant', rarity: 'Pink'},//
- {name: 'Molten Thresher', image: 'https://thoriummod.wiki.gg/images/Molten_Thresher.png?ef380c', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Radiant', rarity: 'Orange'},//
+ {name: 'Mind Melter', image: 'https://thoriummod.wiki.gg/images/Mind_Melter.png?f3e473', tier: [Boss.MechBoss1, Boss.Prime], tags: [], class: 'Radiant', rarity: 'Pink'},//
+ {name: 'Molten Thresher', image: 'https://thoriummod.wiki.gg/images/Molten_Thresher.png?ef380c', tier: [Boss.EvilBoss], tags: [], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Morning Dew', image: 'https://thoriummod.wiki.gg/images/Morning_Dew.png?d5234a', tier: [Boss.MechBossRest], tags: [], class: 'Radiant', rarity: 'Lime'},//
- {name: 'Omen', image: 'https://thoriummod.wiki.gg/images/Omen.png?67c193', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Radiant', rarity: 'Orange'},//
+ {name: 'Omen', image: 'https://thoriummod.wiki.gg/images/Omen.png?67c193', tier: [Boss.EvilBoss], tags: [], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Pagans Grasp', image: 'https://thoriummod.wiki.gg/images/Pagan%27s_Grasp.png?82f9c2', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Yellow'},//
  {name: 'Palm Cross', image: 'https://thoriummod.wiki.gg/images/Palm_Cross.png?53ebe3', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Blue'},//
  {name: 'Poison Prickler', image: 'https://thoriummod.wiki.gg/images/Poison_Prickler.png?eb4b7f', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Orange'},//
  {name: 'Purified Water', image: 'https://thoriummod.wiki.gg/images/Purified_Water.png?b47b64', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'Blue'},//
  {name: 'Rotten Cod', image: 'https://thoriummod.wiki.gg/images/Rotten_Cod.png?734dbc', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Radiant', rarity: 'Blue'},//
- {name: 'Sacred Bludgeon', image: 'https://thoriummod.wiki.gg/images/Sacred_Bludgeon.png?1431a5', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Radiant', rarity: 'Light Red'},//
- {name: 'Sacred Lyre', image: 'https://thoriummod.wiki.gg/images/Sacred_Lyre.png?f6f6ba', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Radiant', rarity: 'Light Red'},//
+ {name: 'Sacred Bludgeon', image: 'https://thoriummod.wiki.gg/images/Sacred_Bludgeon.png?1431a5', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
+ {name: 'Sacred Lyre', image: 'https://thoriummod.wiki.gg/images/Sacred_Lyre.png?f6f6ba', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Samsara Lotus', image: 'https://thoriummod.wiki.gg/images/Samsara_Lotus.png?275567', tier: [Boss.EvilBoss], tags: [], class: 'Radiant', rarity: 'Green'},//
  {name: 'Shadow Wand', image: 'https://thoriummod.wiki.gg/images/Shadow_Wand.png?55af74', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Radiant', rarity: 'Green'},//
  {name: 'Spirit Benders Staff', image: 'https://thoriummod.wiki.gg/images/Spirit_Bender%27s_Staff.png?d866cf', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Yellow'},//
@@ -446,7 +445,7 @@ export const thoriumWeaponData=[
  {name: 'True Blood Harvest', image: 'https://thoriummod.wiki.gg/images/True_Blood_Harvest.png?a5f7d9', tier: [Boss.Skeletron, Boss.Plantera], tags: [VanillaTag.Crimson], class: 'Radiant', rarity: 'Yellow'},//
  {name: 'True Falling Twilight', image: 'https://thoriummod.wiki.gg/images/True_Falling_Twilight.png?75038d', tier: [Boss.Skeletron, Boss.Plantera], tags: [VanillaTag.Corruption], class: 'Radiant', rarity: 'Yellow'},//
  {name: 'True Hallowed Scythe', image: 'https://thoriummod.wiki.gg/images/True_Hallowed_Scythe.png?409aa7', tier: [Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Yellow'},//
- {name: 'Twilight Staff', image: 'https://thoriummod.wiki.gg/images/Twilight_Staff.png?874d51', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Radiant', rarity: 'Light Red'},//
+ {name: 'Twilight Staff', image: 'https://thoriummod.wiki.gg/images/Twilight_Staff.png?874d51', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Wild Umbra', image: 'https://thoriummod.wiki.gg/images/Wild_Umbra.png?4ebd33', tier: [Boss.WallOfFlesh], tags: [], class: 'Radiant', rarity: 'Light Red'},//
  {name: 'Wooden Baton', image: 'https://thoriummod.wiki.gg/images/Wooden_Baton.png?c4cc46', tier: [Boss.PreBoss], tags: [], class: 'Radiant', rarity: 'White'},//
  {name: 'Cold Front', image: 'https://thoriummod.wiki.gg/images/Cold_Front.png?7b534f', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'White'},//
@@ -464,42 +463,42 @@ export const thoriumWeaponData=[
  {name: 'Illumite Scythe', image: 'https://thoriummod.wiki.gg/images/Illumite_Scythe.png?de6f9f', tier: [Boss.Plantera], tags: [], class: 'Radiant', rarity: 'Lime'},//
  {name: 'Illumite Shotbow', image: 'https://thoriummod.wiki.gg/images/Illumite_Shotbow.png?a9c49d', tier: [Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Lime'},//
  {name: 'Illumite Spear', image: 'https://thoriummod.wiki.gg/images/Illumite_Spear.png?a3c81b', tier: [Boss.Plantera], tags: [], class: 'Melee', rarity: 'Lime'},//
- {name: 'Lodestone Bow', image: 'https://thoriummod.wiki.gg/images/Lodestone_Bow.png?627212', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Pink'},//
- {name: 'Lodestone Breaker', image: 'https://thoriummod.wiki.gg/images/Lodestone_Breaker.png?4497d2', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Pink'},//
- {name: 'Lodestone Claymore', image: 'https://thoriummod.wiki.gg/images/Lodestone_Claymore.png?38760f', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Pink'},//
- {name: 'Lodestone Javelin', image: 'https://thoriummod.wiki.gg/images/Lodestone_Javelin.png?a84ce4', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Pink'},//
- {name: 'Lodestone Quick Draw', image: 'https://thoriummod.wiki.gg/images/Lodestone_Quick_Draw.png?8d5975', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Pink'},//
- {name: 'Lodestone Staff', image: 'https://thoriummod.wiki.gg/images/Lodestone_Staff.png?9bd1f0', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Pink'},//
- {name: 'Adamantite Staff', image: 'https://thoriummod.wiki.gg/images/Adamantite_Staff.png?c18063', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Lodestone Bow', image: 'https://thoriummod.wiki.gg/images/Lodestone_Bow.png?627212', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Ranged', rarity: 'Pink'},//
+ {name: 'Lodestone Breaker', image: 'https://thoriummod.wiki.gg/images/Lodestone_Breaker.png?4497d2', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Lodestone Claymore', image: 'https://thoriummod.wiki.gg/images/Lodestone_Claymore.png?38760f', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Lodestone Javelin', image: 'https://thoriummod.wiki.gg/images/Lodestone_Javelin.png?a84ce4', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Throwing', rarity: 'Pink'},//
+ {name: 'Lodestone Quick Draw', image: 'https://thoriummod.wiki.gg/images/Lodestone_Quick_Draw.png?8d5975', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Ranged', rarity: 'Pink'},//
+ {name: 'Lodestone Staff', image: 'https://thoriummod.wiki.gg/images/Lodestone_Staff.png?9bd1f0', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Magic', rarity: 'Pink'},//
+ {name: 'Adamantite Staff', image: 'https://thoriummod.wiki.gg/images/Adamantite_Staff.png?c18063', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Blackhole Cannon', image: 'https://thoriummod.wiki.gg/images/Blackhole_Cannon.png?df6935', tier: [ThoriumBoss.FallenBeholder, Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Light Purple'},//
  {name: 'Chlorophyte Staff', image: 'https://thoriummod.wiki.gg/images/Chlorophyte_Staff.png?a79359', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Lime'},//
  {name: 'Chromatic Fury', image: 'https://thoriummod.wiki.gg/images/Chromatic_Fury.png?fb8b81', tier: [Boss.Plantera, Boss.Empress], tags: [], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Cobalt Staff', image: 'https://thoriummod.wiki.gg/images/Cobalt_Staff.png?9727be', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Cyclone', image: 'https://thoriummod.wiki.gg/images/Cyclone.png?edde41', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Pink'},//
  {name: 'Dark Wave', image: 'https://thoriummod.wiki.gg/images/Dark_Wave.png?a84eaa', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Magic', rarity: 'Blue'},//
- {name: 'Dynasty War Fan', image: 'https://thoriummod.wiki.gg/images/Dynasty_War_Fan.png?c4b283', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Dynasty War Fan', image: 'https://thoriummod.wiki.gg/images/Dynasty_War_Fan.png?c4b283', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Enchanted Staff', image: 'https://thoriummod.wiki.gg/images/Enchanted_Staff.png?262b50', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
- {name: 'Hallowed Staff', image: 'https://thoriummod.wiki.gg/images/Hallowed_Staff.png?dc4d58', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Magic', rarity: 'Pink'},//
+ {name: 'Hallowed Staff', image: 'https://thoriummod.wiki.gg/images/Hallowed_Staff.png?dc4d58', tier: [Boss.MechBoss1], tags: [], class: 'Magic', rarity: 'Pink'},//
  {name: 'High Tide', image: 'https://thoriummod.wiki.gg/images/High_Tide.png?67face', tier: [Boss.Skeletron], tags: [], class: 'Magic', rarity: 'Green'},//
- {name: 'Inferno Staff', image: 'https://thoriummod.wiki.gg/images/Inferno_Staff.png?c0250e', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Magic', rarity: 'Orange'},//
- {name: 'Joyeuse', image: 'https://thoriummod.wiki.gg/images/Joyeuse.png?114b8e', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Inferno Staff', image: 'https://thoriummod.wiki.gg/images/Inferno_Staff.png?c0250e', tier: [Boss.EvilBoss], tags: [], class: 'Magic', rarity: 'Orange'},//
+ {name: 'Joyeuse', image: 'https://thoriummod.wiki.gg/images/Joyeuse.png?114b8e', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Jungles Wrath', image: 'https://thoriummod.wiki.gg/images/Jungle%27s_Wrath.png?16575c', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Orange'},//
- {name: 'Mythril Staff', image: 'https://thoriummod.wiki.gg/images/Mythril_Staff.png?abd6b6', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
- {name: 'Orichalcum Staff', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Staff.png?8537e5', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Mythril Staff', image: 'https://thoriummod.wiki.gg/images/Mythril_Staff.png?abd6b6', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Orichalcum Staff', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Staff.png?8537e5', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Palladium Staff', image: 'https://thoriummod.wiki.gg/images/Palladium_Staff.png?caae8c', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Spectral Blade', image: 'https://thoriummod.wiki.gg/images/Spectral_Blade.png?d5569b', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Spine Breaker', image: 'https://thoriummod.wiki.gg/images/Spine_Breaker.png?fe53f1', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Orange'},//
  {name: 'Spores', image: 'https://thoriummod.wiki.gg/images/Spores.png?96b039', tier: [Boss.Plantera], tags: [], class: 'Magic', rarity: 'Yellow'},//
  {name: 'Stalagmite', image: 'https://thoriummod.wiki.gg/images/Stalagmite.png?53d9d5', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Time Gate', image: 'https://thoriummod.wiki.gg/images/Time_Gate.png?370ece', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Magic', rarity: 'Yellow'},//
- {name: 'Titanium Staff', image: 'https://thoriummod.wiki.gg/images/Titanium_Staff.png?6e96ee', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Magic', rarity: 'Light Red'},//
+ {name: 'Titanium Staff', image: 'https://thoriummod.wiki.gg/images/Titanium_Staff.png?6e96ee', tier: [Boss.WallOfFlesh], tags: [], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Vessel Buster', image: 'https://thoriummod.wiki.gg/images/Vessel_Buster.png?e6035e', tier: [Boss.PreBoss], tags: [VanillaTag.Crimson], class: 'Magic', rarity: 'Blue'},//
  {name: 'Destroyers Rage', image: 'https://thoriummod.wiki.gg/images/Destroyer%27s_Rage.png?496616', tier: [Boss.MechBossRest], tags: [], class: 'Ranged', rarity: 'Light Purple'},//
  {name: 'Eye of the Destroyer', image: 'https://thoriummod.wiki.gg/images/Eye_of_the_Destroyer.png?6cf3d2', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Light Purple'},//
  {name: 'Primes Fury', image: 'https://thoriummod.wiki.gg/images/Prime%27s_Fury.png?586fdb', tier: [Boss.MechBossRest], tags: [], class: 'Melee', rarity: 'Light Purple'},//
  {name: 'Spark Taser', image: 'https://thoriummod.wiki.gg/images/Spark_Taser.png?db77a4', tier: [Boss.MechBossRest], tags: [], class: 'Throwing', rarity: 'Light Purple'},//
  {name: 'Twins Ire', image: 'https://thoriummod.wiki.gg/images/Twin%27s_Ire.png?4d8501', tier: [Boss.MechBossRest], tags: [], class: 'Magic', rarity: 'Light Purple'},//
- {name: 'Doom Fire Axe', image: 'https://thoriummod.wiki.gg/images/Doom_Fire_Axe.png?73d0d9', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Light Red'},//
+ {name: 'Doom Fire Axe', image: 'https://thoriummod.wiki.gg/images/Doom_Fire_Axe.png?73d0d9', tier: [Boss.WallOfFlesh], tags: [], class: 'Melee', rarity: 'Light Red'},//
  {name: 'Nocturnal', image: 'https://thoriummod.wiki.gg/images/Nocturnal.png?fa74be', tier: [Boss.Skeletron], tags: [VanillaTag.Corruption], class: 'Melee', rarity: 'Orange'},//
  {name: 'Sanguine', image: 'https://thoriummod.wiki.gg/images/Sanguine.png?2f5dcb', tier: [Boss.Skeletron], tags: [VanillaTag.Crimson], class: 'Melee', rarity: 'Orange'},//
  {name: 'Sol-Scorched Slab', image: 'https://thoriummod.wiki.gg/images/Sol-Scorched_Slab.png?3a706e', tier: [Boss.Plantera], tags: [], class: 'Melee', rarity: 'Yellow'},//
@@ -544,26 +543,26 @@ export const thoriumWeaponData=[
  {name: 'Vega Phaser', image: 'https://thoriummod.wiki.gg/images/Vega_Phaser.png?101ab6', tier: [Boss.EvilBoss, Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Vile Spitter', image: 'https://thoriummod.wiki.gg/images/Vile_Spitter.png?6888c4', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption], class: 'Magic', rarity: 'Light Red'},//
  {name: 'Whirlpool Saber', image: 'https://thoriummod.wiki.gg/images/Whirlpool_Saber.png?a91fca', tier: [ThoriumBoss.QueenJelly, Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Adamantite Carbine', image: 'https://thoriummod.wiki.gg/images/Adamantite_Carbine.png?21fe27', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Cinder String', image: 'https://thoriummod.wiki.gg/images/Cinder_String.png?f4aa9d', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Adamantite Carbine', image: 'https://thoriummod.wiki.gg/images/Adamantite_Carbine.png?21fe27', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Cinder String', image: 'https://thoriummod.wiki.gg/images/Cinder_String.png?f4aa9d', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Cobalt Popper', image: 'https://thoriummod.wiki.gg/images/Cobalt_Popper.png?4c7a7e', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Comet Crossfire', image: 'https://thoriummod.wiki.gg/images/Comet_Crossfire.png?fc3d70', tier: [Boss.EvilBoss, Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Comet Crossfire', image: 'https://thoriummod.wiki.gg/images/Comet_Crossfire.png?fc3d70', tier: [Boss.EvilBoss, Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Elephant Gun', image: 'https://thoriummod.wiki.gg/images/Elephant_Gun.png?895f74', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Eternal Night', image: 'https://thoriummod.wiki.gg/images/Eternal_Night.png?d39fce', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Bramble Shot', image: 'https://thoriummod.wiki.gg/images/Bramble_Shot.png?19200c', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Micro Launcher', image: 'https://thoriummod.wiki.gg/images/Micro_Launcher.png?f2fea2', tier: [Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Yellow'},//
  {name: 'Mycelium Gatling Gun', image: 'https://thoriummod.wiki.gg/images/Mycelium_Gatling_Gun.png?1784bf', tier: [Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Yellow'},//
- {name: 'Mythril Pelter', image: 'https://thoriummod.wiki.gg/images/Mythril_Pelter.png?b20f31', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
- {name: 'Orichalcum Pelter', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Pelter.png?9a9ad2', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Mythril Pelter', image: 'https://thoriummod.wiki.gg/images/Mythril_Pelter.png?b20f31', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Orichalcum Pelter', image: 'https://thoriummod.wiki.gg/images/Orichalcum_Pelter.png?9a9ad2', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Palladium Sub-machine Gun', image: 'https://thoriummod.wiki.gg/images/Palladium_Sub-machine_Gun.png?f4ea94', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Rejects Blowpipe', image: 'https://thoriummod.wiki.gg/images/Reject%27s_Blowpipe.png?a349db', tier: [Boss.Plantera], tags: [], class: 'Ranged', rarity: 'Yellow'},//
  {name: 'Slugger', image: 'https://thoriummod.wiki.gg/images/Slugger.png?7b19e7', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'Stream Sting', image: 'https://thoriummod.wiki.gg/images/Stream_Sting.png?7a1dec', tier: [Boss.Skeletron], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'The Zapper', image: 'https://thoriummod.wiki.gg/images/The_Zapper.png?67741a', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Green'},//
- {name: 'Titanium Rifle', image: 'https://thoriummod.wiki.gg/images/Titanium_Rifle.png?2d6f8c', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Ranged', rarity: 'Light Red'},//
+ {name: 'Titanium Rifle', image: 'https://thoriummod.wiki.gg/images/Titanium_Rifle.png?2d6f8c', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Tranquilizer Gun', image: 'https://thoriummod.wiki.gg/images/Tranquilizer_Gun.png?a4626c', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Light Red'},//
  {name: 'Trapper', image: 'https://thoriummod.wiki.gg/images/Trapper.png?289853', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Blue'},//
- {name: 'Trigun', image: 'https://thoriummod.wiki.gg/images/Trigun.png?49989e', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Ranged', rarity: 'Pink'},//
+ {name: 'Trigun', image: 'https://thoriummod.wiki.gg/images/Trigun.png?49989e', tier: [Boss.MechBoss1], tags: [], class: 'Ranged', rarity: 'Pink'},//
  {name: 'Webgun', image: 'https://thoriummod.wiki.gg/images/Webgun.png?3508f2', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Green'},//
  {name: 'Sandstone Scimitar', image: 'https://thoriummod.wiki.gg/images/Sandstone_Scimitar.png?b23cfd', tier: [ThoriumBoss.ThunderBird], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Sandstone Bow', image: 'https://thoriummod.wiki.gg/images/Sandstone_Bow.png?87bb7f', tier: [ThoriumBoss.ThunderBird], tags: [], class: 'Ranged', rarity: 'Blue'},//
@@ -579,9 +578,9 @@ export const thoriumWeaponData=[
  {name: 'Antlion Staff', image: 'https://thoriummod.wiki.gg/images/Antlion_Staff.png?cec3ef', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'White'},//
  {name: 'Bleeding Heart Staff', image: 'https://thoriummod.wiki.gg/images/Bleeding_Heart_Staff.png?beeed1', tier: [Boss.EvilBoss], tags: [VanillaTag.Crimson], class: 'Summon', rarity: 'Blue'},//
  {name: 'Butterfly Staff', image: 'https://thoriummod.wiki.gg/images/Butterfly_Staff.png?397be1', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Blue'},//
- {name: 'Corruptling Staff', image: 'https://thoriummod.wiki.gg/images/Corruptling_Staff.png?bd1ac2', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Corruptling Staff', image: 'https://thoriummod.wiki.gg/images/Corruptling_Staff.png?bd1ac2', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Creeping Vine Staff', image: 'https://thoriummod.wiki.gg/images/Creeping_Vine_Staff.png?4f00b2', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Orange'},//
- {name: 'Crimson Hound Staff', image: 'https://thoriummod.wiki.gg/images/Crimson_Hound_Staff.png?c6b57c', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Crimson Hound Staff', image: 'https://thoriummod.wiki.gg/images/Crimson_Hound_Staff.png?c6b57c', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Devourer Staff', image: 'https://thoriummod.wiki.gg/images/Devourer_Staff.png?fb2dc8', tier: [Boss.EvilBoss], tags: [VanillaTag.Corruption], class: 'Summon', rarity: 'Blue'},//
  {name: 'Enchanted Cane', image: 'https://thoriummod.wiki.gg/images/Enchanted_Cane.png?54c6ca', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Blue'},//
  {name: 'Fungal Cane', image: 'https://thoriummod.wiki.gg/images/Fungal_Cane.png?110bc5', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Pink'},//
@@ -590,8 +589,8 @@ export const thoriumWeaponData=[
  {name: 'Mortar Staff', image: 'https://thoriummod.wiki.gg/images/Mortar_Staff.png?9bf617', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Spittin Fish', image: 'https://thoriummod.wiki.gg/images/Spittin%27_Fish.png?868da2', tier: [Boss.PreBoss], tags: [], class: 'Summon', rarity: 'Green'},//
  {name: 'Strongest Link', image: 'https://thoriummod.wiki.gg/images/Strongest_Link.png?ffb2b7', tier: [Boss.Skeletron], tags: [], class: 'Summon', rarity: 'Green'},//
- {name: 'Thrombosis', image: 'https://thoriummod.wiki.gg/images/Thrombosis.png?f05bd8', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Light Red'},//
- {name: 'Void Lance', image: 'https://thoriummod.wiki.gg/images/Void_Lance.png?9edf95', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Summon', rarity: 'Pink'},//
+ {name: 'Thrombosis', image: 'https://thoriummod.wiki.gg/images/Thrombosis.png?f05bd8', tier: [Boss.WallOfFlesh], tags: [], class: 'Summon', rarity: 'Light Red'},//
+ {name: 'Void Lance', image: 'https://thoriummod.wiki.gg/images/Void_Lance.png?9edf95', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Summon', rarity: 'Pink'},//
  {name: 'Volt Module', image: 'https://thoriummod.wiki.gg/images/Volt_Module.png?8fbc88', tier: [Boss.Golem], tags: [], class: 'Summon', rarity: 'Yellow'},//
  {name: 'Terrarium Bomber', image: 'https://thoriummod.wiki.gg/images/Terrarium_Bomber.png?db9878', tier: [Boss.Cultist], tags: [], class: 'Ranged', rarity: 'Terrarium'},//
  {name: 'Terrarium Enigma Staff', image: 'https://thoriummod.wiki.gg/images/Terrarium_Enigma_Staff.png?6f1d86', tier: [Boss.Cultist], tags: [], class: 'Summon', rarity: 'Terrarium'},//
@@ -603,9 +602,9 @@ export const thoriumWeaponData=[
  {name: 'Terrarium Saber', image: 'https://thoriummod.wiki.gg/images/Terrarium_Saber.png?8a4823', tier: [Boss.Cultist], tags: [], class: 'Melee', rarity: 'Terrarium'},//
  {name: 'Terrarium Sage Staff', image: 'https://thoriummod.wiki.gg/images/Terrarium_Sage_Staff.png?63358d', tier: [Boss.Cultist], tags: [], class: 'Magic', rarity: 'Terrarium'},//
  {name: 'Terrarium Spear', image: 'https://thoriummod.wiki.gg/images/Terrarium_Spear.png?9e4887', tier: [Boss.Cultist], tags: [], class: 'Melee', rarity: 'Terrarium'},//
- {name: 'Thors Hammer: Magic', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Magic', rarity: 'Orange'},//
- {name: 'Thors Hammer: Melee', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Melee', rarity: 'Orange'},//
- {name: 'Thors Hammer: Ranged', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Ranged', rarity: 'Orange'},//
+ {name: 'Thors Hammer: Magic', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [], class: 'Magic', rarity: 'Orange'},//
+ {name: 'Thors Hammer: Melee', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [], class: 'Melee', rarity: 'Orange'},//
+ {name: 'Thors Hammer: Ranged', image: 'https://thoriummod.wiki.gg/images/Thor%27s_Hammer_-_Ranged.png?2b8dba', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Thorium Blade', image: 'https://thoriummod.wiki.gg/images/Thorium_Blade.png?b607d8', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Thorium Boomerang', image: 'https://thoriummod.wiki.gg/images/Thorium_Boomerang.png?6692b7', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Thorium Bow', image: 'https://thoriummod.wiki.gg/images/Thorium_Bow.png?89b997', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Blue'},//
@@ -613,10 +612,10 @@ export const thoriumWeaponData=[
  {name: 'Thorium Revolver', image: 'https://thoriummod.wiki.gg/images/Thorium_Revolver.png?89d2b6', tier: [Boss.PreBoss], tags: [], class: 'Ranged', rarity: 'Blue'},//
  {name: 'Thorium Spear', image: 'https://thoriummod.wiki.gg/images/Thorium_Spear.png?f3ed1f', tier: [Boss.PreBoss], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Thorium Staff', image: 'https://thoriummod.wiki.gg/images/Thorium_Staff.png?35dc8d', tier: [Boss.PreBoss], tags: [], class: 'Magic', rarity: 'Blue'},//
- {name: 'Adamantite Ricochet', image: 'https://thoriummod.wiki.gg/images/Adamantite_Ricochet.png?bb3a0f', tier: [Boss.PreBoss, Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Adamantite Ricochet', image: 'https://thoriummod.wiki.gg/images/Adamantite_Ricochet.png?bb3a0f', tier: [Boss.PreBoss, Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Angels End', image: 'https://thoriummod.wiki.gg/images/Angel%27s_End.png?a48004', tier: [Boss.MoonLord], tags: [], class: 'Throwing', rarity: 'Red'},//
  {name: 'Aphrodisiac Vial', image: 'https://thoriummod.wiki.gg/images/Aphrodisiac_Vial.png?400c71', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
- {name: 'Axe Blade', image: 'https://thoriummod.wiki.gg/images/Axe_Blade.png?f2fdf9', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Axe Blade', image: 'https://thoriummod.wiki.gg/images/Axe_Blade.png?f2fdf9', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Crude Bat', image: 'https://thoriummod.wiki.gg/images/Crude_Bat.png?933481', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'White'},//
  {name: 'Blooming Shuriken', image: 'https://thoriummod.wiki.gg/images/Blooming_Shuriken.png?a2213d', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Throwing', rarity: 'Green'},//
  {name: 'Bolas', image: 'https://thoriummod.wiki.gg/images/Bolas.png?8ade2f', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'Orange'},//
@@ -624,23 +623,23 @@ export const thoriumWeaponData=[
  {name: 'Shade Shuriken', image: 'https://thoriummod.wiki.gg/images/Shade_Shuriken.png?68a58a', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Cactus Needle', image: 'https://thoriummod.wiki.gg/images/Cactus_Needle.png?fbdff4', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'White'},//
  {name: 'Captains Poignard', image: 'https://thoriummod.wiki.gg/images/Captain%27s_Poignard.png?e653de', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
- {name: 'Carnwennan', image: 'https://thoriummod.wiki.gg/images/Carnwennan.png?bd4929', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Throwing', rarity: 'Pink'},//
+ {name: 'Carnwennan', image: 'https://thoriummod.wiki.gg/images/Carnwennan.png?bd4929', tier: [Boss.MechBoss1], tags: [], class: 'Throwing', rarity: 'Pink'},//
  {name: 'Chlorophyte Tomahawk', image: 'https://thoriummod.wiki.gg/images/Chlorophyte_Tomahawk.png?4ed41a', tier: [Boss.MechBossRest], tags: [], class: 'Throwing', rarity: 'Lime'},//
  {name: 'Clockwork Bomb', image: 'https://thoriummod.wiki.gg/images/Clockwork_Bomb.png?2a1068', tier: [Boss.MechBoss1], tags: [], class: 'Throwing', rarity: 'Pink'},//
  {name: 'Cobalt Throwing Spear', image: 'https://thoriummod.wiki.gg/images/Cobalt_Throwing_Spear.png?deef71', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Combustion Vial', image: 'https://thoriummod.wiki.gg/images/Combustion_Vial.png?383f14', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Corrosive Vial', image: 'https://thoriummod.wiki.gg/images/Corrosive_Vial.png?e0686e', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
- {name: 'Corrupters Balloon', image: 'https://thoriummod.wiki.gg/images/Corrupter%27s_Balloon.png?d774c1', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Corrupters Balloon', image: 'https://thoriummod.wiki.gg/images/Corrupter%27s_Balloon.png?d774c1', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Corruption, ], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Crimtane Tomahawk', image: 'https://thoriummod.wiki.gg/images/Crimtane_Tomahawk.png?2429bd', tier: [Boss.PreBoss], tags: [VanillaTag.Crimson], class: 'Throwing', rarity: 'Blue'},//
- {name: 'Crystal Balloon', image: 'https://thoriummod.wiki.gg/images/Crystal_Balloon.png?21a984', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Crystal Balloon', image: 'https://thoriummod.wiki.gg/images/Crystal_Balloon.png?21a984', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Demonite Tomahawk', image: 'https://thoriummod.wiki.gg/images/Demonite_Tomahawk.png?efcd14', tier: [Boss.PreBoss], tags: [VanillaTag.Corruption], class: 'Throwing', rarity: 'Blue'},//
  {name: 'Dragon Fang', image: 'https://thoriummod.wiki.gg/images/Dragon_Fang.png?a9a055', tier: [Boss.Golem], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Electro-Rebounder', image: 'https://thoriummod.wiki.gg/images/Electro-Rebounder.png?f18b03', tier: [Boss.Golem], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Embowelment', image: 'https://thoriummod.wiki.gg/images/Embowelment.png?468fc9', tier: [Boss.EvilBoss, Boss.Skeletron], tags: [VanillaTag.Crimson], class: 'Throwing', rarity: 'Orange'},//
  {name: 'Enchanted Knife', image: 'https://thoriummod.wiki.gg/images/Enchanted_Knife.png?b101fa', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'Blue'},//
- {name: 'Eviscerating Claw', image: 'https://thoriummod.wiki.gg/images/Eviscerating_Claw.png?1fb44f', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
- {name: 'Festering Balloon', image: 'https://thoriummod.wiki.gg/images/Festering_Balloon.png?1f3d6f', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
- {name: 'Fungal Popper', image: 'https://thoriummod.wiki.gg/images/Fungal_Popper.png?6da9fa', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Eviscerating Claw', image: 'https://thoriummod.wiki.gg/images/Eviscerating_Claw.png?1fb44f', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Festering Balloon', image: 'https://thoriummod.wiki.gg/images/Festering_Balloon.png?1f3d6f', tier: [Boss.WallOfFlesh], tags: [VanillaTag.Crimson, ], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Fungal Popper', image: 'https://thoriummod.wiki.gg/images/Fungal_Popper.png?6da9fa', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Gas Container', image: 'https://thoriummod.wiki.gg/images/Gas_Container.png?db7c79', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Iron Tomahawk', image: 'https://thoriummod.wiki.gg/images/Iron_Tomahawk.png?648007', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'White'},//
  {name: 'Lead Tomahawk', image: 'https://thoriummod.wiki.gg/images/Lead_Tomahawk.png?174be2', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'White'},//
@@ -648,8 +647,8 @@ export const thoriumWeaponData=[
  {name: 'Lihzahrd Kunai', image: 'https://thoriummod.wiki.gg/images/Lihzahrd_Kunai.png?745dc9', tier: [Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Playing Card', image: 'https://thoriummod.wiki.gg/images/Playing_Card.png?a95e3f', tier: [Boss.MechBossRest], tags: [], class: 'Throwing', rarity: 'Light Purple'},//
  {name: 'Meteorite Cluster Bomb', image: 'https://thoriummod.wiki.gg/images/Meteorite_Cluster_Bomb.png?c78600', tier: [Boss.EvilBoss], tags: [], class: 'Throwing', rarity: 'Blue'},//
- {name: 'Molten Knife', image: 'https://thoriummod.wiki.gg/images/Molten_Knife.png?d4d2ab', tier: [Boss.EvilBoss], tags: [CalamityTag.PreBossHellstone], class: 'Throwing', rarity: 'Orange'},//
- {name: 'Morel Grenade', image: 'https://thoriummod.wiki.gg/images/Morel_Grenade.png?f5d11f', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Molten Knife', image: 'https://thoriummod.wiki.gg/images/Molten_Knife.png?d4d2ab', tier: [Boss.EvilBoss], tags: [], class: 'Throwing', rarity: 'Orange'},//
+ {name: 'Morel Grenade', image: 'https://thoriummod.wiki.gg/images/Morel_Grenade.png?f5d11f', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Naiads Shiv', image: 'https://thoriummod.wiki.gg/images/Naiad%27s_Shiv.png?f8b3d5', tier: [Boss.Skeletron], tags: [], class: 'Throwing', rarity: 'Green'},//
  {name: 'Nitrogen Vial', image: 'https://thoriummod.wiki.gg/images/Nitrogen_Vial.png?7b1164', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Obsidian Striker', image: 'https://thoriummod.wiki.gg/images/Obsidian_Striker.png?6ae237', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'Blue'},//
@@ -658,8 +657,8 @@ export const thoriumWeaponData=[
  {name: 'Phase Chopper', image: 'https://thoriummod.wiki.gg/images/Phase_Chopper.png?3b0e21', tier: [Boss.Skeletron], tags: [], class: 'Throwing', rarity: 'Green'},//
  {name: 'Plasma Vial', image: 'https://thoriummod.wiki.gg/images/Plasma_Vial.png?f62b98', tier: [Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Proximity Mine', image: 'https://thoriummod.wiki.gg/images/Proximity_Mine.png?142502', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
- {name: 'Rift Tearer', image: 'https://thoriummod.wiki.gg/images/Rift_Tearer.png?f0d609', tier: [ThoriumBoss.FallenBeholder, Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Throwing', rarity: 'Light Purple'},//
- {name: 'Rocket Fist', image: 'https://thoriummod.wiki.gg/images/Rocket_Fist.png?681507', tier: [Boss.WallOfFlesh], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Rift Tearer', image: 'https://thoriummod.wiki.gg/images/Rift_Tearer.png?f0d609', tier: [ThoriumBoss.FallenBeholder, Boss.MechBoss1], tags: [], class: 'Throwing', rarity: 'Light Purple'},//
+ {name: 'Rocket Fist', image: 'https://thoriummod.wiki.gg/images/Rocket_Fist.png?681507', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'Pod Bomb', image: 'https://thoriummod.wiki.gg/images/Pod_Bomb.png?91149c', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'Orange'},//
  {name: 'Shade Kunai', image: 'https://thoriummod.wiki.gg/images/Shade_Kunai.png?8b3be0', tier: [ThoriumBoss.ThunderBird, Boss.Skeletron, Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'Shade Kusarigama', image: 'https://thoriummod.wiki.gg/images/Shade_Kusarigama.png?ee4f6c', tier: [Boss.Skeletron, Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
@@ -675,7 +674,7 @@ export const thoriumWeaponData=[
  {name: 'Stone Throwing Spear', image: 'https://thoriummod.wiki.gg/images/Stone_Throwing_Spear.png?fd421a', tier: [Boss.PreBoss], tags: [], class: 'Throwing', rarity: 'White'},//
  {name: 'Swamp Rot', image: 'https://thoriummod.wiki.gg/images/Swamp_Rot.png?32f36f', tier: [Boss.MechBoss1], tags: [], class: 'Throwing', rarity: 'Pink'},//
  {name: 'Terra Knife', image: 'https://thoriummod.wiki.gg/images/Terra_Knife.png?8f8300', tier: [Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
- {name: 'Titanium Ricochet', image: 'https://thoriummod.wiki.gg/images/Titanium_Ricochet.png?f0e077', tier: [Boss.WallOfFlesh], tags: [CalamityTag.TitaniumAdamantite], class: 'Throwing', rarity: 'Light Red'},//
+ {name: 'Titanium Ricochet', image: 'https://thoriummod.wiki.gg/images/Titanium_Ricochet.png?f0e077', tier: [Boss.WallOfFlesh], tags: [], class: 'Throwing', rarity: 'Light Red'},//
  {name: 'True Carnwennan', image: 'https://thoriummod.wiki.gg/images/True_Carnwennan.png?5ba331', tier: [Boss.Plantera], tags: [], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'True Embowelment', image: 'https://thoriummod.wiki.gg/images/True_Embowelment.png?5ef149', tier: [Boss.Plantera], tags: [VanillaTag.Crimson], class: 'Throwing', rarity: 'Yellow'},//
  {name: 'True Lights Anguish', image: 'https://thoriummod.wiki.gg/images/True_Light%27s_Anguish.png?c5bf0d', tier: [Boss.Plantera], tags: [VanillaTag.Corruption], class: 'Throwing', rarity: 'Yellow'},//
@@ -703,10 +702,10 @@ export const thoriumWeaponData=[
  {name: 'Totem Caller', image: 'https://thoriummod.wiki.gg/images/Totem_Caller.png?1cebf9', tier: [Boss.EyeOfCthulhu, Boss.EvilBoss], tags: [], class: 'Summon', rarity: 'Green'},//
  {name: 'Trackers Skinning Blade', image: 'https://thoriummod.wiki.gg/images/Tracker%27s_Skinning_Blade.png?3f64e9', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Melee', rarity: 'Blue'},//
  {name: 'Whip', image: 'https://thoriummod.wiki.gg/images/Whip.png?52c501', tier: [Boss.EyeOfCthulhu], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Valadium Throwing Axe', image: 'https://thoriummod.wiki.gg/images/Valadium_Throwing_Axe.png?2c6989', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Throwing', rarity: 'Pink'},//
- {name: 'Valadium Bow', image: 'https://thoriummod.wiki.gg/images/Valadium_Bow.png?e10f60', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Pink'},//
- {name: 'Valadium Foe Blaster', image: 'https://thoriummod.wiki.gg/images/Valadium_Foe_Blaster.png?9cbb8d', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Ranged', rarity: 'Pink'},//
- {name: 'Valadium Slicer', image: 'https://thoriummod.wiki.gg/images/Valadium_Slicer.png?9ad759', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Pink'},//
- {name: 'Valadium Spear', image: 'https://thoriummod.wiki.gg/images/Valadium_Spear.png?b9f55a', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Melee', rarity: 'Pink'},//
- {name: 'Valadium Staff', image: 'https://thoriummod.wiki.gg/images/Valadium_Staff.png?e27764', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [CalamityTag.MythrilOrichalcum], class: 'Magic', rarity: 'Pink'},//
+ {name: 'Valadium Throwing Axe', image: 'https://thoriummod.wiki.gg/images/Valadium_Throwing_Axe.png?2c6989', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Throwing', rarity: 'Pink'},//
+ {name: 'Valadium Bow', image: 'https://thoriummod.wiki.gg/images/Valadium_Bow.png?e10f60', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Ranged', rarity: 'Pink'},//
+ {name: 'Valadium Foe Blaster', image: 'https://thoriummod.wiki.gg/images/Valadium_Foe_Blaster.png?9cbb8d', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Ranged', rarity: 'Pink'},//
+ {name: 'Valadium Slicer', image: 'https://thoriummod.wiki.gg/images/Valadium_Slicer.png?9ad759', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Valadium Spear', image: 'https://thoriummod.wiki.gg/images/Valadium_Spear.png?b9f55a', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Melee', rarity: 'Pink'},//
+ {name: 'Valadium Staff', image: 'https://thoriummod.wiki.gg/images/Valadium_Staff.png?e27764', tier: [Boss.WallOfFlesh, ThoriumBoss.FallenBeholder], tags: [], class: 'Magic', rarity: 'Pink'},//
 ]

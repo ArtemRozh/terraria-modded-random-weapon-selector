@@ -30,18 +30,6 @@
     );
 }
 
-/* Calamity rarities */
-:root{
-    --turquoise-rarity: #00FFC8;
-    --pure-green-rarity: #00FF00;
-    --cosmic-purple-rarity: #193881;
-    --violet-rarity: #6C2DC7;
-    --hot-pink-rarity: #FF00FF;
-    --dark-orange-rarity: #CC4723;
-
-    --infernum-rarity: #db8727;
-}
-
 /* Thorium rarities */
 :root{
 

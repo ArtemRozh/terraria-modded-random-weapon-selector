@@ -27,11 +27,7 @@ export class WebsiteConfigComponent {
 
   // Stars Above
   starfarer: string = Starfarer.Asphodene;
-
-  // Calamity
-  preBossHellstoneSwitch: boolean = true;
-  hardmodeOreShenanigansSwitch: boolean = true;
-
+  
   constructor(
     private weaponDataService: WeaponDataService,
     public selectorState: WeaponSelectorStateService
@@ -48,8 +44,6 @@ export class WebsiteConfigComponent {
     this.worldEvil = this.selectorState.worldEvil;
     this.finalUpdateSwitch = this.selectorState.finalUpdateSwitch;
     this.starfarer = this.selectorState.starfarer;
-    this.preBossHellstoneSwitch = this.selectorState.preBossHellstoneSwitch;
-    this.hardmodeOreShenanigansSwitch = this.selectorState.hardmodeOreShenanigansSwitch;
 
     if (!this.selectorState.progression || this.selectorState.progression.length === 0) {
       this.progression = this.fullModifyProgression();
@@ -83,7 +77,7 @@ export class WebsiteConfigComponent {
     const masterData = allContent.find(c => c.label === label);
 
     if (value === true) {
-      if (masterData?.requires) {
+      if (masterData?.requires != null) {
         const parentIndex = this.availableContent.findIndex(el => el.label === masterData.requires);
         if (parentIndex !== -1) {
           this.availableContent[parentIndex].active = true;
@@ -245,9 +239,6 @@ export class WebsiteConfigComponent {
         index = this.availableContent.findIndex(c => c.label === ContentLabels.Vanilla)
         break;
       case 2:
-        index = this.availableContent.findIndex(c => c.label === ContentLabels.Calamity)
-        break;
-      case 3:
         index = this.availableContent.findIndex(c => c.label === ContentLabels.StarsAbove)
         break;
       default:
@@ -255,16 +246,6 @@ export class WebsiteConfigComponent {
     }
 
     return this.availableContent[index].active;
-  }
-
-  changePreBossHelstone() {
-    this.selectorState.preBossHellstoneSwitch = this.preBossHellstoneSwitch;
-    this.updateAvailableWeapons();
-  }
-
-  changeHardmodeOreShenanigansSwitch() {
-    this.selectorState.hardmodeOreShenanigansSwitch = this.hardmodeOreShenanigansSwitch;
-    this.updateAvailableWeapons();
   }
 
   changeFinalUpdate() {

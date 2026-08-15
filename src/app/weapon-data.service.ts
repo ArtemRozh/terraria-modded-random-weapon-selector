@@ -4,10 +4,9 @@ import { allContent, ContentLabels, allMajorProgressionResetPoints } from './dat
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
 import { WeaponSelectorStateService } from './weapon-selector-state.service';
-import { CalamityTag, CalamityTagReplacer, StarsAboveTag, VanillaTag } from './data/tag.data';
+import { StarsAboveTag, VanillaTag } from './data/tag.data';
 import { WorldEvil } from './data/helper/worldEvil.data';
 import { Boss } from './data/content/vanilla/vanillaBoss.data';
-import { Calamityboss } from './data/content/calamity/calamityBoss.data';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +15,6 @@ export class WeaponDataService {
   // related bosses
   private mechBosses: string[] = [ Boss.Destroyer, Boss.Twinks, Boss.Prime ]
   private mechBossesTags: string[] = [Boss.MechBoss1, Boss.MechBoss2, Boss.MechBossRest]
-
-  private calamityServants: string[] = [ Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void ]
-  private calamityServantsTags: string[] = [Calamityboss.PostServants]
-
 
   constructor(private selectorState: WeaponSelectorStateService) {}
 
@@ -39,7 +34,9 @@ export class WeaponDataService {
         }
     }
 
-    return this.applyCrossModChanges(weaponsList, availableContent);
+    //return this.applyCrossModChanges(weaponsList, availableContent);
+    //disabled currently
+    return weaponsList;
   }
 
   getWeaponsByProgression(
@@ -52,8 +49,6 @@ export class WeaponDataService {
     const weapons = this.gatherAvailableWeapons(availableContent);
 
     let filteredWeapons = this.filterWeaponsByProgression(weapons, progression, currentStep, clearSwitch);
-
-
 
     filteredWeapons = filteredWeapons.map(wep => ({
       ...wep,
@@ -89,14 +84,13 @@ export class WeaponDataService {
 
       // Adjusting tiers by tags
       let activeTiers = [...w.tier]; 
-      activeTiers = this.applyCalamityTierChanges(w, activeTiers);
 
       // Other logic
       
       let tier = this.getLatestWeaponTier(activeTiers, progression)
       let tierIndex = (tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === tier);
 
-      if(this.mechBossesTags.includes(tier) || this.calamityServantsTags.includes(tier)) {
+      if(this.mechBossesTags.includes(tier)) {
         tierIndex = this.getRelatedBossesTier(progression, tier)
       }
 
@@ -159,14 +153,6 @@ export class WeaponDataService {
     return hasTag ? this.selectorState.finalUpdateSwitch : true;
   }
 
-
-  // For now obsolete
-  filterCalamityTags(weapon: any): boolean{
-    const hasTag = weapon.tags.includes(CalamityTag.PreBossHellstone);
-    
-    return hasTag ? this.selectorState.preBossHellstoneSwitch : true;
-  }
-
   filterStarsAboveTags(weapon: any): boolean{
     const starfarerTags = [StarsAboveTag.Asphodene, StarsAboveTag.Eridani];
     const weaponStarfarerTag = weapon.tags.find((t: StarsAboveTag) => starfarerTags.includes(t));
@@ -174,31 +160,6 @@ export class WeaponDataService {
     if (!weaponStarfarerTag) return true;
 
     return this.selectorState.starfarer === weaponStarfarerTag;
-  }
-
-  applyCalamityTierChanges(weapon: any, currentTiers: string[]): string[] {
-    const isCalamityActive = !this.selectorState.availableContent.find(c => c.label === ContentLabels.Calamity)?.active;
-    if (!weapon.tags || weapon.tags.length === 0 || isCalamityActive) return currentTiers;
-
-    let updatedTiers = [...currentTiers];
-
-    for (const rule of CalamityTagReplacer) {
-      if (weapon.tags.includes(rule.tag)) {    
-        // Condition for Reaver Shark / Pre-Boss Hellstone switch
-        if (
-          rule.tag === CalamityTag.PreBossHellstone
-          && this.selectorState.preBossHellstoneSwitch
-        ) {
-          updatedTiers = updatedTiers.map(t => t === rule.replacedTier ? rule.tierToReplace : t);
-        } 
-        // All other Calamity-active swaps
-        else if(this.selectorState.hardmodeOreShenanigansSwitch){
-          updatedTiers = updatedTiers.map(t => t === rule.tierToReplace ? rule.replacedTier : t);
-          console.log(updatedTiers)
-        }
-      }
-    }
-    return updatedTiers;
   }
 
   getLatestWeaponTier(weaponTier: string[], progression: { step: string }[]): string{
@@ -224,7 +185,7 @@ export class WeaponDataService {
 
     // filling the array with steps, if any new needed add condition here
     for (const prog of progression) {
-      if(this.mechBosses.includes(prog.step) || this.calamityServants.includes(prog.step)){
+      if(this.mechBosses.includes(prog.step)){
         helperArray.push(prog.step)
       }
     }
@@ -234,10 +195,6 @@ export class WeaponDataService {
       if(tier === this.mechBossesTags[2] && this.mechBosses.includes(helperArray[i])) {
         return progression.findIndex(p => p.step === helperArray[i]);
       } 
-
-      if(tier === this.calamityServantsTags[0] && this.calamityServants.includes(helperArray[i])) {
-        return progression.findIndex(p => p.step === helperArray[i]);
-      }
     }
 
     // finding first or second step, if any new needed add another ifs here
@@ -297,6 +254,7 @@ export class WeaponDataService {
     return availableList[randomIndex];
   }
 
+  /* Breaks as no cross mod changes currently
   private applyCrossModChanges(
     weapons: any[],
     availableContent: { label: string; active: boolean }[]
@@ -310,7 +268,7 @@ export class WeaponDataService {
 
     for (const changeGroup of allWeaponChanges) {
       const isActive = changeGroup.requiredLabels.every(label => activeLabels.has(label));
-      if (isActive) {
+      if (isActive && changeGroup.changes != null) {
         for (const override of changeGroup.changes) {
           const index = modifiedWeapons.findIndex(w => w.name === override.name);
           if (index !== -1) {
@@ -325,4 +283,6 @@ export class WeaponDataService {
 
     return modifiedWeapons;
   }
+
+  */
 }

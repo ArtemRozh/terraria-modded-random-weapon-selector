@@ -1,4 +1,3 @@
-import { CalamityTag } from "../../tag.data";
 import { Boss } from "../vanilla/vanillaBoss.data";
 import { StarsAboveBoss } from "./starsAboveBoss.data";
 import { StarsAboveTag } from "../../tag.data";
@@ -29,7 +28,7 @@ export const starsAboveWeaponData=[
  {name: 'Stygian Nymph', image: 'https://starsabovemod.wiki.gg/images/Stygian_Nymph.png?a9c58f', tier: [Boss.Skeletron, Boss.Plantera], tags: [StarsAboveTag.Asphodene], class: 'Magic', rarity: 'Cyan'},//
  {name: 'Supreme Authority', image: 'https://starsabovemod.wiki.gg/images/Supreme_Authority.png?9d4de0', tier: [StarsAboveBoss.WarriorOfLight], tags: [], class: 'Mystic', rarity: 'Purple'},//
  {name: 'Twin Stars of Albiero', image: 'https://starsabovemod.wiki.gg/images/Twin_Stars_of_Albiero.png?6f88b9', tier: [StarsAboveBoss.Vagrant, Boss.Cultist], tags: [], class: 'Magic', rarity: 'Cyan'},//
- {name: 'Veneration Of Butterflies', image: 'https://starsabovemod.wiki.gg/images/Veneration_of_Butterflies.png?867581', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow, StarsAboveTag.Asphodene], class: 'Magic', rarity: 'Light Purple'},//
+ {name: 'Veneration Of Butterflies', image: 'https://starsabovemod.wiki.gg/images/Veneration_of_Butterflies.png?867581', tier: [Boss.MechBoss1], tags: [StarsAboveTag.Asphodene], class: 'Magic', rarity: 'Light Purple'},//
  {name: 'Vermilion Daemon', image: 'https://starsabovemod.wiki.gg/images/Vermilion_Daemon.png?aa01f6', tier: [Boss.MoonLord], tags: [], class: 'Mystic', rarity: 'Red'},//
  {name: 'Voice of the Fallen', image: 'https://starsabovemod.wiki.gg/images/Voice_of_the_Fallen.png?8a6fc1', tier: [Boss.Skeletron, Boss.Plantera], tags: [StarsAboveTag.Eridani], class: 'Mystic', rarity: 'Yellow'},//
  {name: 'Ashen Ambition', image: 'https://starsabovemod.wiki.gg/images/Ashen_Ambition.png?766c0d', tier: [Boss.EvilBoss], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Orange'},//
@@ -38,13 +37,13 @@ export const starsAboveWeaponData=[
  {name: 'Claimh Solais', image: 'https://starsabovemod.wiki.gg/images/Claimh_Solais.png?9e1bee', tier: [StarsAboveBoss.Nalhaun], tags: [], class: 'Melee', rarity: 'Purple'},//
  {name: 'Crimson Sakura Alpha', image: 'https://starsabovemod.wiki.gg/images/Crimson_Sakura_Alpha.png?375f33', tier: [Boss.Plantera, Boss.Duke], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Red'},//
  {name: 'Drachenlance', image: 'https://starsabovemod.wiki.gg/images/Drachenlance.png?34c9af', tier: [Boss.MechBossRest], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Lime'},//
- {name: 'Hullwrought', image: 'https://starsabovemod.wiki.gg/images/Hullwrought.png?40b6c5', tier: [StarsAboveBoss.Vagrant, Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Red'},//
+ {name: 'Hullwrought', image: 'https://starsabovemod.wiki.gg/images/Hullwrought.png?40b6c5', tier: [StarsAboveBoss.Vagrant, Boss.MechBoss1], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Hullwrought MK. II', image: 'https://starsabovemod.wiki.gg/images/Hullwrought_MK._II.png?a15508', tier: [StarsAboveBoss.Vagrant, Boss.MoonLord], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Inugami Ripsaw', image: 'https://starsabovemod.wiki.gg/images/Inugami_Ripsaw.png?745325', tier: [Boss.QueenBee, Boss.Skeletron], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Cyan'},//
  {name: 'Karlan Truesilver', image: 'https://starsabovemod.wiki.gg/images/Karlan_Truesilver.png?c26dc5', tier: [StarsAboveBoss.Vagrant, Boss.WallOfFlesh], tags: [StarsAboveTag.Asphodene], class: 'Melee', rarity: 'Pink'},//
  {name: 'Liberation Blazing', image: 'https://starsabovemod.wiki.gg/images/Liberation_Blazing.png?dbde7a', tier: [StarsAboveBoss.Vagrant, StarsAboveBoss.Nalhaun, Boss.Cultist], tags: [StarsAboveTag.Asphodene], class: 'Melee', rarity: 'Red'},//
  {name: 'Maniacal Justice', image: 'https://starsabovemod.wiki.gg/images/Maniacal_Justice.png?722e08', tier: [Boss.Skeletron, Boss.Plantera, Boss.Duke], tags: [], class: 'Melee', rarity: 'Lime'},//
- {name: 'Memento Muse', image: 'https://starsabovemod.wiki.gg/images/Memento_Muse.png?5c4548', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow, StarsAboveTag.Eridani], class: 'Melee', rarity: 'Light Purple'},//
+ {name: 'Memento Muse', image: 'https://starsabovemod.wiki.gg/images/Memento_Muse.png?5c4548', tier: [Boss.MechBoss1], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Light Purple'},//
  {name: 'Mercy', image: 'https://starsabovemod.wiki.gg/images/Mercy.png?e230b0', tier: [Boss.Golem], tags: [], class: 'Melee', rarity: 'Yellow'},//
  {name: 'Miserys Company', image: 'https://starsabovemod.wiki.gg/images/Misery%27s_Company.png?f3bc4f', tier: [Boss.Skeletron], tags: [], class: 'Melee', rarity: 'Orange'},//
  {name: 'Naganadel', image: 'https://starsabovemod.wiki.gg/images/Naganadel.png?8720df', tier: [Boss.MoonLord], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Purple'},//
@@ -54,7 +53,7 @@ export const starsAboveWeaponData=[
  {name: 'Sakuras Vengeance', image: 'https://starsabovemod.wiki.gg/images/thumb/Sakura%27s_Vengeance.png/192px-Sakura%27s_Vengeance.png?6d8eca', tier: [Boss.Empress], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Shadowless Cerulean', image: 'https://starsabovemod.wiki.gg/images/Shadowless_Cerulean.png?df56f8', tier: [Boss.MoonLord], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Skofnung', image: 'https://starsabovemod.wiki.gg/images/Skofnung.png?a30b50', tier: [Boss.QueenBee], tags: [StarsAboveTag.Asphodene], class: 'Melee', rarity: 'Light Red'},//
- {name: 'Armaments of the Sky Striker', image: 'https://starsabovemod.wiki.gg/images/Armaments_of_the_Sky_Striker.png?624a9c', tier: [Boss.MechBoss1, Boss.Twinks, Boss.Prime], tags: [CalamityTag.Hollow], class: 'Melee', rarity: 'Purple'},//
+ {name: 'Armaments of the Sky Striker', image: 'https://starsabovemod.wiki.gg/images/Armaments_of_the_Sky_Striker.png?624a9c', tier: [Boss.MechBoss1, Boss.Twinks, Boss.Prime], tags: [], class: 'Melee', rarity: 'Purple'},//
  {name: 'Soul Reaver', image: 'https://starsabovemod.wiki.gg/images/Soul_Reaver.png?698f12', tier: [Boss.MoonLord], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Umbra', image: 'https://starsabovemod.wiki.gg/images/Umbra.png?563d1b', tier: [Boss.Cultist], tags: [], class: 'Melee', rarity: 'Cyan'},//
  {name: 'Unforgotten', image: 'https://starsabovemod.wiki.gg/images/Unforgotten.png?a0266c', tier: [StarsAboveBoss.Vagrant, StarsAboveBoss.Nalhaun, Boss.Cultist], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'Red'},//
@@ -69,7 +68,7 @@ export const starsAboveWeaponData=[
  {name: 'Boltstorm Axe', image: 'https://starsabovemod.wiki.gg/images/Boltstorm_Axe.png?4850c9', tier: [StarsAboveBoss.Nalhaun], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Manifestation', image: 'https://starsabovemod.wiki.gg/images/Manifestation.png?ae46e1', tier: [Boss.Prime, StarsAboveBoss.Arbitration], tags: [], class: 'Psychoment', rarity: 'Red'},//
  {name: 'Orbital Expressway Plush', image: 'https://starsabovemod.wiki.gg/images/Orbital_Expressway_Plush.png?19b782', tier: [Boss.MechBoss1], tags: [], class: 'Melee', rarity: 'Green'},//
- {name: 'Phasmasaber', image: 'https://starsabovemod.wiki.gg/images/Phasmasaber.png?972428', tier: [Boss.MechBoss1, Boss.Prime], tags: [CalamityTag.Hollow], class: 'Ranged', rarity: 'Cyan'},//
+ {name: 'Phasmasaber', image: 'https://starsabovemod.wiki.gg/images/Phasmasaber.png?972428', tier: [Boss.MechBoss1, Boss.Prime], tags: [], class: 'Ranged', rarity: 'Cyan'},//
  {name: 'Soliloquy Of Sovereign Seas', image: 'https://starsabovemod.wiki.gg/images/Soliloquy_of_Sovereign_Seas.png?94dc2d', tier: [StarsAboveBoss.Thespian], tags: [StarsAboveTag.Eridani], class: 'Arkhe', rarity: 'Orange'},//
  {name: 'Sunset of the Sun God', image: 'https://starsabovemod.wiki.gg/images/Sunset_of_the_Sun_God.png?cf22a6', tier: [StarsAboveBoss.Tsukiyomi], tags: [], class: 'Melee', rarity: 'Red'},//
  {name: 'Wolvesbane Awakened', image: 'https://starsabovemod.wiki.gg/images/Wolvesbane_Awakened.png?c97073', tier: [Boss.EvilBoss, Boss.Cultist], tags: [], class: 'Melee', rarity: 'Cyan'},//
@@ -88,7 +87,7 @@ export const starsAboveWeaponData=[
  {name: 'Neo Dealmaker', image: 'https://starsabovemod.wiki.gg/images/Neo_Dealmaker.png?5d5b30', tier: [Boss.EvilBoss], tags: [StarsAboveTag.Asphodene], class: 'Ranged', rarity: 'Orange'},//
  {name: 'Plenilune Gaze', image: 'https://starsabovemod.wiki.gg/images/Plenilune_Gaze.png?567ff0', tier: [Boss.Golem], tags: [StarsAboveTag.Asphodene], class: 'Ranged', rarity: 'Cyan'},//
  {name: 'Quis Ut Deus', image: 'https://starsabovemod.wiki.gg/images/Quis_Ut_Deus.png?29d8b9', tier: [StarsAboveBoss.WarriorOfLight], tags: [], class: 'Ranged', rarity: 'Red'},//
- {name: 'Ride the Bull', image: 'https://starsabovemod.wiki.gg/images/Ride_The_Bull.png?5e9339', tier: [Boss.MechBoss1, Boss.Destroyer], tags: [CalamityTag.Hollow, StarsAboveTag.Asphodene], class: 'Ranged', rarity: 'Lime'},//
+ {name: 'Ride the Bull', image: 'https://starsabovemod.wiki.gg/images/Ride_The_Bull.png?5e9339', tier: [Boss.MechBoss1, Boss.Destroyer], tags: [StarsAboveTag.Asphodene], class: 'Ranged', rarity: 'Lime'},//
  {name: 'Saltwater Scourge', image: 'https://starsabovemod.wiki.gg/images/Saltwater_Scourge.png?1cb553', tier: [Boss.WallOfFlesh], tags: [], class: 'Ranged', rarity: 'Yellow'},//
  {name: 'Shock & Awe', image: 'https://starsabovemod.wiki.gg/images/Shock_%26_Awe.png?d0fc73', tier: [Boss.EvilBoss], tags: [], class: 'Ranged', rarity: 'Orange'},//
  {name: 'String of Curses', image: 'https://starsabovemod.wiki.gg/images/String_of_Curses.png?dd3ee2', tier: [Boss.MechBoss1, Boss.Twinks], tags: [], class: 'Ranged', rarity: 'Orange'},//
@@ -97,7 +96,7 @@ export const starsAboveWeaponData=[
  {name: 'Adornment of the Chaotic God', image: 'https://starsabovemod.wiki.gg/images/Adornment_of_the_Chaotic_God.png?f41d5a', tier: [Boss.QueenSlime], tags: [], class: 'Summon', rarity: 'Green'},//
  {name: 'Takonomicon', image: 'https://starsabovemod.wiki.gg/images/Takonomicon.png?edfc99', tier: [Boss.EvilBoss], tags: [], class: 'Summon', rarity: 'Light Red'},//
  {name: 'Apalistik', image: 'https://starsabovemod.wiki.gg/images/Apalistik.png?adb231', tier: [Boss.Skeletron], tags: [], class: 'Summon', rarity: 'Lime'},//
- {name: 'Seaborn Apalistik', image: 'https://starsabovemod.wiki.gg/images/Seaborn_Apalistik.png?927e39', tier: [Boss.MechBoss1], tags: [CalamityTag.Hollow], class: 'Summon', rarity: 'Red'},//
+ {name: 'Seaborn Apalistik', image: 'https://starsabovemod.wiki.gg/images/Seaborn_Apalistik.png?927e39', tier: [Boss.MechBoss1], tags: [], class: 'Summon', rarity: 'Red'},//
  {name: 'Arachnid Needlepoint', image: 'https://starsabovemod.wiki.gg/images/Arachnid_Needlepoint.png?6f5bc4', tier: [Boss.Empress], tags: [], class: 'Summon', rarity: 'Cyan'},//
  {name: 'Cæsura of Despair', image: 'https://starsabovemod.wiki.gg/images/C%C3%A6sura_of_Despair.png?612f72', tier: [Boss.Plantera], tags: [StarsAboveTag.Eridani], class: 'Melee', rarity: 'White'},//
  {name: 'Candied Sugar Ball', image: 'https://starsabovemod.wiki.gg/images/Candied_Sugarball.png?107d41', tier: [StarsAboveBoss.Thespian], tags: [], class: 'Summon', rarity: 'Pink'},//
