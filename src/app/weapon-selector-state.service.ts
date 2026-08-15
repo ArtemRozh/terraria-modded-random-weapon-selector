@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
-import { allContent, ContentLabels, Boss, Calamityboss, StarsAboveBoss } from './data/progression.data';
+import { allContent, ContentLabels } from './data/progression.data';
 import { Filter, Sort } from './data/filter.data';
 import { saveAs } from 'file-saver';
+import { WorldEvil } from './data/helper/worldEvil.data';
+import { Starfarer } from './data/helper/smallModHelper.data';
+import { Boss } from './data/content/vanilla/vanillaBoss.data';
+import { StarsAboveBoss } from './data/content/stars-above/starsAboveBoss.data';
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +25,19 @@ export class WeaponSelectorStateService {
   private _sortingState: string = "";
   private _isReverse: boolean = false;
 
+  // Vanilla
+  private _worldEvil: string = WorldEvil.Both;
+  private _finalUpdateSwitch: boolean = false;
+  
+  // Stars Above
+  private _starfarer: string = Starfarer.Asphodene;
+
   private storageKey = 'weaponSelectorState';
 
   // modernization block
 
-  private legacyTags: string[] = [Boss.MechBoss1, Boss.MechBossRest, Calamityboss.Servant1, Calamityboss.ServantRest] 
-  private replacementTags: string[] = [Boss.Destroyer, Boss.Twinks, Boss.Prime, Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void]
+  private legacyTags: string[] = [Boss.MechBoss1, Boss.MechBossRest] 
+  private replacementTags: string[] = [Boss.Destroyer, Boss.Twinks, Boss.Prime]
 
   //
 
@@ -131,6 +142,33 @@ export class WeaponSelectorStateService {
     this.saveState();
   }
 
+  get worldEvil() {
+    return this._worldEvil;
+  }
+
+  set worldEvil(value: string) {
+    this._worldEvil = value;
+    this.saveState();
+  }
+
+  get finalUpdateSwitch() {
+    return this._finalUpdateSwitch;
+  }
+
+  set finalUpdateSwitch(value: boolean) {
+    this._finalUpdateSwitch = value;
+    this.saveState();
+  }
+
+  get starfarer() {
+    return this._starfarer;
+  }
+
+  set starfarer(value: string) {
+    this._starfarer = value;
+    this.saveState();
+  }
+  
   saveState() {
     const state = this.getState();
     
@@ -143,17 +181,27 @@ export class WeaponSelectorStateService {
 
     try {
       const state = JSON.parse(raw);
+      
       this._currentIndex = state.currentIndex || 0;
-      this._availableContent = state.availableContent || [...allContent];
-      this._progression = this._progression = this.modernizeProgression(state.progression || []);
+
+      const savedContent = state.availableContent || [];
+      this._availableContent = allContent.map(masterItem => {
+        const savedItem = savedContent.find((s: { label: ContentLabels; active: boolean }) => s.label === masterItem.label);
+        return savedItem ? { ...savedItem } : { ...masterItem };
+      });
+      
+      this._progression = this.modernizeProgression(state.progression || []);
       this._selectedWeapon = state.selectedWeapon || { name: "None" };
       this._switch = state.switch || false;
       this._clearSwich = state.clearSwich || false;
       this._banSwitch = state.banSwitch || false;
       this._bannedWeaponsMap = state.bannedWeaponsMap || {};
       this._filterState = state.filterState || Filter.All;
-      this.sortingState = state.sortingState || Sort.Alphabet;
-      this.isReverse = state.isReverse || false;
+      this._sortingState = state.sortingState || Sort.Alphabet;
+      this._isReverse = state.isReverse || false;
+      this._worldEvil = state.worldEvil || WorldEvil.Both;
+      this._finalUpdateSwitch = state.finalUpdateSwitch || false;
+      this._starfarer = state.starfarer || Starfarer.Asphodene;
     } catch (e) {
       console.warn('Failed to load saved state:', e);
     }
@@ -171,7 +219,10 @@ export class WeaponSelectorStateService {
         bannedWeaponsMap: this._bannedWeaponsMap,
         filterState: this._filterState,
         sortingState: this._sortingState,
-        isReverse: this._isReverse
+        isReverse: this._isReverse,
+        worldEvil: this._worldEvil,
+        finalUpdateSwitch: this._finalUpdateSwitch,
+        starfarer: this._starfarer
       };
   }
 
@@ -207,6 +258,7 @@ export class WeaponSelectorStateService {
         }
       }
 
+      this.ensureNewFields(parsed);
 
       this._currentIndex = parsed.currentIndex;
       this._availableContent = parsed.availableContent;
@@ -219,6 +271,9 @@ export class WeaponSelectorStateService {
       this._filterState = parsed.filterState;
       this._sortingState = parsed.sortingState;
       this._isReverse = parsed.isReverse;
+      this._worldEvil = parsed.worldEvil;
+      this._finalUpdateSwitch = parsed.finalUpdateSwitch;
+      this._starfarer = parsed.starfarer;
 
       this.saveState(); 
       
@@ -240,41 +295,45 @@ export class WeaponSelectorStateService {
   }
 
   modernizeProgression(progression: { step: string }[]): { step: string }[] {
-    const result: { step: string }[] = [];
+    const mapping: Record<string, string[]> = {
+      [Boss.MechBoss1]: [Boss.Destroyer, Boss.Twinks, Boss.Prime],
+      [Boss.MechBossRest]: [],
+    };
 
-    let replacedMechBoss = false;
-    let replacedServant = false;
+    const processedTags = new Set<string>();
 
-    for (const item of progression) {
-      const step = item.step;
+    return progression.flatMap(item => {
+      const replacements = mapping[item.step];
 
-      if (
-        step === Boss.MechBoss1 ||
-        step === Boss.MechBossRest ||
-        step === Calamityboss.Servant1 ||
-        step === Calamityboss.ServantRest
-      ) {
-        if (step === Boss.MechBoss1 && !replacedMechBoss) {
-          result.push(
-            { step: this.replacementTags[0] },
-            { step: this.replacementTags[1] },
-            { step: this.replacementTags[2] }
-          );
-          replacedMechBoss = true;
-        } else if (step === Calamityboss.Servant1 && !replacedServant) {
-          result.push(
-            { step: this.replacementTags[3] },
-            { step: this.replacementTags[4] },
-            { step: this.replacementTags[5] }
-          );
-          replacedServant = true;
+      if (replacements) {
+        if (replacements.length > 0 && !processedTags.has(item.step)) {
+          processedTags.add(item.step);
+          return replacements.map(tag => ({ step: tag }));
         }
-        continue;
+        return [];
       }
 
-      result.push(item);
-    }
+      return [item];
+    });
+  }
 
-    return result;
+  ensureNewFields(parsed: any) {
+    const defaults: any = {
+      worldEvil: WorldEvil.Both,
+      finalUpdateSwitch: false,
+      starfarer: Starfarer.Asphodene
+    };
+
+    Object.keys(defaults).forEach(key => {
+      if (!(key in parsed)) {
+        parsed[key] = defaults[key];
+      }
+    });
+
+    const savedContent = parsed.availableContent || [];
+    parsed.availableContent = allContent.map(masterItem => {
+      const savedItem = savedContent.find((s: any) => s.label === masterItem.label);
+      return savedItem ? { ...savedItem } : { ...masterItem };
+    });
   }
 }

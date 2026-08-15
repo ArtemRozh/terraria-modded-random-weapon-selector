@@ -4,7 +4,7 @@ import { WeaponDataService } from '../weapon-data.service';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
 import { Filter, Sort } from '../data/filter.data';
 import { FormsModule } from '@angular/forms';
-import { Boss, Calamityboss } from '../data/progression.data';
+import { Boss } from '../data/content/vanilla/vanillaBoss.data';
 
 @Component({
   selector: 'app-weapon-config',
@@ -26,12 +26,13 @@ export class WeaponConfigComponent {
   private mechBosses: string[] = [ Boss.Destroyer, Boss.Twinks, Boss.Prime ]
   private mechBossesTags: string[] = [Boss.MechBoss1, Boss.MechBoss2, Boss.MechBossRest]
 
-  private calamityServants: string[] = [ Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void ]
-  private calamityServantsTags: string[] = [Calamityboss.PostServants]
-
   constructor(private weaponDataService: WeaponDataService,
       private selectorState: WeaponSelectorStateService
   ) {}
+
+  getLatestTier(tiers: any, weapon: any): string{
+    return this.weaponDataService.getLatestWeaponTier(tiers, this.selectorState.progression)
+  }
 
   getBackgroundColor(isBanned: boolean): string{
     if(isBanned){
@@ -103,25 +104,25 @@ export class WeaponConfigComponent {
   }
 
   getProgressionIndex(
-    weapon: any,
+    weapon: any, 
     progression: { step: string }[]
   ): number {
-    
+    const tier = this.getLatestTier(weapon.tier, weapon);
 
-    if (weapon.tier === Boss.PreBoss) {
+    if (tier === Boss.PreBoss) {
       return -1;
     }
 
-
-
-    return this.getRelatedBossIndex(weapon, progression);
+    return this.getRelatedBossIndex(weapon, progression, tier);
   }
 
+
   getRelatedBossIndex(
-    weapon: any,
-    progression: { step: string }[]
+    weapon: any, 
+    progression: { step: string }[], 
+    tier: string
   ): number {
-    if (this.mechBossesTags.includes(weapon.tier)) {
+    if (this.mechBossesTags.includes(tier)) {
       let helperArray: string|any = []
 
       for(const tag of progression){
@@ -130,7 +131,7 @@ export class WeaponConfigComponent {
         }
       }
 
-      switch(weapon.tier){
+      switch(tier){
         case this.mechBossesTags[0]:
           return progression.findIndex(p => p.step === helperArray[0]) + 0.5;
         case this.mechBossesTags[1]:
@@ -140,24 +141,7 @@ export class WeaponConfigComponent {
       }
     }
 
-    if(this.calamityServantsTags.includes(weapon.tier)) {
-      let helperArray: string|any = []
-
-      for(const tag of progression){
-        if(this.calamityServants.includes(tag.step)){
-          helperArray.push(tag.step)
-        }
-      }
-
-      console.log(helperArray)
-
-      switch(weapon.tier){
-        case this.calamityServantsTags[0]:
-          return progression.findIndex(p => p.step === helperArray[2]) + 0.5;
-      }
-    }
-
-    return progression.findIndex(p => p.step === weapon.tier);
+    return progression.findIndex(p => p.step === tier);
   }
 
   searchFor(query: string){

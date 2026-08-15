@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { vanillaProgression, allModdedProgression } from '../data/progression.data';
+import { allModdedProgression } from '../data/progression.data';
 import { WeaponSelectorStateService } from '../weapon-selector-state.service';
 import { WeaponDataService } from '../weapon-data.service';
+import { vanillaProgression } from '../data/content/vanilla/vanillaProgression.data';
 
 @Component({
   selector: 'app-progression-changer',

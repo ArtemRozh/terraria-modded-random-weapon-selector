@@ -6,8 +6,6 @@ A site that is supposed to make a challenge easier to set up. A challenge where 
 Huge inspiration taken from the site made by DarioDaF, hds536jhmk, and others. It has nearly the same premise, but only for vanilla, and it works and looks better than mine. If you're only interested in vanilla, check theirs.  
 Link to their website: https://dariodaf.github.io/TerrariaRandomWeapon/ 
 
-Additional details:  
-1. I do not know if I'm allowed to use weapon sprites. I have them, but in the end decided just to use one sprite that represents weapon source, one for vanilla, one for each mod.  
-2. Mod I made to gather weapons data is included. 
-3. All weapon data is sorted manually. While I'm almost sure about vanilla weapons, modded probably have some mistakes. If someone finds it and is kind enough, try reporting it by any means you see fit. (If my site is ever going to be indexed, as I don't know what I'm doing.) The same goes for any of the bugs. Tested as much as I could myself.
-
+TLDR`s:  
+1. Mod I made to gather weapon data is included. 
+2. All weapon data is sorted manually. While I'm almost sure about vanilla weapons, modded probably have some mistakes. If someone finds it and is kind enough, try reporting it by any means you see fit. (If my site is ever going to be indexed, as I don't know what I'm doing.) The same goes for any of the bugs. Tested as much as I could myself.

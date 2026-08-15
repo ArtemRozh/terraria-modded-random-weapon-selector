@@ -9,6 +9,38 @@
     --spceial-button-color-two: #ffffc1;
 }
 
+/* Vanilla rarities */
+:root{
+    --gray-rarity: #828282;
+    --white-rarity: #828282;
+    --blue-rarity: #9696FF;
+    --green-rarity: #96FF96;
+    --orange-rarity: #FFC896;
+    --light-red-rarity: #FF9696;
+    --pink-rarity: #FF96FF;
+    --light-purple-rarity: #D2A0FF;
+    --lime-rarity: #96FF0A;
+    --yellow-rarity: #FFFF0A;
+    --cyan-rarity: #05C8FF;
+    --red-rarity: #FF2864;
+    --purple-rarity: #5a0d83;
+    --rainbow-rarity: linear-gradient(
+        to right, 
+        #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00ff
+    );
+}
+
+/* Thorium rarities */
+:root{
+
+    --terrarium-rarity:  linear-gradient(
+        to right, 
+        #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00ff);
+    --donator-rarity: #40ebd4;
+    --blood-orange-rarity: #f86a0b;
+}
+
+
 html, body{
     background-image: url('/backgrounds/main.png');
     background-repeat: no-repeat;
@@ -60,3 +92,5 @@ button {
 button, input {
     cursor: pointer;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

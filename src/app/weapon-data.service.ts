@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
-import { allWeaponData } from './data/weapon.data';
-import { allContent, ContentLabels, Boss, allMajorProgressionResetPoints, Calamityboss } from './data/progression.data';
+import { allWeaponData } from './data/allWeapon.data';
+import { allContent, ContentLabels, allMajorProgressionResetPoints } from './data/progression.data';
 import { allWeaponChanges } from './data/crossModSupport.data';
 import seedrandom from 'seedrandom';
+import { WeaponSelectorStateService } from './weapon-selector-state.service';
+import { StarsAboveTag, VanillaTag } from './data/tag.data';
+import { WorldEvil } from './data/helper/worldEvil.data';
+import { Boss } from './data/content/vanilla/vanillaBoss.data';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +16,7 @@ export class WeaponDataService {
   private mechBosses: string[] = [ Boss.Destroyer, Boss.Twinks, Boss.Prime ]
   private mechBossesTags: string[] = [Boss.MechBoss1, Boss.MechBoss2, Boss.MechBossRest]
 
-  private calamityServants: string[] = [ Calamityboss.Signus, Calamityboss.Weaver, Calamityboss.Void ]
-  private calamityServantsTags: string[] = [Calamityboss.PostServants]
-
-
-  constructor() {
-  }
+  constructor(private selectorState: WeaponSelectorStateService) {}
 
   private gatherAvailableWeapons(availableContent: { label: string; active: boolean }[]): any[] {
     const weaponsList: any[] = [];
@@ -35,7 +34,9 @@ export class WeaponDataService {
         }
     }
 
-    return this.applyCrossModChanges(weaponsList, availableContent);
+    //return this.applyCrossModChanges(weaponsList, availableContent);
+    //disabled currently
+    return weaponsList;
   }
 
   getWeaponsByProgression(
@@ -57,6 +58,8 @@ export class WeaponDataService {
     return filteredWeapons;
   }
 
+
+  // main filtering happen here
   private filterWeaponsByProgression(
     weapons: any[],
     progression: { step: string }[],
@@ -75,11 +78,20 @@ export class WeaponDataService {
       if (isVanillaDisabled && w.source === ContentLabels.Vanilla) {
         return false;
       }
-      
-      let tierIndex = (w.tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === w.tier);
 
-      if(this.mechBossesTags.includes(w.tier) || this.calamityServantsTags.includes(w.tier)) {
-        tierIndex = this.getRelatedBossesTier(progression, w.tier)
+      // tag filtering
+      if(!this.filterByTags(w)) return false;
+
+      // Adjusting tiers by tags
+      let activeTiers = [...w.tier]; 
+
+      // Other logic
+      
+      let tier = this.getLatestWeaponTier(activeTiers, progression)
+      let tierIndex = (tier === Boss.PreBoss) ? -1 : progression.findIndex(p => p.step === tier);
+
+      if(this.mechBossesTags.includes(tier)) {
+        tierIndex = this.getRelatedBossesTier(progression, tier)
       }
 
       // test only
@@ -116,13 +128,64 @@ export class WeaponDataService {
     });
   }
 
+  filterByTags(weapon: any): boolean{
+    if(weapon.tags === undefined || weapon.tags.length === 0) return true;
+
+    return (this.filterWorldEvil(weapon) 
+      && this.filterVanillaTags(weapon)
+      && this.filterStarsAboveTags(weapon))
+  }
+
+  filterWorldEvil(weapon: any): boolean{
+    if (this.selectorState.worldEvil === WorldEvil.Both) return true;
+
+    const evilTags = [VanillaTag.Corruption, VanillaTag.Crimson];
+    const weaponEvilTag = weapon.tags.find((t: VanillaTag) => evilTags.includes(t));
+
+    if (!weaponEvilTag) return true;
+
+    return this.selectorState.worldEvil === weaponEvilTag;
+  }
+
+  filterVanillaTags(weapon: any): boolean{
+    const hasTag = weapon.tags.includes(VanillaTag.FinalUpdate);
+
+    return hasTag ? this.selectorState.finalUpdateSwitch : true;
+  }
+
+  filterStarsAboveTags(weapon: any): boolean{
+    const starfarerTags = [StarsAboveTag.Asphodene, StarsAboveTag.Eridani];
+    const weaponStarfarerTag = weapon.tags.find((t: StarsAboveTag) => starfarerTags.includes(t));
+
+    if (!weaponStarfarerTag) return true;
+
+    return this.selectorState.starfarer === weaponStarfarerTag;
+  }
+
+  getLatestWeaponTier(weaponTier: string[], progression: { step: string }[]): string{
+    if(weaponTier.length === 1) return weaponTier[0]
+    let highestIndex = 0
+    let highestTier = 0
+
+    for(let i = 0; i < weaponTier.length; ++i){
+        let tmp = progression.findIndex(p => p.step === weaponTier[i])
+
+        if (tmp > highestIndex){
+          highestTier = i
+          highestIndex = tmp
+        }
+    }
+    
+    return weaponTier[highestTier]  
+  }
+
   getRelatedBossesTier(progression: { step: string }[], tier: string): number {
     // vanilla helper and modded helper
     const helperArray: string|any = []
 
     // filling the array with steps, if any new needed add condition here
     for (const prog of progression) {
-      if(this.mechBosses.includes(prog.step) || this.calamityServants.includes(prog.step)){
+      if(this.mechBosses.includes(prog.step)){
         helperArray.push(prog.step)
       }
     }
@@ -132,10 +195,6 @@ export class WeaponDataService {
       if(tier === this.mechBossesTags[2] && this.mechBosses.includes(helperArray[i])) {
         return progression.findIndex(p => p.step === helperArray[i]);
       } 
-
-      if(tier === this.calamityServantsTags[0] && this.calamityServants.includes(helperArray[i])) {
-        return progression.findIndex(p => p.step === helperArray[i]);
-      }
     }
 
     // finding first or second step, if any new needed add another ifs here
@@ -195,6 +254,7 @@ export class WeaponDataService {
     return availableList[randomIndex];
   }
 
+  /* Breaks as no cross mod changes currently
   private applyCrossModChanges(
     weapons: any[],
     availableContent: { label: string; active: boolean }[]
@@ -208,7 +268,7 @@ export class WeaponDataService {
 
     for (const changeGroup of allWeaponChanges) {
       const isActive = changeGroup.requiredLabels.every(label => activeLabels.has(label));
-      if (isActive) {
+      if (isActive && changeGroup.changes != null) {
         for (const override of changeGroup.changes) {
           const index = modifiedWeapons.findIndex(w => w.name === override.name);
           if (index !== -1) {
@@ -223,4 +283,6 @@ export class WeaponDataService {
 
     return modifiedWeapons;
   }
+
+  */
 }

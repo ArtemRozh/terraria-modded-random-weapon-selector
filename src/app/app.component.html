@@ -1,9 +1,13 @@
 <div class="main-container">
 
     <div class="button-holder container-border">
-        <button class="link-button content-border" routerLink="/main" routerLinkActive="active"> Main </button>
-        <button class="link-button content-border" routerLink="/config" routerLinkActive="active"> Weapons </button>
-        <button class="link-button content-border" routerLink="/prog" routerLinkActive="active"> Progression </button>
+        <div class="icon-holder">
+            <button class="link-button content-border" routerLink="/main" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Housing_menu_%28on%29.png?9af942"></button>
+            <button class="link-button content-border" routerLink="/config" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Waffle%27s_Iron.png?be4e57"></button>
+            <button class="link-button content-border" routerLink="/prog" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Map_Icon_Eye_of_Cthulhu_%28first_form%29.png?1b90a8"></button>
+            <button class="link-button content-border" routerLink="/webconfig" routerLinkActive="active"><img src="https://terraria.wiki.gg/images/Cog.png?70c88a"></button>
+        </div>
+        <button class="display-button content-border"> {{currentRouteName}} </button>
     </div>
 
     <div class="content-wrapper">
@@ -27,8 +31,13 @@
             </span>
 
             <span>
-                Weapons are located as early as they could be obtained. It matters mostly with Calamity, 
-                where you can get hellstone gear before any bosses, stuff like that.
+                It was made for Calamity mostly at first, but I removed anything related to it there. 
+                Though have plans in future to implement it with focus on infernum, depending on mods state, as currently it is ambigous what would really happen to Calamity.
+            </span>
+
+            <span>
+                Weapons are located as early as they could be obtained. 
+                Bugs and niche methods aren`t accounted for.
             </span>
 
             <span>
@@ -38,18 +47,19 @@
 
             <span>
                 If you dont like the progression, there should be a menu to modify it to fit your needs. Note that there could be some inconsistencies after some swaps.
-                It is mostly made for bosses whose order is ambigous (post golem calamity), mech bosses, etc.
-                <br> Its a bit poorly coded so it wont save after toggling mods, but it works
+                It is mostly made for bosses whose order is ambigous, mech bosses, etc.
+                Its a bit poorly coded (as almost everything here) so it wont save after toggling mods, but it works
             </span>
         </div>
     </div>
 
     <footer>
-        <div class="version-text-container">
-            <span> Calamity v.2.0.7 </span>
-            <span> Stars Above v.2.1.7.1  </span>
-            <span> Terraria v.1.4.4.9  </span>
-        </div>
+        <select name="mods" id="mods" class="version-text-container">
+            <option value="" disabled selected> Mod Versions </option>
+            <option value="starsabove">Stars Above 2.1.8.3 </option>
+            <option value="terraria">Terraria 1.4.4.9 - 1.4.5.6 </option>
+            <option value="thorium">Thorium 1.7.2.5 </option>
+        </select>
 
         <div class="details-container">
             <span class="signature-text">
